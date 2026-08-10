@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quinn Corcoran | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* HELVETICA STACK */
+        body { 
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background: url('background.jpg') no-repeat center center fixed; 
+            background-size: cover;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .helvetica-bold { font-weight: 700; letter-spacing: -0.05em; }
+        .helvetica-light { font-weight: 300; letter-spacing: 0.02em; }
+
+        /* GLASSMORPHISM */
+        .glass {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+        }
+
+        /* TICKER ANIMATION */
+        #ticker-container {
+            position: fixed; bottom: 0; left: 0; width: 100%;
+            background: rgba(0, 255, 255, 0.9); color: black;
+            padding: 10px 0; z-index: 100;
+            display: none; /* Hidden for 2 seconds */
+        }
+
+        .ticker-text {
+            display: inline-block; white-space: nowrap;
+            animation: marquee 30s linear infinite;
+            font-weight: 800; text-transform: uppercase; font-size: 0.8rem;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* MOUSE BLOB */
+        #blob {
+            position: fixed; width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(0, 255, 255, 0.2) 0%, rgba(0,0,0,0) 70%);
+            border-radius: 50%; z-index: -1; filter: blur(80px);
+            pointer-events: none; transition: transform 0.1s ease-out;
+        }
+
+        .insta-grid blockquote { min-width: 100% !important; margin: 0 !important; }
+    </style>
+</head>
+<body class="helvetica-light">
+
+    <div id="blob"></div>
+
+    <!-- TICKER -->
+    <div id="ticker-container" class="flex items-center">
+        <div class="ticker-text">
+            50M+ Views &bull; 1M+ Likes &bull; 20+ Viral Campaigns &bull; Thousands of Posts &bull; 100% Follower Growth &bull; $285k+ Budget Managed &bull; Award Winning Journalism &bull; 
+            50M+ Views &bull; 1M+ Likes &bull; 20+ Viral Campaigns &bull; Thousands of Posts &bull; 100% Follower Growth &bull; $285k+ Budget Managed &bull;
+        </div>
+        <a href="resume.pdf" download class="absolute right-4 bg-black text-white px-4 py-1 rounded-full text-xs helvetica-bold uppercase">Download Resume</a>
+    </div>
+
+    <main class="max-w-6xl mx-auto px-6 pt-20 pb-40">
+        
+        <!-- HERO -->
+        <section class="text-center mb-24">
+            <h1 class="text-7xl md:text-9xl helvetica-bold uppercase leading-none">Quinn Corcoran</h1>
+            <p class="text-2xl md:text-4xl helvetica-light uppercase tracking-widest opacity-80">Portfolio</p>
+        </section>
+
+        <!-- VIRAL GRID -->
+        <h2 class="text-3xl helvetica-bold mb-8 uppercase tracking-tighter">Viral Hits</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 insta-grid mb-24">
+            <!-- All 18 Embeds go here -->
+            <div class="glass p-2 overflow-hidden"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DQsQvXmDqsa/"></blockquote></div>
+            <div class="glass p-2 overflow-hidden"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DbbkIuDKjTk/"></blockquote></div>
+            <div class="glass p-2 overflow-hidden"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DKdFg3LRSsX/"></blockquote></div>
+            <div class="glass p-2 overflow-hidden"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DYftPfsqb4c/"></blockquote></div>
+            <div class="glass p-2 overflow-hidden"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DYE2Rg8xc4J/"></blockquote></div>
+            <div class="glass p-2 overflow-hidden"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DbUBtVfKrYI/"></blockquote></div>
+            <div class="glass p-2 overflow-hidden"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DXIMNdQDt_8/"></blockquote></div>
+            <div class="glass p-2 overflow-hidden"><blockquote class="instagram-media" data-instgrm-permalink="http://instagram.com/p/DaQ6CVgqH1H/"></blockquote></div>
+            <div class="glass p-2 overflow-hidden"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DZffGVgu4OP/"></blockquote></div>
+            <div class="glass p-2 overflow-hidden"><blockquote class="instagram-media" data-instgrm-permalink="http://instagram.com/p/Dav-JdNKSYF/"></blockquote></div>
+            <div class="glass p-2 overflow-hidden"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DXjwun9kTj6/"></blockquote></div>
+            <div class="glass p-2 overflow-hidden"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DWhkhJtDoms/"></blockquote></div>
+            <div class="glass p-2 overflow-hidden"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DSV1FftDvS4/"></blockquote></div>
+            <div class="glass p-2 overflow-hidden"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DWAEGdIjsD1/"></blockquote></div>
+            <div class="glass p-2 overflow-hidden"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DZkdA5fuiKg/"></blockquote></div>
+            <div class="glass p-2 overflow-hidden"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Da5-qNzq2zB/"></blockquote></div>
+            <div class="glass p-2 overflow-hidden"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DOW-EVIDXpj/"></blockquote></div>
+            <div class="glass p-2 overflow-hidden"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CwTYkMrKPCK/"></blockquote></div>
+        </div>
+
+        <!-- ABOUT SECTION -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center mb-24">
+            <div class="md:col-span-4">
+                <img src="headshot.jpg" alt="Quinn Corcoran" class="w-full rounded-[40px] shadow-2xl border-4 border-white/10">
+            </div>
+            <div class="md:col-span-8 glass p-10">
+                <h2 class="text-4xl helvetica-bold mb-6 uppercase">About Quinn Corcoran</h2>
+                <div class="space-y-4 text-lg leading-relaxed opacity-90">
+                    <p>Quinn Corcoran is an <a href="https://www.spj.org/mark-of-excellence-awards-2020-national-winners-and-finalists/#:~:text=Digital%20News%20Videography-,National%20Winner,are%20the%20students%3F%20An%20enrollment%20investigation%0AQuinn%20Corcoran%2C%20University%20of%20Montana,-Watch%20online" target="_blank" class="text-cyan-400 underline">award-winning journalist</a> and social media expert passionate about the power of storytelling to inform, inspire, and connect.</p>
+                    <p>A recognized Gen Z culture expert and “viral content certified” creator, Quinn has helped brands transform their online presence through storytelling that feels real, relevant, and human.</p>
+                    <p>Before stepping into the world of brand storytelling, Quinn began his career in journalism, earning awards for his work as a reporter and video producer. Today, he brings that same curiosity and craft to digital media—where strategy meets creativity, and data meets emotion.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- INFLUENCER MANAGEMENT -->
+        <div class="glass p-10 mb-24">
+            <h2 class="text-4xl helvetica-bold mb-6 uppercase">Influencer Management</h2>
+            <p class="text-xl mb-8 opacity-80">I specialize in bridging the gap between high-performance brands and world-class creators. Managed budgets: Gold Eagle/303 Products ($285K+) & Seymour of Sycamore ($150K).</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="https://www.instagram.com/p/DKfBji1ugdG/" target="_blank" class="bg-white/10 p-6 rounded-2xl hover:bg-cyan-400 hover:text-black transition">
+                    <p class="text-xs uppercase helvetica-bold opacity-50 mb-2">Partner</p>
+                    <p class="text-lg helvetica-bold">Vaughn Gittin Jr. & RTR Performance</p>
+                </a>
+                <a href="https://www.instagram.com/p/DUT1lPAEmEl/" target="_blank" class="bg-white/10 p-6 rounded-2xl hover:bg-cyan-400 hover:text-black transition">
+                    <p class="text-xs uppercase helvetica-bold opacity-50 mb-2">Partner</p>
+                    <p class="text-lg helvetica-bold">OffRoadNChill</p>
+                </a>
+                <a href="https://www.instagram.com/p/DTstKfejrDC/" target="_blank" class="bg-white/10 p-6 rounded-2xl hover:bg-cyan-400 hover:text-black transition">
+                    <p class="text-xs uppercase helvetica-bold opacity-50 mb-2">Partner</p>
+                    <p class="text-lg helvetica-bold">FlexRocksandRollovers</p>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <script async src="//www.instagram.com/embed.js"></script>
+    <script>
+        // Delayed Ticker
+        setTimeout(() => {
+            document.getElementById('ticker-container').style.display = 'flex';
+        }, 2000);
+
+        // Mouse Blob
+        const blob = document.getElementById('blob');
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX - 250;
+            const y = e.clientY - 250;
+            blob.style.transform = `translate(${x}px, ${y}px)`;
+        });
+    </script>
+</body>
+</html>
