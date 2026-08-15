@@ -7,14 +7,12 @@
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
     
     <style>
         /* HELVETICA & GEN Z SOFT CLUB TYPOGRAPHY */
         body { 
             font-family: "Helvetica Neue", Helvetica, Arial, -apple-system, BlinkMacSystemFont, sans-serif;
-            background: #0b1120 url('background.jpg') no-repeat center center fixed; 
+            background: #0b1120 url('Background.jpg') no-repeat center center fixed; 
             background-size: cover;
             color: #ffffff;
             overflow-x: hidden;
@@ -26,9 +24,9 @@
 
         /* SOFT CLUB FROSTED GLASS PANELS */
         .soft-glass {
-            background: rgba(13, 22, 40, 0.75);
-            backdrop-filter: blur(24px) saturate(140%);
-            -webkit-backdrop-filter: blur(24px) saturate(140%);
+            background: rgba(13, 22, 40, 0.78);
+            backdrop-filter: blur(26px) saturate(140%);
+            -webkit-backdrop-filter: blur(26px) saturate(140%);
             border: 1px solid rgba(255, 255, 255, 0.18);
             box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.5);
         }
@@ -42,10 +40,10 @@
         }
 
         .soft-glass-card:hover {
-            background: rgba(255, 255, 255, 0.12);
-            border-color: rgba(56, 189, 248, 0.6);
+            background: rgba(255, 255, 255, 0.13);
+            border-color: rgba(56, 189, 248, 0.7);
             transform: translateY(-5px);
-            box-shadow: 0 25px 50px -12px rgba(56, 189, 248, 0.28);
+            box-shadow: 0 25px 50px -12px rgba(56, 189, 248, 0.3);
         }
 
         /* AMBIENT SOFT GLOW */
@@ -104,26 +102,33 @@
                 <a href="#about-quinn" class="hover:text-sky-300 transition">About</a>
             </div>
 
-            <a href="mailto:quinncorcoran@gmail.com" class="bg-gradient-to-r from-sky-400 to-cyan-300 hover:from-sky-300 hover:to-white text-slate-950 text-xs helvetica-bold uppercase px-5 py-2.5 rounded-full transition shadow-lg hover:shadow-sky-400/50">
-                Let's Talk
-            </a>
+            <div class="flex items-center gap-3">
+                <a href="resume.pdf" download class="bg-white hover:bg-neutral-100 text-slate-950 text-xs helvetica-bold uppercase px-4 sm:px-5 py-2.5 rounded-full transition shadow-md flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+                    Resume
+                </a>
+                <a href="mailto:quinncorcoran@gmail.com" class="hidden sm:inline-flex bg-gradient-to-r from-sky-400 to-cyan-300 hover:from-sky-300 hover:to-white text-slate-950 text-xs helvetica-bold uppercase px-5 py-2.5 rounded-full transition shadow-lg hover:shadow-sky-400/50">
+                    Let's Talk
+                </a>
+            </div>
         </div>
     </nav>
 
     <!-- BOTTOM FLOATING STATS TICKER -->
-    <div id="ticker-container" class="fixed bottom-0 left-0 w-full bg-gradient-to-r from-sky-400 via-teal-300 to-amber-300 text-slate-950 py-2.5 z-40 shadow-2xl flex items-center justify-between border-t border-white/30">
+    <div id="ticker-container" class="fixed bottom-0 left-0 w-full bg-gradient-to-r from-sky-400 via-teal-300 to-amber-300 text-slate-950 py-3 z-40 shadow-2xl flex items-center justify-between border-t border-white/40">
         <div class="ticker-wrap text-xs helvetica-bold uppercase tracking-wider">
             <div class="ticker-move">
-                ✦ 50M+ Organic Views &bull; ✦ 4.4M Single Reel Record &bull; ✦ 1M+ Engagements &bull; ✦ 100% Audience Growth &bull; ✦ $435K+ Managed Creator Budgets &bull; ✦ SPJ National Award-Winning Journalism &bull; ✦ Full Production & Editing &bull; 
-                ✦ 50M+ Organic Views &bull; ✦ 4.4M Single Reel Record &bull; ✦ 1M+ Engagements &bull; ✦ 100% Audience Growth &bull; ✦ $435K+ Managed Creator Budgets &bull; ✦ SPJ National Award-Winning Journalism &bull; ✦ Full Production & Editing &bull;
+                ✦ 50M+ Organic Views &bull; ✦ 4.4M Single Reel Record &bull; ✦ 1M+ Engagements &bull; ✦ 100% Audience Growth &bull; ✦ $435K+ Managed Creator Budgets &bull; ✦ SPJ National Award-Winning Journalism &bull; ✦ Full Production & Directing &bull; 
+                ✦ 50M+ Organic Views &bull; ✦ 4.4M Single Reel Record &bull; ✦ 1M+ Engagements &bull; ✦ 100% Audience Growth &bull; ✦ $435K+ Managed Creator Budgets &bull; ✦ SPJ National Award-Winning Journalism &bull; ✦ Full Production & Directing &bull;
             </div>
         </div>
-        <a href="resume.pdf" download class="hidden sm:flex items-center gap-1.5 bg-slate-950 text-white px-4 py-1.5 rounded-full text-xs helvetica-bold uppercase mr-4 whitespace-nowrap hover:bg-slate-800 transition">
-            <i data-lucide="download" class="w-3.5 h-3.5"></i> Resume
+        <a href="resume.pdf" download class="flex items-center gap-2 bg-slate-950 text-white px-5 py-2 rounded-full text-xs helvetica-bold uppercase mr-4 whitespace-nowrap hover:bg-slate-800 transition shadow-xl border border-white/20">
+            <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+            Download Resume (PDF)
         </a>
     </div>
 
-    <!-- MAIN CONTAINER -->
+    <!-- MAIN WRAPPER -->
     <main class="max-w-6xl mx-auto px-4 sm:px-6 pt-36 pb-36 relative z-10">
         
         <!-- HERO SECTION -->
@@ -141,11 +146,16 @@
             </p>
 
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="#viral-reels" class="bg-white text-slate-950 hover:bg-neutral-100 px-8 py-3.5 rounded-full helvetica-bold text-xs uppercase tracking-wider transition shadow-xl">
-                    View Viral Hits
+                <a href="resume.pdf" download class="bg-gradient-to-r from-sky-400 via-teal-300 to-amber-300 text-slate-950 px-8 py-4 rounded-full helvetica-bold text-sm uppercase tracking-wider transition shadow-2xl hover:scale-105 flex items-center gap-2.5">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+                    Download Resume
                 </a>
-                <a href="https://www.linkedin.com/in/quinn-corcoran1998/" target="_blank" class="soft-glass hover:bg-white/20 px-8 py-3.5 rounded-full helvetica-bold text-xs uppercase tracking-wider transition flex items-center gap-2 border border-white/20">
-                    <i data-lucide="linkedin" class="w-4 h-4 text-sky-300"></i> LinkedIn Profile
+                <a href="#viral-reels" class="bg-white text-slate-950 hover:bg-neutral-100 px-8 py-4 rounded-full helvetica-bold text-sm uppercase tracking-wider transition shadow-xl">
+                    View Portfolio
+                </a>
+                <a href="https://www.linkedin.com/in/quinn-corcoran1998/" target="_blank" class="soft-glass hover:bg-white/20 px-8 py-4 rounded-full helvetica-bold text-sm uppercase tracking-wider transition flex items-center gap-2 border border-white/20">
+                    <svg class="w-4 h-4 text-sky-400 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.62 1.62 0 1 0 0-3.24 1.62 1.62 0 0 0 0 3.24M7.85 18.5V10.1H5.07v8.4h2.78z"/></svg>
+                    LinkedIn
                 </a>
             </div>
 
@@ -153,11 +163,11 @@
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-16 text-left">
                 <div class="soft-glass p-6 rounded-3xl border border-white/20">
                     <span class="text-3xl sm:text-4xl helvetica-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-300 to-white">50M+</span>
-                    <p class="text-xs text-neutral-300 uppercase tracking-wider mt-1 font-mono">Organic Views</p>
+                    <p class="text-xs text-neutral-300 uppercase tracking-wider mt-1 font-mono">Organic Impressions</p>
                 </div>
                 <div class="soft-glass p-6 rounded-3xl border border-white/20">
                     <span class="text-3xl sm:text-4xl helvetica-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-white">4.4M</span>
-                    <p class="text-xs text-neutral-300 uppercase tracking-wider mt-1 font-mono">Top Single Video Reach</p>
+                    <p class="text-xs text-neutral-300 uppercase tracking-wider mt-1 font-mono">Top Single Reel Reach</p>
                 </div>
                 <div class="soft-glass p-6 rounded-3xl border border-white/20">
                     <span class="text-3xl sm:text-4xl helvetica-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-white">$435K+</span>
@@ -180,47 +190,46 @@
                     <h2 class="text-4xl sm:text-5xl helvetica-bold uppercase tracking-tight">Viral Hits & Content Engine</h2>
                 </div>
                 <p class="text-neutral-300 text-sm max-w-md mt-4 md:mt-0 font-light">
-                    Clean, uninhibited video viewports. Click any reel to launch the native on-page player.
+                    Clean, uninhibited video viewports. Click any reel to launch the native on-page theater player.
                 </p>
             </div>
 
-            <!-- REELS GRID -->
+            <!-- REELS GRID (ALL 8 REELS WITH BULLETPROOF SVGs) -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
                 <!-- 1. DYE2Rg8xc4J (4.4M Views - COLLAB LEAD) -->
                 <div class="soft-glass-card rounded-[32px] p-4 flex flex-col justify-between">
-                    <!-- CLEAN VIDEO VIEWPORT (NO CLUTTER) -->
                     <div class="aspect-reel w-full rounded-2xl bg-neutral-900 overflow-hidden relative border border-white/10 group cursor-pointer" onclick="openReelModal('DYE2Rg8xc4J', '4.4M Views Collab')">
                         <img src="thumb-1.jpg" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&auto=format&fit=crop&q=80'" alt="Reel Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition"></div>
                         <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="w-14 h-14 rounded-full bg-white/90 text-slate-950 flex items-center justify-center group-hover:scale-110 transition shadow-2xl">
-                                <i data-lucide="play" class="w-6 h-6 fill-slate-950 ml-1"></i>
+                            <div class="w-14 h-14 rounded-full bg-white/95 text-slate-950 flex items-center justify-center group-hover:scale-110 transition shadow-2xl">
+                                <svg class="w-7 h-7 fill-slate-950 ml-1" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                             </div>
                         </div>
                     </div>
 
-                    <!-- METRICS & DETAILS BELOW -->
                     <div class="mt-4 flex flex-col gap-3">
                         <div class="flex items-center justify-between">
                             <span class="bg-purple-500/30 text-purple-200 border border-purple-400/40 px-2.5 py-0.5 rounded-full text-[11px] font-bold font-mono">
                                 ✦ COLLAB
                             </span>
                             <span class="text-xs font-mono text-amber-300 font-bold flex items-center gap-1">
-                                <i data-lucide="eye" class="w-3.5 h-3.5"></i> 4.4M Views
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                4.4M Views
                             </span>
                         </div>
                         <p class="text-sm font-semibold text-white leading-tight">Creator Partnership & High-Impact Demo</p>
                         
                         <div class="grid grid-cols-2 gap-1.5 text-[11px] font-mono text-neutral-300 bg-white/5 p-2 rounded-xl border border-white/5">
-                            <span class="flex items-center gap-1"><i data-lucide="heart" class="w-3 h-3 text-rose-400"></i> 20K Likes</span>
-                            <span class="flex items-center gap-1"><i data-lucide="message-circle" class="w-3 h-3 text-sky-400"></i> 440 Cmts</span>
-                            <span class="flex items-center gap-1"><i data-lucide="repeat" class="w-3 h-3 text-emerald-400"></i> 15 Reposts</span>
-                            <span class="flex items-center gap-1"><i data-lucide="share-2" class="w-3 h-3 text-amber-400"></i> 68 Shares</span>
+                            <span class="flex items-center gap-1">❤️ 20K Likes</span>
+                            <span class="flex items-center gap-1">💬 440 Cmts</span>
+                            <span class="flex items-center gap-1">🔁 15 Reposts</span>
+                            <span class="flex items-center gap-1">↗️ 68 Shares</span>
                         </div>
 
                         <a href="https://www.instagram.com/p/DYE2Rg8xc4J/?hl=en" target="_blank" class="w-full text-center py-2 rounded-xl bg-white/5 hover:bg-sky-400 hover:text-black transition text-xs font-mono text-neutral-300 flex items-center justify-center gap-1.5">
-                            View on Instagram <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                            View on Instagram <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
                         </a>
                     </div>
                 </div>
@@ -231,8 +240,8 @@
                         <img src="thumb-2.jpg" onerror="this.src='https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=600&auto=format&fit=crop&q=80'" alt="Reel Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition"></div>
                         <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="w-14 h-14 rounded-full bg-white/90 text-slate-950 flex items-center justify-center group-hover:scale-110 transition shadow-2xl">
-                                <i data-lucide="play" class="w-6 h-6 fill-slate-950 ml-1"></i>
+                            <div class="w-14 h-14 rounded-full bg-white/95 text-slate-950 flex items-center justify-center group-hover:scale-110 transition shadow-2xl">
+                                <svg class="w-7 h-7 fill-slate-950 ml-1" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                             </div>
                         </div>
                     </div>
@@ -243,20 +252,21 @@
                                 🔥 VIRAL
                             </span>
                             <span class="text-xs font-mono text-sky-300 font-bold flex items-center gap-1">
-                                <i data-lucide="eye" class="w-3.5 h-3.5"></i> 555K Views
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                555K Views
                             </span>
                         </div>
                         <p class="text-sm font-semibold text-white leading-tight">Industrial Strength Stress Test</p>
                         
                         <div class="grid grid-cols-2 gap-1.5 text-[11px] font-mono text-neutral-300 bg-white/5 p-2 rounded-xl border border-white/5">
-                            <span class="flex items-center gap-1"><i data-lucide="heart" class="w-3 h-3 text-rose-400"></i> 3.9K Likes</span>
-                            <span class="flex items-center gap-1"><i data-lucide="message-circle" class="w-3 h-3 text-sky-400"></i> 142 Cmts</span>
-                            <span class="flex items-center gap-1"><i data-lucide="repeat" class="w-3 h-3 text-emerald-400"></i> 20 Reposts</span>
-                            <span class="flex items-center gap-1"><i data-lucide="share-2" class="w-3 h-3 text-amber-400"></i> 661 Shares</span>
+                            <span class="flex items-center gap-1">❤️ 3.9K Likes</span>
+                            <span class="flex items-center gap-1">💬 142 Cmts</span>
+                            <span class="flex items-center gap-1">🔁 20 Reposts</span>
+                            <span class="flex items-center gap-1">↗️ 661 Shares</span>
                         </div>
 
                         <a href="https://www.instagram.com/p/DQsQvXmDqsa/" target="_blank" class="w-full text-center py-2 rounded-xl bg-white/5 hover:bg-sky-400 hover:text-black transition text-xs font-mono text-neutral-300 flex items-center justify-center gap-1.5">
-                            View on Instagram <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                            View on Instagram <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
                         </a>
                     </div>
                 </div>
@@ -267,8 +277,8 @@
                         <img src="thumb-3.jpg" onerror="this.src='https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=600&auto=format&fit=crop&q=80'" alt="Reel Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition"></div>
                         <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="w-14 h-14 rounded-full bg-white/90 text-slate-950 flex items-center justify-center group-hover:scale-110 transition shadow-2xl">
-                                <i data-lucide="play" class="w-6 h-6 fill-slate-950 ml-1"></i>
+                            <div class="w-14 h-14 rounded-full bg-white/95 text-slate-950 flex items-center justify-center group-hover:scale-110 transition shadow-2xl">
+                                <svg class="w-7 h-7 fill-slate-950 ml-1" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                             </div>
                         </div>
                     </div>
@@ -279,426 +289,37 @@
                                 🎧 ASMR VIRAL
                             </span>
                             <span class="text-xs font-mono text-sky-300 font-bold flex items-center gap-1">
-                                <i data-lucide="eye" class="w-3.5 h-3.5"></i> 527K Views
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                527K Views
                             </span>
                         </div>
                         <p class="text-sm font-semibold text-white leading-tight">Satisfying Texture & Application Audio</p>
                         
                         <div class="grid grid-cols-2 gap-1.5 text-[11px] font-mono text-neutral-300 bg-white/5 p-2 rounded-xl border border-white/5">
-                            <span class="flex items-center gap-1"><i data-lucide="heart" class="w-3 h-3 text-rose-400"></i> 5.5K Likes</span>
-                            <span class="flex items-center gap-1"><i data-lucide="message-circle" class="w-3 h-3 text-sky-400"></i> 187 Cmts</span>
-                            <span class="flex items-center gap-1"><i data-lucide="repeat" class="w-3 h-3 text-emerald-400"></i> 55 Reposts</span>
-                            <span class="flex items-center gap-1"><i data-lucide="share-2" class="w-3 h-3 text-amber-400"></i> 3.2K Shares</span>
+                            <span class="flex items-center gap-1">❤️ 5.5K Likes</span>
+                            <span class="flex items-center gap-1">💬 187 Cmts</span>
+                            <span class="flex items-center gap-1">🔁 55 Reposts</span>
+                            <span class="flex items-center gap-1">↗️ 3.2K Shares</span>
                         </div>
 
                         <a href="https://www.instagram.com/p/DWAEGdIjsD1/?hl=en" target="_blank" class="w-full text-center py-2 rounded-xl bg-white/5 hover:bg-sky-400 hover:text-black transition text-xs font-mono text-neutral-300 flex items-center justify-center gap-1.5">
-                            View on Instagram <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                            View on Instagram <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
                         </a>
                     </div>
                 </div>
 
-                <!-- 4. DU_VfcGD8n8 (483K Views - VIRAL ORGANIC INFLUENCER PROMO) -->
+                <!-- 4. DU_VfcGD8n8 (483K Views - VIRAL INFLUENCER PROMO) -->
                 <div class="soft-glass-card rounded-[32px] p-4 flex flex-col justify-between">
                     <div class="aspect-reel w-full rounded-2xl bg-neutral-900 overflow-hidden relative border border-white/10 group cursor-pointer" onclick="openReelModal('DU_VfcGD8n8', '483K Views Influencer Promo')">
                         <img src="thumb-4.jpg" onerror="this.src='https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&auto=format&fit=crop&q=80'" alt="Reel Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition"></div>
                         <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="w-14 h-14 rounded-full bg-white/90 text-slate-950 flex items-center justify-center group-hover:scale-110 transition shadow-2xl">
-                                <i data-lucide="play" class="w-6 h-6 fill-slate-950 ml-1"></i>
+                            <div class="w-14 h-14 rounded-full bg-white/95 text-slate-950 flex items-center justify-center group-hover:scale-110 transition shadow-2xl">
+                                <svg class="w-7 h-7 fill-slate-950 ml-1" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                             </div>
                         </div>
                     </div>
 
                     <div class="mt-4 flex flex-col gap-3">
                         <div class="flex items-center justify-between">
-                            <span class="bg-amber-500/30 text-amber-200 border border-amber-400/40 px-2.5 py-0.5 rounded-full text-[10px] font-bold font-mono">
-                                🚀 INFLUENCER PROMO
-                            </span>
-                            <span class="text-xs font-mono text-amber-300 font-bold flex items-center gap-1">
-                                <i data-lucide="eye" class="w-3.5 h-3.5"></i> 483K Views
-                            </span>
-                        </div>
-                        <p class="text-sm font-semibold text-white leading-tight">Organic Creator Integration & Campaign</p>
-                        
-                        <div class="grid grid-cols-2 gap-1.5 text-[11px] font-mono text-neutral-300 bg-white/5 p-2 rounded-xl border border-white/5">
-                            <span class="flex items-center gap-1"><i data-lucide="heart" class="w-3 h-3 text-rose-400"></i> 16.2K Likes</span>
-                            <span class="flex items-center gap-1"><i data-lucide="message-circle" class="w-3 h-3 text-sky-400"></i> 262 Cmts</span>
-                            <span class="flex items-center gap-1"><i data-lucide="repeat" class="w-3 h-3 text-emerald-400"></i> 149 Reposts</span>
-                            <span class="flex items-center gap-1"><i data-lucide="share-2" class="w-3 h-3 text-amber-400"></i> 7.2K Shares</span>
-                        </div>
-
-                        <a href="https://www.instagram.com/p/DU_VfcGD8n8/?hl=en" target="_blank" class="w-full text-center py-2 rounded-xl bg-white/5 hover:bg-sky-400 hover:text-black transition text-xs font-mono text-neutral-300 flex items-center justify-center gap-1.5">
-                            View on Instagram <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 5. DYftPfsqb4c (212K Views) -->
-                <div class="soft-glass-card rounded-[32px] p-4 flex flex-col justify-between">
-                    <div class="aspect-reel w-full rounded-2xl bg-neutral-900 overflow-hidden relative border border-white/10 group cursor-pointer" onclick="openReelModal('DYftPfsqb4c', '212K Views How-To')">
-                        <img src="thumb-5.jpg" onerror="this.src='https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&auto=format&fit=crop&q=80'" alt="Reel Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="w-14 h-14 rounded-full bg-white/90 text-slate-950 flex items-center justify-center group-hover:scale-110 transition shadow-2xl">
-                                <i data-lucide="play" class="w-6 h-6 fill-slate-950 ml-1"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-4 flex flex-col gap-3">
-                        <div class="flex items-center justify-between">
-                            <span class="bg-white/20 text-white border border-white/30 px-2.5 py-0.5 rounded-full text-[11px] font-bold font-mono">
-                                ✦ HOW-TO
-                            </span>
-                            <span class="text-xs font-mono text-neutral-200 font-bold flex items-center gap-1">
-                                <i data-lucide="eye" class="w-3.5 h-3.5"></i> 212K Views
-                            </span>
-                        </div>
-                        <p class="text-sm font-semibold text-white leading-tight">Nozzle Agitation & Pro Tips</p>
-                        
-                        <div class="grid grid-cols-2 gap-1.5 text-[11px] font-mono text-neutral-300 bg-white/5 p-2 rounded-xl border border-white/5">
-                            <span class="flex items-center gap-1"><i data-lucide="heart" class="w-3 h-3 text-rose-400"></i> 2K Likes</span>
-                            <span class="flex items-center gap-1"><i data-lucide="message-circle" class="w-3 h-3 text-sky-400"></i> 86 Cmts</span>
-                            <span class="flex items-center gap-1"><i data-lucide="repeat" class="w-3 h-3 text-emerald-400"></i> 7 Reposts</span>
-                            <span class="flex items-center gap-1"><i data-lucide="share-2" class="w-3 h-3 text-amber-400"></i> 223 Shares</span>
-                        </div>
-
-                        <a href="https://www.instagram.com/p/DYftPfsqb4c/?hl=en" target="_blank" class="w-full text-center py-2 rounded-xl bg-white/5 hover:bg-sky-400 hover:text-black transition text-xs font-mono text-neutral-300 flex items-center justify-center gap-1.5">
-                            View on Instagram <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 6. DOW-EVIDXpj (150K Views) -->
-                <div class="soft-glass-card rounded-[32px] p-4 flex flex-col justify-between">
-                    <div class="aspect-reel w-full rounded-2xl bg-neutral-900 overflow-hidden relative border border-white/10 group cursor-pointer" onclick="openReelModal('DOW-EVIDXpj', '150K Views Demo')">
-                        <img src="thumb-6.jpg" onerror="this.src='https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=600&auto=format&fit=crop&q=80'" alt="Reel Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="w-14 h-14 rounded-full bg-white/90 text-slate-950 flex items-center justify-center group-hover:scale-110 transition shadow-2xl">
-                                <i data-lucide="play" class="w-6 h-6 fill-slate-950 ml-1"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-4 flex flex-col gap-3">
-                        <div class="flex items-center justify-between">
-                            <span class="bg-white/20 text-white border border-white/30 px-2.5 py-0.5 rounded-full text-[11px] font-bold font-mono">
-                                ✦ SPOTLIGHT
-                            </span>
-                            <span class="text-xs font-mono text-neutral-200 font-bold flex items-center gap-1">
-                                <i data-lucide="eye" class="w-3.5 h-3.5"></i> 150K Views
-                            </span>
-                        </div>
-                        <p class="text-sm font-semibold text-white leading-tight">Product Feature & Coverage Demo</p>
-                        
-                        <div class="grid grid-cols-2 gap-1.5 text-[11px] font-mono text-neutral-300 bg-white/5 p-2 rounded-xl border border-white/5">
-                            <span class="flex items-center gap-1"><i data-lucide="heart" class="w-3 h-3 text-rose-400"></i> 2K Likes</span>
-                            <span class="flex items-center gap-1"><i data-lucide="message-circle" class="w-3 h-3 text-sky-400"></i> 14 Cmts</span>
-                            <span class="flex items-center gap-1"><i data-lucide="repeat" class="w-3 h-3 text-emerald-400"></i> 1 Repost</span>
-                            <span class="flex items-center gap-1"><i data-lucide="share-2" class="w-3 h-3 text-amber-400"></i> 7 Shares</span>
-                        </div>
-
-                        <a href="https://www.instagram.com/p/DOW-EVIDXpj/?hl=en" target="_blank" class="w-full text-center py-2 rounded-xl bg-white/5 hover:bg-sky-400 hover:text-black transition text-xs font-mono text-neutral-300 flex items-center justify-center gap-1.5">
-                            View on Instagram <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 7. DXIMNdQDt_8 (125K Views) -->
-                <div class="soft-glass-card rounded-[32px] p-4 flex flex-col justify-between">
-                    <div class="aspect-reel w-full rounded-2xl bg-neutral-900 overflow-hidden relative border border-white/10 group cursor-pointer" onclick="openReelModal('DXIMNdQDt_8', '125K Views Spotlight')">
-                        <img src="thumb-7.jpg" onerror="this.src='https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=600&auto=format&fit=crop&q=80'" alt="Reel Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="w-14 h-14 rounded-full bg-white/90 text-slate-950 flex items-center justify-center group-hover:scale-110 transition shadow-2xl">
-                                <i data-lucide="play" class="w-6 h-6 fill-slate-950 ml-1"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-4 flex flex-col gap-3">
-                        <div class="flex items-center justify-between">
-                            <span class="bg-white/20 text-white border border-white/30 px-2.5 py-0.5 rounded-full text-[11px] font-bold font-mono">
-                                ✦ COMMUNITY
-                            </span>
-                            <span class="text-xs font-mono text-neutral-200 font-bold flex items-center gap-1">
-                                <i data-lucide="eye" class="w-3.5 h-3.5"></i> 125K Views
-                            </span>
-                        </div>
-                        <p class="text-sm font-semibold text-white leading-tight">Field Application & Community Spotlight</p>
-                        
-                        <div class="grid grid-cols-2 gap-1.5 text-[11px] font-mono text-neutral-300 bg-white/5 p-2 rounded-xl border border-white/5">
-                            <span class="flex items-center gap-1"><i data-lucide="heart" class="w-3 h-3 text-rose-400"></i> 1K Likes</span>
-                            <span class="flex items-center gap-1"><i data-lucide="message-circle" class="w-3 h-3 text-sky-400"></i> 26 Cmts</span>
-                            <span class="flex items-center gap-1"><i data-lucide="repeat" class="w-3 h-3 text-emerald-400"></i> 6 Reposts</span>
-                            <span class="flex items-center gap-1"><i data-lucide="share-2" class="w-3 h-3 text-amber-400"></i> 82 Shares</span>
-                        </div>
-
-                        <a href="https://www.instagram.com/p/DXIMNdQDt_8/?hl=en" target="_blank" class="w-full text-center py-2 rounded-xl bg-white/5 hover:bg-sky-400 hover:text-black transition text-xs font-mono text-neutral-300 flex items-center justify-center gap-1.5">
-                            View on Instagram <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 8. DbbkIuDKjTk (115K Views) -->
-                <div class="soft-glass-card rounded-[32px] p-4 flex flex-col justify-between">
-                    <div class="aspect-reel w-full rounded-2xl bg-neutral-900 overflow-hidden relative border border-white/10 group cursor-pointer" onclick="openReelModal('DbbkIuDKjTk', '115K Views Transformation')">
-                        <img src="thumb-8.jpg" onerror="this.src='https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&auto=format&fit=crop&q=80'" alt="Reel Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="w-14 h-14 rounded-full bg-white/90 text-slate-950 flex items-center justify-center group-hover:scale-110 transition shadow-2xl">
-                                <i data-lucide="play" class="w-6 h-6 fill-slate-950 ml-1"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-4 flex flex-col gap-3">
-                        <div class="flex items-center justify-between">
-                            <span class="bg-sky-500/30 text-sky-200 border border-sky-400/40 px-2.5 py-0.5 rounded-full text-[11px] font-bold font-mono">
-                                ⚡ TRENDING
-                            </span>
-                            <span class="text-xs font-mono text-neutral-200 font-bold flex items-center gap-1">
-                                <i data-lucide="eye" class="w-3.5 h-3.5"></i> 115K Views
-                            </span>
-                        </div>
-                        <p class="text-sm font-semibold text-white leading-tight">Restoration & Surface Transformation</p>
-                        
-                        <div class="grid grid-cols-2 gap-1.5 text-[11px] font-mono text-neutral-300 bg-white/5 p-2 rounded-xl border border-white/5">
-                            <span class="flex items-center gap-1"><i data-lucide="heart" class="w-3 h-3 text-rose-400"></i> 5K Likes</span>
-                            <span class="flex items-center gap-1"><i data-lucide="repeat" class="w-3 h-3 text-emerald-400"></i> 38 Reposts</span>
-                            <span class="flex items-center gap-1 col-span-2 justify-center"><i data-lucide="share-2" class="w-3 h-3 text-amber-400"></i> 473 Shares</span>
-                        </div>
-
-                        <a href="https://www.instagram.com/p/DbbkIuDKjTk/" target="_blank" class="w-full text-center py-2 rounded-xl bg-white/5 hover:bg-sky-400 hover:text-black transition text-xs font-mono text-neutral-300 flex items-center justify-center gap-1.5">
-                            View on Instagram <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- YOUTUBE & COMMERCIAL VIDEO PRODUCTIONS -->
-        <section id="youtube-productions" class="mb-32">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-                <div>
-                    <span class="px-2.5 py-0.5 rounded-md bg-amber-400/20 border border-amber-400/40 text-amber-200 font-mono text-[11px] uppercase tracking-wider block w-fit mb-2">Production & Directing</span>
-                    <h2 class="text-4xl sm:text-5xl helvetica-bold uppercase tracking-tight">Commercial & Long-Form Works</h2>
-                </div>
-                <p class="text-neutral-300 text-sm max-w-md mt-4 md:mt-0 font-light">
-                    Concept to final export: Scripting, high-CRI lighting, multi-cam shooting (Sony/Panasonic), sound design, and color grading.
-                </p>
-            </div>
-
-            <!-- 3 SEYMOUR VIDEO PRODUCTIONS -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
-
-                <!-- Video 1: Seymour MRO Industrial Enamel -->
-                <div class="soft-glass rounded-[32px] p-5 flex flex-col justify-between border border-white/20">
-                    <div>
-                        <div class="aspect-video w-full rounded-2xl bg-slate-900 overflow-hidden relative mb-5 shadow-2xl border border-white/10">
-                            <!-- Replace with your YouTube Embed ID -->
-                            <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Seymour MRO High Solids Enamel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <span class="text-[10px] font-mono uppercase tracking-wider text-sky-300 bg-sky-400/10 border border-sky-400/30 px-2.5 py-1 rounded-full">
-                            Product Commercial
-                        </span>
-                        <h3 class="text-xl helvetica-bold mt-3 mb-2">Seymour MRO: High Solids Industrial Enamel</h3>
-                        <p class="text-neutral-300 text-xs leading-relaxed">
-                            Written and directed commercial spot demonstrating 2X coverage formulation, corrosion prevention, and OSHA-matched industrial coatings.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-3 border-t border-white/10 flex justify-between text-[11px] font-mono text-neutral-400">
-                        <span>Role: Director & DP</span>
-                        <span>Client: Seymour</span>
-                    </div>
-                </div>
-
-                <!-- Video 2: Spray Painting Tips -->
-                <div class="soft-glass rounded-[32px] p-5 flex flex-col justify-between border border-white/20">
-                    <div>
-                        <div class="aspect-video w-full rounded-2xl bg-slate-900 overflow-hidden relative mb-5 shadow-2xl border border-white/10">
-                            <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Spray Painting Pro Tips & Tricks" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <span class="text-[10px] font-mono uppercase tracking-wider text-amber-200 bg-amber-400/10 border border-amber-400/30 px-2.5 py-1 rounded-full">
-                            Educational / How-To
-                        </span>
-                        <h3 class="text-xl helvetica-bold mt-3 mb-2">Spray Painting Tips: Prep, Priming & Clog Prevention</h3>
-                        <p class="text-neutral-300 text-xs leading-relaxed">
-                            Fast-paced customer education video explaining 2-minute agitation, degreasing prep, and inverted spray clearing to eliminate nozzle clogs.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-3 border-t border-white/10 flex justify-between text-[11px] font-mono text-neutral-400">
-                        <span>Role: Host & Videographer</span>
-                        <span>Client: Seymour</span>
-                    </div>
-                </div>
-
-                <!-- Video 3: Stool Restoration Project (Brandon / Seymour Crew) -->
-                <div class="soft-glass rounded-[32px] p-5 flex flex-col justify-between border border-white/20">
-                    <div>
-                        <div class="aspect-video w-full rounded-2xl bg-slate-900 overflow-hidden relative mb-5 shadow-2xl border border-white/10">
-                            <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Restoring Bar Stools with Seymour 2K Clear & Stainless Steel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <span class="text-[10px] font-mono uppercase tracking-wider text-rose-300 bg-rose-400/10 border border-rose-400/30 px-2.5 py-1 rounded-full">
-                            Restoration Project
-                        </span>
-                        <h3 class="text-xl helvetica-bold mt-3 mb-2">Bar Stool Refurbishing: 16-45 Converter & 2K Clear</h3>
-                        <p class="text-neutral-300 text-xs leading-relaxed">
-                            Step-by-step restoration documenting rust removal, 16-45 Rust-to-Primer application, 316L Stainless-Steel coating, and 2K activated clear coat.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-3 border-t border-white/10 flex justify-between text-[11px] font-mono text-neutral-400">
-                        <span>Role: Producer & Editor</span>
-                        <span>Client: Seymour Crew</span>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- JOURNALISM & DOCUMENTARY HIGHLIGHTS (KAIMIN) -->
-            <div class="soft-glass p-8 rounded-[36px] border border-white/20">
-                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
-                    <div>
-                        <span class="text-xs font-mono uppercase text-sky-300 tracking-wider">Investigative Reporting & Visual Journalism</span>
-                        <h3 class="text-2xl helvetica-bold uppercase mt-1">The Montana Kaimin & Award-Winning Series</h3>
-                    </div>
-                    <span class="bg-amber-300 text-slate-950 text-xs px-4 py-1.5 rounded-full font-bold font-mono shadow-md flex items-center gap-1.5">
-                        <i data-lucide="award" class="w-4 h-4"></i> SPJ Mark of Excellence Winner
-                    </span>
-                </div>
-                <p class="text-neutral-300 text-sm leading-relaxed mb-6 font-light">
-                    Led a team of 4 photojournalists and videographers producing weekly documentary packages. Grounded in investigative rigor, interview pacing, and high-trust storytelling.
-                </p>
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                    <a href="https://www.spj.org/mark-of-excellence-awards-2020-national-winners-and-finalists/#:~:text=Digital%20News%20Videography-,National%20Winner" target="_blank" class="soft-glass-card hover:bg-white hover:text-slate-950 p-4 rounded-2xl transition group">
-                        <p class="text-[11px] text-neutral-400 group-hover:text-slate-700 font-mono">National Winner</p>
-                        <p class="text-sm font-bold mt-1">Enrollment Probe &rarr;</p>
-                    </a>
-                    <a href="https://quinncorcoran.myportfolio.com/" target="_blank" class="soft-glass-card hover:bg-white hover:text-slate-950 p-4 rounded-2xl transition group">
-                        <p class="text-[11px] text-neutral-400 group-hover:text-slate-700 font-mono">Docuseries</p>
-                        <p class="text-sm font-bold mt-1">Art Talks &rarr;</p>
-                    </a>
-                    <a href="https://quinncorcoran.myportfolio.com/" target="_blank" class="soft-glass-card hover:bg-white hover:text-slate-950 p-4 rounded-2xl transition group">
-                        <p class="text-[11px] text-neutral-400 group-hover:text-slate-700 font-mono">Mini-Doc</p>
-                        <p class="text-sm font-bold mt-1">Ghost Hunt &rarr;</p>
-                    </a>
-                    <a href="https://quinncorcoran.myportfolio.com/" target="_blank" class="soft-glass-card hover:bg-white hover:text-slate-950 p-4 rounded-2xl transition group">
-                        <p class="text-[11px] text-neutral-400 group-hover:text-slate-700 font-mono">Feature Reel</p>
-                        <p class="text-sm font-bold mt-1">Ducks &rarr;</p>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- INFLUENCER MANAGEMENT -->
-        <section id="influencer-partners" class="soft-glass p-8 sm:p-12 rounded-[40px] mb-32 border border-white/20 relative overflow-hidden">
-            <div class="max-w-3xl mb-10">
-                <span class="px-2.5 py-0.5 rounded-md bg-purple-400/20 border border-purple-400/40 text-purple-200 font-mono text-[11px] uppercase tracking-wider block w-fit mb-2">Creator Partnerships</span>
-                <h2 class="text-4xl helvetica-bold uppercase mb-4">Influencer Strategy & Budget Direction</h2>
-                <p class="text-neutral-200 text-base sm:text-lg leading-relaxed font-light">
-                    Connecting industrial and automotive brands with top-tier talent. Managed <strong class="text-white font-semibold">$285,000 at 303 Products</strong> and <strong class="text-white font-semibold">$150,000 at Seymour of Sycamore</strong> to build loyal communities and organic referral loops.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <a href="https://www.instagram.com/p/DKfBji1ugdG/" target="_blank" class="soft-glass-card p-6 rounded-3xl hover:border-sky-400 transition group flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-mono uppercase text-sky-300">Drift / Performance</span>
-                            <i data-lucide="arrow-up-right" class="w-4 h-4 text-neutral-400 group-hover:text-sky-300"></i>
-                        </div>
-                        <p class="text-lg helvetica-bold mb-1 text-white group-hover:text-sky-300 transition">Vaughn Gittin Jr. & RTR</p>
-                        <p class="text-xs text-neutral-300">Pro motorsport campaign & trackside content series.</p>
-                    </div>
-                </a>
-
-                <a href="https://www.instagram.com/p/DUT1lPAEmEl/" target="_blank" class="soft-glass-card p-6 rounded-3xl hover:border-sky-400 transition group flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-mono uppercase text-sky-300">Overland / Offroad</span>
-                            <i data-lucide="arrow-up-right" class="w-4 h-4 text-neutral-400 group-hover:text-sky-300"></i>
-                        </div>
-                        <p class="text-lg helvetica-bold mb-1 text-white group-hover:text-sky-300 transition">OffRoadNChill</p>
-                        <p class="text-xs text-neutral-300">Expedition lifestyle seeding & extreme durability testing.</p>
-                    </div>
-                </a>
-
-                <a href="https://www.instagram.com/p/DTstKfejrDC/" target="_blank" class="soft-glass-card p-6 rounded-3xl hover:border-sky-400 transition group flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-mono uppercase text-sky-300">Rock Crawling</span>
-                            <i data-lucide="arrow-up-right" class="w-4 h-4 text-neutral-400 group-hover:text-sky-300"></i>
-                        </div>
-                        <p class="text-lg helvetica-bold mb-1 text-white group-hover:text-sky-300 transition">FlexRocksandRollovers</p>
-                        <p class="text-xs text-neutral-300">Chassis coating trials, live demos, and community meetups.</p>
-                    </div>
-                </a>
-            </div>
-        </section>
-
-        <!-- STRATEGY & SKILLS MATRIX -->
-        <section id="strategy-skills" class="mb-32">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="px-2.5 py-0.5 rounded-md bg-sky-400/20 border border-sky-400/40 text-sky-300 font-mono text-[11px] uppercase tracking-wider">Strategic Toolbox</span>
-                <h2 class="text-4xl sm:text-5xl helvetica-bold uppercase tracking-tight mt-2">Skills & Digital Strategy</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="soft-glass p-8 rounded-[36px] border border-white/20">
-                    <div class="w-12 h-12 rounded-2xl bg-sky-400/20 text-sky-300 flex items-center justify-center mb-6">
-                        <i data-lucide="line-chart" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl helvetica-bold mb-3">Analytics & Paid Ads</h3>
-                    <ul class="space-y-2.5 text-xs font-mono text-neutral-200">
-                        <li>✦ Meta & TikTok Paid Ads Management</li>
-                        <li>✦ Google Analytics & Custom KPI Dashboards</li>
-                        <li>✦ A/B Creative Testing & Funnel Optimization</li>
-                        <li>✦ Amazon Store & eCommerce Conversion</li>
-                    </ul>
-                </div>
-
-                <div class="soft-glass p-8 rounded-[36px] border border-white/20">
-                    <div class="w-12 h-12 rounded-2xl bg-amber-400/20 text-amber-200 flex items-center justify-center mb-6">
-                        <i data-lucide="camera" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl helvetica-bold mb-3">Cinematography & Gear</h3>
-                    <ul class="space-y-2.5 text-xs font-mono text-neutral-200">
-                        <li>✦ Sony FX / Canon Cinema / Panasonic Systems</li>
-                        <li>✦ High-CRI Continuous Lighting & Studio Audio</li>
-                        <li>✦ Premiere Pro, After Effects, DaVinci Resolve</li>
-                        <li>✦ Commercial Product & Macro Photography</li>
-                    </ul>
-                </div>
-
-                <div class="soft-glass p-8 rounded-[36px] border border-white/20">
-                    <div class="w-12 h-12 rounded-2xl bg-rose-400/20 text-rose-300 flex items-center justify-center mb-6">
-                        <i data-lucide="globe" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl helvetica-bold mb-3">Community & Web</h3>
-                    <ul class="space-y-2.5 text-xs font-mono text-neutral-200">
-                        <li>✦ Multi-Channel Social Content Calendaring</li>
-                        <li>✦ WordPress CMS, Basic CSS & HTML5</li>
-                        <li>✦ Brand Voice, Copywriting & PR Management</li>
-                        <li>✦ Cross-Platform Community Engagement</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- ABOUT ME -->
-        <section id="about-quinn" class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center mb-24">
-            <div class="md:col-span-4">
-                <div class="relative">
-                    <img src="headshot.jpg" alt="Quinn Corcoran" class="w-full rounded-[40px] shadow-2xl border-2 border-white/20 aspect-square object-cover">
-                    <div class="absolute -bottom-3 -right-3 bg-white text-slate-950 px-4 py-2 rounded-2xl text-xs helvetica-bold uppercase shadow-2xl font-mono">
-                        Chicago, IL 📍
-                    </div>
-                </div>
-            </div>
-
-            <div class="md:col-span-8 soft-glass p-8 sm:p-12 rounded-[40px] border border-white/20">
-                <span class="text-xs font-mono uppercase text-sky-300 tracking-wider block mb-2">// Storyteller Profile</span>
-                <h2 class="text-4xl helvetica-bold mb-6 uppercase">About Quinn Corcoran</h2>
-                <div clas
+                            <span class=
