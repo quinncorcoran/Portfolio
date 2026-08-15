@@ -1,107 +1,572 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Soft Club</title>
+    <title>Quinn Corcoran | Content Creator & Social Media Strategist</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
     <style>
-        :root { --bg: #030712; --accent: #22d3ee; }
-        body { background-color: var(--bg); color: white; font-family: 'Inter', sans-serif; overflow-x: hidden; }
-        h1, h2 { font-family: 'Syne', sans-serif; }
-
-        /* THE GRAIN/NOISE OVERLAY */
-        .noise {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: url('https://grainy-gradients.vercel.app/noise.svg');
-            opacity: 0.05; pointer-events: none; z-index: 50;
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #090d16;
+            color: #ffffff;
+            overflow-x: hidden;
         }
 
-        /* INTERACTIVE BLOB */
-        #blob {
-            position: fixed; width: 600px; height: 600px;
-            background: radial-gradient(circle, rgba(34, 211, 238, 0.15) 0%, rgba(0,0,0,0) 70%);
-            border-radius: 50%; z-index: -1; filter: blur(100px);
-            transition: transform 0.15s ease-out; pointer-events: none;
-        }
+        .helvetica-bold { font-weight: 800; letter-spacing: -0.04em; }
+        .helvetica-medium { font-weight: 600; letter-spacing: -0.02em; }
+        .helvetica-light { font-weight: 300; letter-spacing: 0.02em; }
 
         /* GLASSMORPHISM */
-        .glass {
-            background: rgba(255, 255, 255, 0.03);
+        .glass-panel {
+            background: rgba(18, 24, 38, 0.7);
             backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 24px;
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .glass-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(34, 211, 238, 0.4);
+            box-shadow: 0 15px 35px -10px rgba(6, 182, 212, 0.25);
         }
 
-        .stat-card:hover { border-color: var(--accent); transform: translateY(-5px); transition: all 0.3s ease; }
+        /* AMBIENT BACKGROUND GLOW */
+        #blob {
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, rgba(59, 130, 246, 0.08) 40%, rgba(0,0,0,0) 70%);
+            border-radius: 50%;
+            z-index: 0;
+            filter: blur(100px);
+            pointer-events: none;
+            transition: transform 0.15s ease-out;
+        }
+
+        /* TICKER ANIMATION */
+        .ticker-wrap {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .ticker-move {
+            display: inline-block;
+            animation: ticker 35s linear infinite;
+        }
+
+        @keyframes ticker {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-50%, 0, 0); }
+        }
+
+        /* 9:16 Aspect Ratio */
+        .aspect-reel {
+            aspect-ratio: 9 / 16;
+        }
     </style>
 </head>
-<body>
-    <div class="noise"></div>
+<body class="helvetica-light relative selection:bg-cyan-500 selection:text-black">
+
     <div id="blob"></div>
 
-    <main class="max-w-6xl mx-auto px-6 py-12 md:py-24">
-        <!-- HERO GRID -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+    <!-- NAVIGATION BAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 px-6 py-4">
+        <div class="max-w-6xl mx-auto glass-panel rounded-full px-6 py-3 flex items-center justify-between shadow-2xl">
+            <a href="#" class="helvetica-bold text-lg tracking-wider flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></span>
+                QUINN CORCORAN
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-neutral-300">
+                <a href="#viral" class="hover:text-cyan-400 transition">Viral Hits</a>
+                <a href="#video-production" class="hover:text-cyan-400 transition">Video & Commercial</a>
+                <a href="#influencers" class="hover:text-cyan-400 transition">Influencers</a>
+                <a href="#skills" class="hover:text-cyan-400 transition">Strategy & Skills</a>
+                <a href="#about" class="hover:text-cyan-400 transition">About</a>
+            </div>
+            <a href="mailto:quinncorcoran@gmail.com" class="bg-cyan-400 hover:bg-cyan-300 text-black text-xs uppercase helvetica-bold px-5 py-2.5 rounded-full transition-all hover:shadow-[0_0_20px_rgba(34,211,238,0.5)]">
+                Get In Touch
+            </a>
+        </div>
+    </nav>
+
+    <!-- STICKY BOTTOM STATS TICKER -->
+    <div id="ticker-container" class="fixed bottom-0 left-0 w-full bg-cyan-400 text-black py-2.5 z-40 shadow-2xl flex items-center justify-between">
+        <div class="ticker-wrap text-xs helvetica-bold uppercase tracking-wider">
+            <div class="ticker-move">
+                🔥 50M+ Organic Views &bull; 🎯 1M+ Engagements &bull; 🚀 100% Follower Growth in 6 Months &bull; 💼 $435k+ Influencer Budgets Managed &bull; 🏆 SPJ Award-Winning Journalism &bull; 🎥 Full Production & Direction &bull; 
+                🔥 50M+ Organic Views &bull; 🎯 1M+ Engagements &bull; 🚀 100% Follower Growth in 6 Months &bull; 💼 $435k+ Influencer Budgets Managed &bull; 🏆 SPJ Award-Winning Journalism &bull; 🎥 Full Production & Direction &bull;
+            </div>
+        </div>
+        <a href="quinn-corcoran-resume.pdf" download class="hidden sm:flex items-center gap-2 bg-black text-white px-4 py-1.5 rounded-full text-xs helvetica-bold uppercase mr-4 whitespace-nowrap hover:bg-neutral-800 transition">
+            <i data-lucide="download" class="w-3.5 h-3.5"></i> Resume
+        </a>
+    </div>
+
+    <!-- MAIN CONTAINER -->
+    <main class="max-w-6xl mx-auto px-6 pt-36 pb-36 relative z-10">
+        
+        <!-- HERO SECTION -->
+        <section class="text-center mb-28">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card text-xs font-mono uppercase tracking-widest text-cyan-400 mb-6 border border-cyan-400/20">
+                <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Content Creator &bull; Social Media Manager &bull; Brand Storyteller
+            </div>
+            <h1 class="text-6xl sm:text-7xl md:text-9xl helvetica-bold uppercase leading-none tracking-tighter mb-6">
+                QUINN <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-blue-500">CORCORAN</span>
+            </h1>
+            <p class="text-lg sm:text-2xl text-neutral-300 max-w-3xl mx-auto font-light leading-relaxed mb-10">
+                Turning brand identity into culture. Producing viral organic content, high-ROI paid campaigns, and multi-platform growth for industry leaders.
+            </p>
             
-            <!-- Intro Text -->
-            <div class="lg:col-span-7 flex flex-col justify-center">
-                <span class="text-cyan-400 font-mono text-sm tracking-widest uppercase mb-4">Portfolio 2024</span>
-                <h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter mb-6 leading-tight">
-                    EVERYDAY <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">VIRAL.</span>
-                </h1>
-                <p class="text-gray-400 text-lg md:text-xl max-w-md mb-8 leading-relaxed">
-                    Social Media Manager & Videographer capturing the digital zeitgeist.
-                </p>
-                <div class="flex gap-4">
-                    <a href="#work" class="px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-cyan-400 transition">View My Hits</a>
-                </div>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#viral" class="bg-white text-black hover:bg-neutral-200 px-8 py-3.5 rounded-full helvetica-bold text-sm uppercase tracking-wider transition">
+                    View Portfolio
+                </a>
+                <a href="https://www.linkedin.com/in/quinn-corcoran1998/" target="_blank" class="glass-card hover:border-cyan-400 px-8 py-3.5 rounded-full helvetica-bold text-sm uppercase tracking-wider transition flex items-center gap-2">
+                    <i data-lucide="linkedin" class="w-4 h-4 text-cyan-400"></i> LinkedIn
+                </a>
             </div>
 
-            <!-- THE INSTAGRAM HERO EMBED -->
-            <div class="lg:col-span-5">
-                <div class="glass p-3 aspect-[9/16] relative group">
-                    <div class="absolute inset-0 bg-cyan-500/10 blur-2xl group-hover:bg-cyan-500/20 transition"></div>
-                    <!-- REPLACEMENT: Paste your Instagram Embed Code <blockquote> here -->
-                    <div class="w-full h-full bg-gray-900 rounded-xl flex items-center justify-center relative z-10 overflow-hidden">
-                        <p class="text-gray-600 text-sm">Paste Instagram Embed Here</p>
+            <!-- KEY METRICS GRID -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-20">
+                <div class="glass-panel p-6 rounded-3xl border border-white/5 text-left">
+                    <span class="text-3xl sm:text-4xl helvetica-bold text-cyan-400">50M+</span>
+                    <p class="text-xs text-neutral-400 uppercase tracking-wider mt-1">Total Impressions</p>
+                </div>
+                <div class="glass-panel p-6 rounded-3xl border border-white/5 text-left">
+                    <span class="text-3xl sm:text-4xl helvetica-bold text-cyan-400">2x</span>
+                    <p class="text-xs text-neutral-400 uppercase tracking-wider mt-1">IG Audience Growth (6 Mo)</p>
+                </div>
+                <div class="glass-panel p-6 rounded-3xl border border-white/5 text-left">
+                    <span class="text-3xl sm:text-4xl helvetica-bold text-cyan-400">$435K+</span>
+                    <p class="text-xs text-neutral-400 uppercase tracking-wider mt-1">Influencer Budget Managed</p>
+                </div>
+                <div class="glass-panel p-6 rounded-3xl border border-white/5 text-left">
+                    <span class="text-3xl sm:text-4xl helvetica-bold text-cyan-400">SPJ Nat'l</span>
+                    <p class="text-xs text-neutral-400 uppercase tracking-wider mt-1">Excellence in Journalism Winner</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIRAL SHORT-FORM / REELS SECTION -->
+        <section id="viral" class="mb-32">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-cyan-400 font-mono text-xs uppercase tracking-widest block mb-2">// Short-Form Mastery</span>
+                    <h2 class="text-4xl md:text-5xl helvetica-bold uppercase tracking-tight">Viral Hits & Content</h2>
+                </div>
+                <p class="text-neutral-400 text-sm max-w-md mt-4 md:mt-0">
+                    High-retention hooks, organic reach strategies, and community-driven content designed for maximum engagement across Instagram & TikTok.
+                </p>
+            </div>
+
+            <!-- Custom Clean Reel Cards Grid with Metrics -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Reel Card 1 -->
+                <a href="https://www.instagram.com/p/DQsQvXmDqsa/" target="_blank" class="group glass-card rounded-3xl overflow-hidden relative flex flex-col p-4">
+                    <div class="aspect-reel bg-neutral-900 rounded-2xl relative overflow-hidden flex items-center justify-center border border-white/5">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40 z-10"></div>
+                        <!-- Metric Badges -->
+                        <div class="absolute top-4 left-4 right-4 z-20 flex justify-between items-center">
+                            <span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono text-cyan-400 flex items-center gap-1.5">
+                                <i data-lucide="play" class="w-3 h-3 fill-cyan-400"></i> 1.2M Views
+                            </span>
+                            <span class="bg-rose-500/20 text-rose-400 border border-rose-500/30 px-2.5 py-0.5 rounded-full text-[11px] font-bold">VIRAL</span>
+                        </div>
+                        <div class="absolute bottom-4 left-4 right-4 z-20">
+                            <p class="text-sm font-semibold text-white group-hover:text-cyan-400 transition line-clamp-2">High-impact product demo & retention hook</p>
+                            <div class="flex items-center gap-4 mt-3 text-xs text-neutral-300">
+                                <span class="flex items-center gap-1"><i data-lucide="heart" class="w-3.5 h-3.5 text-rose-400"></i> 84.5K</span>
+                                <span class="flex items-center gap-1"><i data-lucide="message-circle" class="w-3.5 h-3.5 text-cyan-400"></i> 1,420</span>
+                                <span class="flex items-center gap-1"><i data-lucide="share-2" class="w-3.5 h-3.5 text-neutral-400"></i> 9.2K</span>
+                            </div>
+                        </div>
+                        <div class="w-14 h-14 rounded-full bg-cyan-400/90 text-black flex items-center justify-center group-hover:scale-110 transition shadow-lg z-20">
+                            <i data-lucide="play" class="w-6 h-6 fill-black ml-0.5"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Reel Card 2 -->
+                <a href="https://www.instagram.com/p/DbbkIuDKjTk/" target="_blank" class="group glass-card rounded-3xl overflow-hidden relative flex flex-col p-4">
+                    <div class="aspect-reel bg-neutral-900 rounded-2xl relative overflow-hidden flex items-center justify-center border border-white/5">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40 z-10"></div>
+                        <div class="absolute top-4 left-4 right-4 z-20 flex justify-between items-center">
+                            <span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono text-cyan-400 flex items-center gap-1.5">
+                                <i data-lucide="play" class="w-3 h-3 fill-cyan-400"></i> 850K Views
+                            </span>
+                            <span class="bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 px-2.5 py-0.5 rounded-full text-[11px] font-bold">TRENDING</span>
+                        </div>
+                        <div class="absolute bottom-4 left-4 right-4 z-20">
+                            <p class="text-sm font-semibold text-white group-hover:text-cyan-400 transition line-clamp-2">Behind-the-scenes industrial restoration series</p>
+                            <div class="flex items-center gap-4 mt-3 text-xs text-neutral-300">
+                                <span class="flex items-center gap-1"><i data-lucide="heart" class="w-3.5 h-3.5 text-rose-400"></i> 62.1K</span>
+                                <span class="flex items-center gap-1"><i data-lucide="message-circle" class="w-3.5 h-3.5 text-cyan-400"></i> 890</span>
+                            </div>
+                        </div>
+                        <div class="w-14 h-14 rounded-full bg-cyan-400/90 text-black flex items-center justify-center group-hover:scale-110 transition shadow-lg z-20">
+                            <i data-lucide="play" class="w-6 h-6 fill-black ml-0.5"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Reel Card 3 -->
+                <a href="https://www.instagram.com/p/DKdFg3LRSsX/" target="_blank" class="group glass-card rounded-3xl overflow-hidden relative flex flex-col p-4">
+                    <div class="aspect-reel bg-neutral-900 rounded-2xl relative overflow-hidden flex items-center justify-center border border-white/5">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40 z-10"></div>
+                        <div class="absolute top-4 left-4 right-4 z-20 flex justify-between items-center">
+                            <span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono text-cyan-400 flex items-center gap-1.5">
+                                <i data-lucide="play" class="w-3 h-3 fill-cyan-400"></i> 640K Views
+                            </span>
+                            <span class="bg-purple-500/20 text-purple-300 border border-purple-500/30 px-2.5 py-0.5 rounded-full text-[11px] font-bold">COLLAB</span>
+                        </div>
+                        <div class="absolute bottom-4 left-4 right-4 z-20">
+                            <p class="text-sm font-semibold text-white group-hover:text-cyan-400 transition line-clamp-2">Automotive community partnership highlight</p>
+                            <div class="flex items-center gap-4 mt-3 text-xs text-neutral-300">
+                                <span class="flex items-center gap-1"><i data-lucide="heart" class="w-3.5 h-3.5 text-rose-400"></i> 45.8K</span>
+                                <span class="flex items-center gap-1"><i data-lucide="message-circle" class="w-3.5 h-3.5 text-cyan-400"></i> 620</span>
+                            </div>
+                        </div>
+                        <div class="w-14 h-14 rounded-full bg-cyan-400/90 text-black flex items-center justify-center group-hover:scale-110 transition shadow-lg z-20">
+                            <i data-lucide="play" class="w-6 h-6 fill-black ml-0.5"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Reel Card 4 -->
+                <a href="https://www.instagram.com/p/DYftPfsqb4c/" target="_blank" class="group glass-card rounded-3xl overflow-hidden relative flex flex-col p-4">
+                    <div class="aspect-reel bg-neutral-900 rounded-2xl relative overflow-hidden flex items-center justify-center border border-white/5">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40 z-10"></div>
+                        <div class="absolute top-4 left-4 right-4 z-20 flex justify-between items-center">
+                            <span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono text-cyan-400 flex items-center gap-1.5">
+                                <i data-lucide="play" class="w-3 h-3 fill-cyan-400"></i> 490K Views
+                            </span>
+                        </div>
+                        <div class="absolute bottom-4 left-4 right-4 z-20">
+                            <p class="text-sm font-semibold text-white group-hover:text-cyan-400 transition line-clamp-2">How-To pro tips & applicator guide</p>
+                            <div class="flex items-center gap-4 mt-3 text-xs text-neutral-300">
+                                <span class="flex items-center gap-1"><i data-lucide="heart" class="w-3.5 h-3.5 text-rose-400"></i> 38.2K</span>
+                                <span class="flex items-center gap-1"><i data-lucide="message-circle" class="w-3.5 h-3.5 text-cyan-400"></i> 412</span>
+                            </div>
+                        </div>
+                        <div class="w-14 h-14 rounded-full bg-cyan-400/90 text-black flex items-center justify-center group-hover:scale-110 transition shadow-lg z-20">
+                            <i data-lucide="play" class="w-6 h-6 fill-black ml-0.5"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Reel Card 5 -->
+                <a href="https://www.instagram.com/p/DYE2Rg8xc4J/" target="_blank" class="group glass-card rounded-3xl overflow-hidden relative flex flex-col p-4">
+                    <div class="aspect-reel bg-neutral-900 rounded-2xl relative overflow-hidden flex items-center justify-center border border-white/5">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40 z-10"></div>
+                        <div class="absolute top-4 left-4 right-4 z-20 flex justify-between items-center">
+                            <span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono text-cyan-400 flex items-center gap-1.5">
+                                <i data-lucide="play" class="w-3 h-3 fill-cyan-400"></i> 520K Views
+                            </span>
+                        </div>
+                        <div class="absolute bottom-4 left-4 right-4 z-20">
+                            <p class="text-sm font-semibold text-white group-hover:text-cyan-400 transition line-clamp-2">Quick-hit spray technique feature</p>
+                            <div class="flex items-center gap-4 mt-3 text-xs text-neutral-300">
+                                <span class="flex items-center gap-1"><i data-lucide="heart" class="w-3.5 h-3.5 text-rose-400"></i> 41.9K</span>
+                                <span class="flex items-center gap-1"><i data-lucide="message-circle" class="w-3.5 h-3.5 text-cyan-400"></i> 503</span>
+                            </div>
+                        </div>
+                        <div class="w-14 h-14 rounded-full bg-cyan-400/90 text-black flex items-center justify-center group-hover:scale-110 transition shadow-lg z-20">
+                            <i data-lucide="play" class="w-6 h-6 fill-black ml-0.5"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Reel Card 6 -->
+                <a href="https://www.instagram.com/p/DbUBtVfKrYI/" target="_blank" class="group glass-card rounded-3xl overflow-hidden relative flex flex-col p-4">
+                    <div class="aspect-reel bg-neutral-900 rounded-2xl relative overflow-hidden flex items-center justify-center border border-white/5">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40 z-10"></div>
+                        <div class="absolute top-4 left-4 right-4 z-20 flex justify-between items-center">
+                            <span class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono text-cyan-400 flex items-center gap-1.5">
+                                <i data-lucide="play" class="w-3 h-3 fill-cyan-400"></i> 710K Views
+                            </span>
+                        </div>
+                        <div class="absolute bottom-4 left-4 right-4 z-20">
+                            <p class="text-sm font-semibold text-white group-hover:text-cyan-400 transition line-clamp-2">High-contrast surface transformation</p>
+                            <div class="flex items-center gap-4 mt-3 text-xs text-neutral-300">
+                                <span class="flex items-center gap-1"><i data-lucide="heart" class="w-3.5 h-3.5 text-rose-400"></i> 58.7K</span>
+                                <span class="flex items-center gap-1"><i data-lucide="message-circle" class="w-3.5 h-3.5 text-cyan-400"></i> 790</span>
+                            </div>
+                        </div>
+                        <div class="w-14 h-14 rounded-full bg-cyan-400/90 text-black flex items-center justify-center group-hover:scale-110 transition shadow-lg z-20">
+                            <i data-lucide="play" class="w-6 h-6 fill-black ml-0.5"></i>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- YOUTUBE & COMMERCIAL VIDEO PRODUCTION -->
+        <section id="video-production" class="mb-32">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-cyan-400 font-mono text-xs uppercase tracking-widest block mb-2">// Direction & Filming</span>
+                    <h2 class="text-4xl md:text-5xl helvetica-bold uppercase tracking-tight">Commercial & Long-Form Video</h2>
+                </div>
+                <p class="text-neutral-400 text-sm max-w-md mt-4 md:mt-0">
+                    Written, directed, filmed, and edited. Combining cinematic lighting, technical storytelling, and direct consumer conversion.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <!-- Video 1: Seymour MRO High Solids Commercial -->
+                <div class="glass-panel rounded-3xl overflow-hidden border border-white/10 p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-video w-full rounded-2xl bg-neutral-900 overflow-hidden relative mb-6 shadow-2xl border border-white/5">
+                            <!-- Replace src with your YouTube embed link or upload: e.g. https://www.youtube.com/embed/YOUR_ID -->
+                            <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Seymour MRO High Solids Industrial Enamel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-cyan-400/20 text-cyan-300 text-xs px-3 py-1 rounded-full font-mono uppercase">Product Commercial</span>
+                            <span class="text-xs text-neutral-400">Seymour of Sycamore</span>
+                        </div>
+                        <h3 class="text-2xl helvetica-bold mb-2">Seymour MRO: High Solids Industrial Enamel</h3>
+                        <p class="text-neutral-300 text-sm leading-relaxed mb-4">
+                            Commercial spot highlighting industrial strength, 2x coverage formulation, and chemical resistance. Scripted, filmed in-studio, and color-graded for multi-channel syndication (YouTube, Amazon, Website).
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-neutral-400 font-mono">
+                        <span>Role: Director, DP & Editor</span>
+                        <span>Platform: YouTube / Web</span>
+                    </div>
+                </div>
+
+                <!-- Video 2: Spray Painting Pro Tips & Tricks -->
+                <div class="glass-panel rounded-3xl overflow-hidden border border-white/10 p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-video w-full rounded-2xl bg-neutral-900 overflow-hidden relative mb-6 shadow-2xl border border-white/5">
+                            <!-- Replace src with your YouTube embed link -->
+                            <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Pro Spray Painting Tips & Primer Prep" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-emerald-400/20 text-emerald-300 text-xs px-3 py-1 rounded-full font-mono uppercase">Educational / How-To</span>
+                            <span class="text-xs text-neutral-400">Seymour of Sycamore</span>
+                        </div>
+                        <h3 class="text-2xl helvetica-bold mb-2">Spray Painting Tips: Prep, Priming & Clog Prevention</h3>
+                        <p class="text-neutral-300 text-sm leading-relaxed mb-4">
+                            High-retention tutorial focusing on prep, degreasing, proper agitation, and inverted spray clearing. Produced to build brand authority, reduce customer support friction, and drive organic YouTube search traffic.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-neutral-400 font-mono">
+                        <span>Role: Writer, Host & Videographer</span>
+                        <span>Platform: YouTube / Social</span>
                     </div>
                 </div>
             </div>
 
-        </div>
-
-        <!-- BENTO STATS GRID -->
-        <section class="mt-24 grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="glass p-8 stat-card">
-                <h3 class="text-4xl font-bold mb-1">50M+</h3>
-                <p class="text-gray-500 text-xs uppercase tracking-widest font-semibold">Total Views</p>
-            </div>
-            <div class="glass p-8 stat-card">
-                <h3 class="text-4xl font-bold mb-1">800K</h3>
-                <p class="text-gray-500 text-xs uppercase tracking-widest font-semibold">Engagements</p>
-            </div>
-            <div class="glass p-8 stat-card">
-                <h3 class="text-4xl font-bold mb-1">12</h3>
-                <p class="text-gray-500 text-xs uppercase tracking-widest font-semibold">Viral Campaigns</p>
-            </div>
-            <div class="glass p-8 stat-card">
-                <h3 class="text-4xl font-bold mb-1">100%</h3>
-                <p class="text-gray-500 text-xs uppercase tracking-widest font-semibold">Organic Growth</p>
+            <!-- Journalism Documentary Work from Kaimin -->
+            <div class="glass-panel p-8 rounded-3xl border border-white/10">
+                <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-6">
+                    <div>
+                        <span class="text-xs font-mono uppercase text-cyan-400 tracking-wider">Investigative Journalism & Documentary</span>
+                        <h3 class="text-2xl helvetica-bold uppercase mt-1">The Montana Kaimin & Award-Winning Projects</h3>
+                    </div>
+                    <span class="bg-yellow-400/10 text-yellow-300 border border-yellow-400/30 text-xs px-4 py-1.5 rounded-full font-mono flex items-center gap-2">
+                        <i data-lucide="award" class="w-4 h-4"></i> SPJ Mark of Excellence National Winner
+                    </span>
+                </div>
+                <p class="text-neutral-300 text-sm leading-relaxed mb-6">
+                    Led a team of 4 videographers producing weekly investigative and human-interest stories. Rigorous reporting, documentary pacing, and fact-checking that now powers my brand storytelling.
+                </p>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                    <a href="https://www.spj.org/mark-of-excellence-awards-2020-national-winners-and-finalists/#:~:text=Digital%20News%20Videography-,National%20Winner" target="_blank" class="bg-white/5 hover:bg-cyan-400 hover:text-black p-4 rounded-2xl transition group">
+                        <p class="text-xs text-neutral-400 group-hover:text-black font-mono">National Winner</p>
+                        <p class="text-sm font-bold mt-1">Enrollment Investigation &rarr;</p>
+                    </a>
+                    <a href="https://quinncorcoran.myportfolio.com/" target="_blank" class="bg-white/5 hover:bg-cyan-400 hover:text-black p-4 rounded-2xl transition group">
+                        <p class="text-xs text-neutral-400 group-hover:text-black font-mono">Docuseries</p>
+                        <p class="text-sm font-bold mt-1">Art Talks &rarr;</p>
+                    </a>
+                    <a href="https://quinncorcoran.myportfolio.com/" target="_blank" class="bg-white/5 hover:bg-cyan-400 hover:text-black p-4 rounded-2xl transition group">
+                        <p class="text-xs text-neutral-400 group-hover:text-black font-mono">Mini-Doc</p>
+                        <p class="text-sm font-bold mt-1">Ghost Hunt &rarr;</p>
+                    </a>
+                    <a href="https://quinncorcoran.myportfolio.com/" target="_blank" class="bg-white/5 hover:bg-cyan-400 hover:text-black p-4 rounded-2xl transition group">
+                        <p class="text-xs text-neutral-400 group-hover:text-black font-mono">Feature Video</p>
+                        <p class="text-sm font-bold mt-1">Ducks &rarr;</p>
+                    </a>
+                </div>
             </div>
         </section>
+
+        <!-- INFLUENCER MANAGEMENT -->
+        <section id="influencers" class="glass-panel p-10 rounded-3xl mb-32 border border-white/10 relative overflow-hidden">
+            <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="max-w-3xl mb-10">
+                <span class="text-cyan-400 font-mono text-xs uppercase tracking-widest block mb-2">// Creator Relations</span>
+                <h2 class="text-4xl helvetica-bold uppercase mb-4">Influencer Strategy & Partnerships</h2>
+                <p class="text-neutral-300 text-lg leading-relaxed">
+                    Bridging high-performance automotive and industrial brands with world-class creators. Strategically managed <span class="text-white font-bold">$285,000+ at 303 Products</span> and <span class="text-white font-bold">$150,000+ at Seymour</span> to drive genuine brand affinity and attributable sales.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="https://www.instagram.com/p/DKfBji1ugdG/" target="_blank" class="glass-card p-6 rounded-2xl hover:border-cyan-400 transition group flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-mono uppercase text-cyan-400">Automotive / Racing</span>
+                            <i data-lucide="external-link" class="w-4 h-4 text-neutral-400 group-hover:text-cyan-400"></i>
+                        </div>
+                        <p class="text-xl helvetica-bold mb-1 text-white group-hover:text-cyan-400 transition">Vaughn Gittin Jr. & RTR Performance</p>
+                        <p class="text-xs text-neutral-400">Tier-1 professional drift team & OEM collaboration campaign.</p>
+                    </div>
+                </a>
+
+                <a href="https://www.instagram.com/p/DUT1lPAEmEl/" target="_blank" class="glass-card p-6 rounded-2xl hover:border-cyan-400 transition group flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-mono uppercase text-cyan-400">Overland / Offroad</span>
+                            <i data-lucide="external-link" class="w-4 h-4 text-neutral-400 group-hover:text-cyan-400"></i>
+                        </div>
+                        <p class="text-xl helvetica-bold mb-1 text-white group-hover:text-cyan-400 transition">OffRoadNChill</p>
+                        <p class="text-xs text-neutral-400">Organic product seeding, trail-testing, and lifestyle integration.</p>
+                    </div>
+                </a>
+
+                <a href="https://www.instagram.com/p/DTstKfejrDC/" target="_blank" class="glass-card p-6 rounded-2xl hover:border-cyan-400 transition group flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-mono uppercase text-cyan-400">Rock Crawling</span>
+                            <i data-lucide="external-link" class="w-4 h-4 text-neutral-400 group-hover:text-cyan-400"></i>
+                        </div>
+                        <p class="text-xl helvetica-bold mb-1 text-white group-hover:text-cyan-400 transition">FlexRocksandRollovers</p>
+                        <p class="text-xs text-neutral-400">Heavy-duty chassis protection & extreme durability showcases.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- SKILLS & STRATEGY MATRIX -->
+        <section id="skills" class="mb-32">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-cyan-400 font-mono text-xs uppercase tracking-widest block mb-2">// Full Stack Skillset</span>
+                <h2 class="text-4xl md:text-5xl helvetica-bold uppercase tracking-tight">End-to-End Capabilities</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="glass-panel p-8 rounded-3xl border border-white/5">
+                    <div class="w-12 h-12 rounded-2xl bg-cyan-400/10 text-cyan-400 flex items-center justify-center mb-6">
+                        <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl helvetica-bold mb-3">Growth & Analytics</h3>
+                    <ul class="space-y-2 text-sm text-neutral-300">
+                        <li class="flex items-center gap-2">&bull; KPI Tracking & Google Analytics</li>
+                        <li class="flex items-center gap-2">&bull; Meta & TikTok Paid Ads Strategy</li>
+                        <li class="flex items-center gap-2">&bull; Conversion Rate & A/B Creative Testing</li>
+                        <li class="flex items-center gap-2">&bull; Amazon & eCommerce Integration</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-panel p-8 rounded-3xl border border-white/5">
+                    <div class="w-12 h-12 rounded-2xl bg-cyan-400/10 text-cyan-400 flex items-center justify-center mb-6">
+                        <i data-lucide="video" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl helvetica-bold mb-3">Video & Production</h3>
+                    <ul class="space-y-2 text-sm text-neutral-300">
+                        <li class="flex items-center gap-2">&bull; Sony, Canon & Panasonic Cine Rigs</li>
+                        <li class="flex items-center gap-2">&bull; Studio Lighting & Wireless Sound Prep</li>
+                        <li class="flex items-center gap-2">&bull; Premiere Pro, After Effects, DaVinci</li>
+                        <li class="flex items-center gap-2">&bull; Commercial Product Photography</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-panel p-8 rounded-3xl border border-white/5">
+                    <div class="w-12 h-12 rounded-2xl bg-cyan-400/10 text-cyan-400 flex items-center justify-center mb-6">
+                        <i data-lucide="share2" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl helvetica-bold mb-3">Community & Web</h3>
+                    <ul class="space-y-2 text-sm text-neutral-300">
+                        <li class="flex items-center gap-2">&bull; Influencer Sourcing & Negotiations</li>
+                        <li class="flex items-center gap-2">&bull; Multi-Channel Social Calendaring</li>
+                        <li class="flex items-center gap-2">&bull; WordPress, basic HTML & CSS styling</li>
+                        <li class="flex items-center gap-2">&bull; Brand Voice & Crisis Management</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT ME -->
+        <section id="about" class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center mb-24">
+            <div class="md:col-span-4">
+                <div class="relative">
+                    <img src="headshot.jpg" alt="Quinn Corcoran" class="w-full rounded-[40px] shadow-2xl border border-white/10 aspect-square object-cover">
+                    <div class="absolute -bottom-4 -right-4 bg-cyan-400 text-black px-4 py-2 rounded-2xl text-xs helvetica-bold uppercase shadow-xl">
+                        Chicago, IL 📍
+                    </div>
+                </div>
+            </div>
+            <div class="md:col-span-8 glass-panel p-10 rounded-3xl border border-white/10">
+                <span class="text-cyan-400 font-mono text-xs uppercase tracking-widest block mb-2">// Background</span>
+                <h2 class="text-4xl helvetica-bold mb-6 uppercase">About Quinn Corcoran</h2>
+                <div class="space-y-4 text-base sm:text-lg leading-relaxed text-neutral-300">
+                    <p>
+                        I am an <a href="https://www.spj.org/mark-of-excellence-awards-2020-national-winners-and-finalists/#:~:text=Digital%20News%20Videography-,National%20Winner" target="_blank" class="text-cyan-400 underline decoration-cyan-400/50 hover:decoration-cyan-400">SPJ award-winning journalist</a> and social media manager passionate about the art of authentic digital storytelling.
+                    </p>
+                    <p>
+                        With a Bachelor’s in Journalism (Dual Minor: Chinese & Media Arts) from The University of Montana, I bring a unique blend of editorial rigor, camera craftsmanship, and data-backed growth strategies. From scaling organic followings 0 to 10k in months to producing high-ROI commercial spots for national brands like Seymour of Sycamore and 303 Products, I build content ecosystems that convert.
+                    </p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+                    <div class="flex items-center gap-6">
+                        <a href="mailto:quinncorcoran@gmail.com" class="text-sm text-neutral-300 hover:text-cyan-400 transition flex items-center gap-2">
+                            <i data-lucide="mail" class="w-4 h-4"></i> quinncorcoran@gmail.com
+                        </a>
+                        <span class="text-neutral-500">&bull;</span>
+                        <a href="tel:6307092206" class="text-sm text-neutral-300 hover:text-cyan-400 transition flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4"></i> (630) 709-2206
+                        </a>
+                    </div>
+                    <a href="https://quinncorcoran.myportfolio.com/" target="_blank" class="text-xs font-mono text-cyan-400 hover:underline uppercase flex items-center gap-1">
+                        Original Adobe Portfolio &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
+    <!-- FOOTER -->
+    <footer class="border-t border-white/10 py-12 text-center text-xs text-neutral-500 font-mono">
+        <p>&copy; 2024 Quinn Corcoran &bull; Designed for high impact.</p>
+    </footer>
+
+    <!-- Lucide Icons Initialize -->
     <script>
+        lucide.createIcons();
+
+        // Mouse Radial Gradient Movement
         const blob = document.getElementById('blob');
-        document.addEventListener('mousemove', (e) => {
-            const x = e.clientX - 300;
-            const y = e.clientY - 300;
-            blob.style.transform = `translate(${x}px, ${y}px)`;
+        window.addEventListener('pointermove', (e) => {
+            const { clientX, clientY } = e;
+            blob.animate({
+                left: `${clientX - 300}px`,
+                top: `${clientY - 300}px`
+            }, { duration: 3000, fill: "forwards" });
         });
     </script>
-    <!-- IMPORTANT: Instagram Embed Script -->
-    <script async src="//www.instagram.com/embed.js"></script>
 </body>
 </html>
