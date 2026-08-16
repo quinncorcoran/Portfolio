@@ -22,40 +22,41 @@
         .helvetica-medium { font-weight: 600; letter-spacing: -0.02em; }
         .helvetica-light { font-weight: 400; letter-spacing: 0.01em; }
 
-        /* LUMINOUS FROSTED GLASS PANELS (LIGHT MODE) */
+        /* LUMINOUS FROSTED GLASS (LIGHT MODE) */
         .soft-glass {
-            background: rgba(255, 255, 255, 0.78);
-            backdrop-filter: blur(24px) saturate(160%);
-            -webkit-backdrop-filter: blur(24px) saturate(160%);
+            background: rgba(255, 255, 255, 0.72);
+            backdrop-filter: blur(28px) saturate(170%);
+            -webkit-backdrop-filter: blur(28px) saturate(170%);
             border: 1px solid rgba(255, 255, 255, 0.9);
             box-shadow: 0 20px 45px -15px rgba(2, 132, 199, 0.15);
         }
 
+        /* EXTRA TRANSPARENT GLASS CARDS FOR REELS */
         .soft-glass-card {
-            background: rgba(255, 255, 255, 0.75);
-            backdrop-filter: blur(18px);
-            -webkit-backdrop-filter: blur(18px);
-            border: 1px solid rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.48);
+            backdrop-filter: blur(24px) saturate(180%);
+            -webkit-backdrop-filter: blur(24px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.75);
+            box-shadow: 0 15px 35px -10px rgba(15, 23, 42, 0.07);
             transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.06);
         }
 
         .soft-glass-card:hover {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.75);
             border-color: #f97316;
             transform: translateY(-6px);
-            box-shadow: 0 25px 50px -12px rgba(249, 115, 22, 0.25);
+            box-shadow: 0 25px 50px -12px rgba(249, 115, 22, 0.22);
         }
 
-        /* AMBIENT SUNNY GLOW */
+        /* AMBIENT BLUE/CYAN CURSOR GLOW */
         #soft-glow {
             position: fixed;
-            width: 700px;
-            height: 700px;
-            background: radial-gradient(circle, rgba(251, 191, 36, 0.25) 0%, rgba(249, 115, 22, 0.12) 45%, rgba(0,0,0,0) 70%);
+            width: 750px;
+            height: 750px;
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.28) 0%, rgba(56, 189, 248, 0.15) 40%, rgba(0,0,0,0) 70%);
             border-radius: 50%;
             z-index: 0;
-            filter: blur(100px);
+            filter: blur(110px);
             pointer-events: none;
             transition: transform 0.2s ease-out;
         }
@@ -91,16 +92,16 @@
     <nav class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-4">
         <div class="max-w-6xl mx-auto soft-glass rounded-full px-6 py-3.5 flex items-center justify-between shadow-xl">
             <a href="#" class="helvetica-bold text-base sm:text-lg tracking-tight flex items-center gap-2 text-slate-950">
-                <span class="w-3.5 h-3.5 rounded-full bg-gradient-to-tr from-amber-500 to-orange-500 animate-pulse"></span>
+                <span class="w-3.5 h-3.5 rounded-full bg-gradient-to-tr from-sky-500 to-amber-500 animate-pulse"></span>
                 QUINN CORCORAN
             </a>
             
             <div class="hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-wider text-slate-700">
                 <a href="#viral-reels" class="hover:text-orange-600 transition">Viral Hits</a>
                 <a href="#youtube-productions" class="hover:text-orange-600 transition">Commercials</a>
-                <a href="#influencer-partners" class="hover:text-orange-600 transition">Collabs</a>
-                <a href="#strategy-skills" class="hover:text-orange-600 transition">Strategy</a>
                 <a href="#about-quinn" class="hover:text-orange-600 transition">About</a>
+                <a href="#influencer-partners" class="hover:text-orange-600 transition">Creator Collabs</a>
+                <a href="#strategy-skills" class="hover:text-orange-600 transition">Strategy</a>
             </div>
 
             <div class="flex items-center gap-3">
@@ -142,9 +143,12 @@
                 QUINN <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600">CORCORAN</span>
             </h1>
             
-            <p class="text-lg sm:text-2xl text-slate-700 max-w-3xl mx-auto font-light leading-relaxed mb-10">
-                Crafting culture-defining short form, high-ROI commercial ads, and hyper-engaged communities for industry-leading brands.
-            </p>
+            <!-- HERO SUBTITLE FROSTED BUBBLE -->
+            <div class="max-w-3xl mx-auto mb-10 p-5 sm:p-6 rounded-3xl soft-glass border border-white/90 shadow-md">
+                <p class="text-lg sm:text-2xl text-slate-800 font-light leading-relaxed">
+                    Crafting culture-defining short form, high-ROI commercial ads, and hyper-engaged communities for industry-leading brands.
+                </p>
+            </div>
 
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="resume.pdf" download class="bg-gradient-to-r from-amber-400 via-orange-500 to-amber-500 text-white px-9 py-4 rounded-full helvetica-bold text-sm uppercase tracking-wider transition shadow-xl hover:scale-105 flex items-center gap-2.5 hover:shadow-orange-500/30">
@@ -195,7 +199,7 @@
                 </p>
             </div>
 
-            <!-- REELS GRID (ALL 8 REELS WITH INLINE LOCAL PLAYERS) -->
+            <!-- REELS GRID (EXTRA TRANSPARENT GLASS CARDS) -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
                 <!-- 1. DYE2Rg8xc4J (4.4M Views - COLLAB LEAD) -->
@@ -203,7 +207,7 @@
                     <div class="aspect-reel w-full rounded-2xl bg-slate-900 overflow-hidden relative border border-slate-200 group cursor-pointer" onclick="toggleReel(this, 'reel-video-1')">
                         <video id="reel-video-1" class="w-full h-full object-cover" poster="thumb-1.jpg" src="reel-1.mp4" playsinline preload="metadata" loop></video>
                         <div class="play-overlay absolute inset-0 bg-black/25 flex items-center justify-center transition-opacity duration-300">
-                            <div class="w-14 h-14 rounded-full bg-white text-orange-600 flex items-center justify-center shadow-xl group-hover:scale-110 transition">
+                            <div class="w-14 h-14 rounded-full bg-white/95 text-orange-600 flex items-center justify-center shadow-xl group-hover:scale-110 transition">
                                 <svg class="w-7 h-7 fill-orange-600 ml-1" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                             </div>
                         </div>
@@ -221,14 +225,14 @@
                         </div>
                         <p class="text-sm font-bold text-slate-950 leading-tight">Creator Partnership & High-Impact Demo</p>
                         
-                        <div class="grid grid-cols-2 gap-1.5 text-[11px] font-mono text-slate-700 bg-slate-100/80 p-2.5 rounded-xl border border-slate-200">
+                        <div class="grid grid-cols-2 gap-1.5 text-[11px] font-mono text-slate-700 bg-white/60 p-2.5 rounded-xl border border-slate-200">
                             <span class="flex items-center gap-1 font-semibold">❤️ 20K Likes</span>
                             <span class="flex items-center gap-1 font-semibold">💬 440 Cmts</span>
                             <span class="flex items-center gap-1 font-semibold">🔁 15 Reposts</span>
                             <span class="flex items-center gap-1 font-semibold">↗️ 68 Shares</span>
                         </div>
 
-                        <a href="https://www.instagram.com/p/DYE2Rg8xc4J/?hl=en" target="_blank" class="w-full text-center py-2 rounded-xl bg-slate-100 hover:bg-orange-500 hover:text-white transition text-xs font-mono text-slate-700 flex items-center justify-center gap-1.5 font-semibold">
+                        <a href="https://www.instagram.com/p/DYE2Rg8xc4J/?hl=en" target="_blank" class="w-full text-center py-2 rounded-xl bg-white/70 hover:bg-orange-500 hover:text-white transition text-xs font-mono text-slate-700 flex items-center justify-center gap-1.5 font-semibold">
                             View on Instagram <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
                         </a>
                     </div>
@@ -239,7 +243,7 @@
                     <div class="aspect-reel w-full rounded-2xl bg-slate-900 overflow-hidden relative border border-slate-200 group cursor-pointer" onclick="toggleReel(this, 'reel-video-2')">
                         <video id="reel-video-2" class="w-full h-full object-cover" poster="thumb-2.jpg" src="reel-2.mp4" playsinline preload="metadata" loop></video>
                         <div class="play-overlay absolute inset-0 bg-black/25 flex items-center justify-center transition-opacity duration-300">
-                            <div class="w-14 h-14 rounded-full bg-white text-orange-600 flex items-center justify-center shadow-xl group-hover:scale-110 transition">
+                            <div class="w-14 h-14 rounded-full bg-white/95 text-orange-600 flex items-center justify-center shadow-xl group-hover:scale-110 transition">
                                 <svg class="w-7 h-7 fill-orange-600 ml-1" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                             </div>
                         </div>
@@ -257,14 +261,14 @@
                         </div>
                         <p class="text-sm font-bold text-slate-950 leading-tight">Industrial Strength Stress Test</p>
                         
-                        <div class="grid grid-cols-2 gap-1.5 text-[11px] font-mono text-slate-700 bg-slate-100/80 p-2.5 rounded-xl border border-slate-200">
+                        <div class="grid grid-cols-2 gap-1.5 text-[11px] font-mono text-slate-700 bg-white/60 p-2.5 rounded-xl border border-slate-200">
                             <span class="flex items-center gap-1 font-semibold">❤️ 3.9K Likes</span>
                             <span class="flex items-center gap-1 font-semibold">💬 142 Cmts</span>
                             <span class="flex items-center gap-1 font-semibold">🔁 20 Reposts</span>
                             <span class="flex items-center gap-1 font-semibold">↗️ 661 Shares</span>
                         </div>
 
-                        <a href="https://www.instagram.com/p/DQsQvXmDqsa/" target="_blank" class="w-full text-center py-2 rounded-xl bg-slate-100 hover:bg-orange-500 hover:text-white transition text-xs font-mono text-slate-700 flex items-center justify-center gap-1.5 font-semibold">
+                        <a href="https://www.instagram.com/p/DQsQvXmDqsa/" target="_blank" class="w-full text-center py-2 rounded-xl bg-white/70 hover:bg-orange-500 hover:text-white transition text-xs font-mono text-slate-700 flex items-center justify-center gap-1.5 font-semibold">
                             View on Instagram <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
                         </a>
                     </div>
@@ -275,7 +279,7 @@
                     <div class="aspect-reel w-full rounded-2xl bg-slate-900 overflow-hidden relative border border-slate-200 group cursor-pointer" onclick="toggleReel(this, 'reel-video-3')">
                         <video id="reel-video-3" class="w-full h-full object-cover" poster="thumb-3.jpg" src="reel-3.mp4" playsinline preload="metadata" loop></video>
                         <div class="play-overlay absolute inset-0 bg-black/25 flex items-center justify-center transition-opacity duration-300">
-                            <div class="w-14 h-14 rounded-full bg-white text-orange-600 flex items-center justify-center shadow-xl group-hover:scale-110 transition">
+                            <div class="w-14 h-14 rounded-full bg-white/95 text-orange-600 flex items-center justify-center shadow-xl group-hover:scale-110 transition">
                                 <svg class="w-7 h-7 fill-orange-600 ml-1" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                             </div>
                         </div>
@@ -293,14 +297,14 @@
                         </div>
                         <p class="text-sm font-bold text-slate-950 leading-tight">Texture & Application Sound ASMR</p>
                         
-                        <div class="grid grid-cols-2 gap-1.5 text-[11px] font-mono text-slate-700 bg-slate-100/80 p-2.5 rounded-xl border border-slate-200">
+                        <div class="grid grid-cols-2 gap-1.5 text-[11px] font-mono text-slate-700 bg-white/60 p-2.5 rounded-xl border border-slate-200">
                             <span class="flex items-center gap-1 font-semibold">❤️ 5.5K Likes</span>
                             <span class="flex items-center gap-1 font-semibold">💬 187 Cmts</span>
                             <span class="flex items-center gap-1 font-semibold">🔁 55 Reposts</span>
                             <span class="flex items-center gap-1 font-semibold">↗️ 3.2K Shares</span>
                         </div>
 
-                        <a href="https://www.instagram.com/p/DWAEGdIjsD1/?hl=en" target="_blank" class="w-full text-center py-2 rounded-xl bg-slate-100 hover:bg-orange-500 hover:text-white transition text-xs font-mono text-slate-700 flex items-center justify-center gap-1.5 font-semibold">
+                        <a href="https://www.instagram.com/p/DWAEGdIjsD1/?hl=en" target="_blank" class="w-full text-center py-2 rounded-xl bg-white/70 hover:bg-orange-500 hover:text-white transition text-xs font-mono text-slate-700 flex items-center justify-center gap-1.5 font-semibold">
                             View on Instagram <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
                         </a>
                     </div>
@@ -311,7 +315,7 @@
                     <div class="aspect-reel w-full rounded-2xl bg-slate-900 overflow-hidden relative border border-slate-200 group cursor-pointer" onclick="toggleReel(this, 'reel-video-4')">
                         <video id="reel-video-4" class="w-full h-full object-cover" poster="thumb-4.jpg" src="reel-4.mp4" playsinline preload="metadata" loop></video>
                         <div class="play-overlay absolute inset-0 bg-black/25 flex items-center justify-center transition-opacity duration-300">
-                            <div class="w-14 h-14 rounded-full bg-white text-orange-600 flex items-center justify-center shadow-xl group-hover:scale-110 transition">
+                            <div class="w-14 h-14 rounded-full bg-white/95 text-orange-600 flex items-center justify-center shadow-xl group-hover:scale-110 transition">
                                 <svg class="w-7 h-7 fill-orange-600 ml-1" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                             </div>
                         </div>
@@ -329,14 +333,14 @@
                         </div>
                         <p class="text-sm font-bold text-slate-950 leading-tight">Organic Creator Partnership</p>
                         
-                        <div class="grid grid-cols-2 gap-1.5 text-[11px] font-mono text-slate-700 bg-slate-100/80 p-2.5 rounded-xl border border-slate-200">
+                        <div class="grid grid-cols-2 gap-1.5 text-[11px] font-mono text-slate-700 bg-white/60 p-2.5 rounded-xl border border-slate-200">
                             <span class="flex items-center gap-1 font-semibold">❤️ 16.2K Likes</span>
                             <span class="flex items-center gap-1 font-semibold">💬 262 Cmts</span>
                             <span class="flex items-center gap-1 font-semibold">🔁 149 Reposts</span>
                             <span class="flex items-center gap-1 font-semibold">↗️ 7.2K Shares</span>
                         </div>
 
-                        <a href="https://www.instagram.com/p/DU_VfcGD8n8/?hl=en" target="_blank" class="w-full text-center py-2 rounded-xl bg-slate-100 hover:bg-orange-500 hover:text-white transition text-xs font-mono text-slate-700 flex items-center justify-center gap-1.5 font-semibold">
+                        <a href="https://www.instagram.com/p/DU_VfcGD8n8/?hl=en" target="_blank" class="w-full text-center py-2 rounded-xl bg-white/70 hover:bg-orange-500 hover:text-white transition text-xs font-mono text-slate-700 flex items-center justify-center gap-1.5 font-semibold">
                             View on Instagram <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
                         </a>
                     </div>
@@ -347,7 +351,7 @@
                     <div class="aspect-reel w-full rounded-2xl bg-slate-900 overflow-hidden relative border border-slate-200 group cursor-pointer" onclick="toggleReel(this, 'reel-video-5')">
                         <video id="reel-video-5" class="w-full h-full object-cover" poster="thumb-5.jpg" src="reel-5.mp4" playsinline preload="metadata" loop></video>
                         <div class="play-overlay absolute inset-0 bg-black/25 flex items-center justify-center transition-opacity duration-300">
-                            <div class="w-14 h-14 rounded-full bg-white text-orange-600 flex items-center justify-center shadow-xl group-hover:scale-110 transition">
+                            <div class="w-14 h-14 rounded-full bg-white/95 text-orange-600 flex items-center justify-center shadow-xl group-hover:scale-110 transition">
                                 <svg class="w-7 h-7 fill-orange-600 ml-1" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                             </div>
                         </div>
@@ -365,14 +369,14 @@
                         </div>
                         <p class="text-sm font-bold text-slate-950 leading-tight">Nozzle Agitation & Pro Tips</p>
                         
-                        <div class="grid grid-cols-2 gap-1.5 text-[11px] font-mono text-slate-700 bg-slate-100/80 p-2.5 rounded-xl border border-slate-200">
+                        <div class="grid grid-cols-2 gap-1.5 text-[11px] font-mono text-slate-700 bg-white/60 p-2.5 rounded-xl border border-slate-200">
                             <span class="flex items-center gap-1 font-semibold">❤️ 2K Likes</span>
                             <span class="flex items-center gap-1 font-semibold">💬 86 Cmts</span>
                             <span class="flex items-center gap-1 font-semibold">🔁 7 Reposts</span>
                             <span class="flex items-center gap-1 font-semibold">↗️ 223 Shares</span>
                         </div>
 
-                        <a href="https://www.instagram.com/p/DYftPfsqb4c/?hl=en" target="_blank" class="w-full text-center py-2 rounded-xl bg-slate-100 hover:bg-orange-500 hover:text-white transition text-xs font-mono text-slate-700 flex items-center justify-center gap-1.5 font-semibold">
+                        <a href="https://www.instagram.com/p/DYftPfsqb4c/?hl=en" target="_blank" class="w-full text-center py-2 rounded-xl bg-white/70 hover:bg-orange-500 hover:text-white transition text-xs font-mono text-slate-700 flex items-center justify-center gap-1.5 font-semibold">
                             View on Instagram <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
                         </a>
                     </div>
@@ -383,7 +387,7 @@
                     <div class="aspect-reel w-full rounded-2xl bg-slate-900 overflow-hidden relative border border-slate-200 group cursor-pointer" onclick="toggleReel(this, 'reel-video-6')">
                         <video id="reel-video-6" class="w-full h-full object-cover" poster="thumb-6.jpg" src="reel-6.mp4" playsinline preload="metadata" loop></video>
                         <div class="play-overlay absolute inset-0 bg-black/25 flex items-center justify-center transition-opacity duration-300">
-                            <div class="w-14 h-14 rounded-full bg-white text-orange-600 flex items-center justify-center shadow-xl group-hover:scale-110 transition">
+                            <div class="w-14 h-14 rounded-full bg-white/95 text-orange-600 flex items-center justify-center shadow-xl group-hover:scale-110 transition">
                                 <svg class="w-7 h-7 fill-orange-600 ml-1" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                             </div>
                         </div>
@@ -401,14 +405,14 @@
                         </div>
                         <p class="text-sm font-bold text-slate-950 leading-tight">Product Feature & Coverage Demo</p>
                         
-                        <div class="grid grid-cols-2 gap-1.5 text-[11px] font-mono text-slate-700 bg-slate-100/80 p-2.5 rounded-xl border border-slate-200">
+                        <div class="grid grid-cols-2 gap-1.5 text-[11px] font-mono text-slate-700 bg-white/60 p-2.5 rounded-xl border border-slate-200">
                             <span class="flex items-center gap-1 font-semibold">❤️ 2K Likes</span>
                             <span class="flex items-center gap-1 font-semibold">💬 14 Cmts</span>
                             <span class="flex items-center gap-1 font-semibold">🔁 1 Repost</span>
                             <span class="flex items-center gap-1 font-semibold">↗️ 7 Shares</span>
                         </div>
 
-                        <a href="https://www.instagram.com/p/DOW-EVIDXpj/?hl=en" target="_blank" class="w-full text-center py-2 rounded-xl bg-slate-100 hover:bg-orange-500 hover:text-white transition text-xs font-mono text-slate-700 flex items-center justify-center gap-1.5 font-semibold">
+                        <a href="https://www.instagram.com/p/DOW-EVIDXpj/?hl=en" target="_blank" class="w-full text-center py-2 rounded-xl bg-white/70 hover:bg-orange-500 hover:text-white transition text-xs font-mono text-slate-700 flex items-center justify-center gap-1.5 font-semibold">
                             View on Instagram <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
                         </a>
                     </div>
@@ -419,7 +423,7 @@
                     <div class="aspect-reel w-full rounded-2xl bg-slate-900 overflow-hidden relative border border-slate-200 group cursor-pointer" onclick="toggleReel(this, 'reel-video-7')">
                         <video id="reel-video-7" class="w-full h-full object-cover" poster="thumb-7.jpg" src="reel-7.mp4" playsinline preload="metadata" loop></video>
                         <div class="play-overlay absolute inset-0 bg-black/25 flex items-center justify-center transition-opacity duration-300">
-                            <div class="w-14 h-14 rounded-full bg-white text-orange-600 flex items-center justify-center shadow-xl group-hover:scale-110 transition">
+                            <div class="w-14 h-14 rounded-full bg-white/95 text-orange-600 flex items-center justify-center shadow-xl group-hover:scale-110 transition">
                                 <svg class="w-7 h-7 fill-orange-600 ml-1" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                             </div>
                         </div>
@@ -437,14 +441,14 @@
                         </div>
                         <p class="text-sm font-bold text-slate-950 leading-tight">Field Application & Community Spotlight</p>
                         
-                        <div class="grid grid-cols-2 gap-1.5 text-[11px] font-mono text-slate-700 bg-slate-100/80 p-2.5 rounded-xl border border-slate-200">
+                        <div class="grid grid-cols-2 gap-1.5 text-[11px] font-mono text-slate-700 bg-white/60 p-2.5 rounded-xl border border-slate-200">
                             <span class="flex items-center gap-1 font-semibold">❤️ 1K Likes</span>
                             <span class="flex items-center gap-1 font-semibold">💬 26 Cmts</span>
                             <span class="flex items-center gap-1 font-semibold">🔁 6 Reposts</span>
                             <span class="flex items-center gap-1 font-semibold">↗️ 82 Shares</span>
                         </div>
 
-                        <a href="https://www.instagram.com/p/DXIMNdQDt_8/?hl=en" target="_blank" class="w-full text-center py-2 rounded-xl bg-slate-100 hover:bg-orange-500 hover:text-white transition text-xs font-mono text-slate-700 flex items-center justify-center gap-1.5 font-semibold">
+                        <a href="https://www.instagram.com/p/DXIMNdQDt_8/?hl=en" target="_blank" class="w-full text-center py-2 rounded-xl bg-white/70 hover:bg-orange-500 hover:text-white transition text-xs font-mono text-slate-700 flex items-center justify-center gap-1.5 font-semibold">
                             View on Instagram <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
                         </a>
                     </div>
@@ -455,7 +459,7 @@
                     <div class="aspect-reel w-full rounded-2xl bg-slate-900 overflow-hidden relative border border-slate-200 group cursor-pointer" onclick="toggleReel(this, 'reel-video-8')">
                         <video id="reel-video-8" class="w-full h-full object-cover" poster="thumb-8.jpg" src="reel-8.mp4" playsinline preload="metadata" loop></video>
                         <div class="play-overlay absolute inset-0 bg-black/25 flex items-center justify-center transition-opacity duration-300">
-                            <div class="w-14 h-14 rounded-full bg-white text-orange-600 flex items-center justify-center shadow-xl group-hover:scale-110 transition">
+                            <div class="w-14 h-14 rounded-full bg-white/95 text-orange-600 flex items-center justify-center shadow-xl group-hover:scale-110 transition">
                                 <svg class="w-7 h-7 fill-orange-600 ml-1" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                             </div>
                         </div>
@@ -473,13 +477,13 @@
                         </div>
                         <p class="text-sm font-bold text-slate-950 leading-tight">Restoration & Surface Transformation</p>
                         
-                        <div class="grid grid-cols-2 gap-1.5 text-[11px] font-mono text-slate-700 bg-slate-100/80 p-2.5 rounded-xl border border-slate-200">
+                        <div class="grid grid-cols-2 gap-1.5 text-[11px] font-mono text-slate-700 bg-white/60 p-2.5 rounded-xl border border-slate-200">
                             <span class="flex items-center gap-1 font-semibold">❤️ 5K Likes</span>
                             <span class="flex items-center gap-1 font-semibold">🔁 38 Reposts</span>
                             <span class="flex items-center gap-1 col-span-2 justify-center font-semibold">↗️ 473 Shares</span>
                         </div>
 
-                        <a href="https://www.instagram.com/p/DbbkIuDKjTk/" target="_blank" class="w-full text-center py-2 rounded-xl bg-slate-100 hover:bg-orange-500 hover:text-white transition text-xs font-mono text-slate-700 flex items-center justify-center gap-1.5 font-semibold">
+                        <a href="https://www.instagram.com/p/DbbkIuDKjTk/" target="_blank" class="w-full text-center py-2 rounded-xl bg-white/70 hover:bg-orange-500 hover:text-white transition text-xs font-mono text-slate-700 flex items-center justify-center gap-1.5 font-semibold">
                             View on Instagram <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
                         </a>
                     </div>
@@ -506,7 +510,7 @@
                     <div class="lg:col-span-8">
                         <div class="aspect-video w-full rounded-3xl bg-slate-950 overflow-hidden relative shadow-2xl border border-slate-300">
                             <!-- Replace with your YouTube Embed ID -->
-                            <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/2iFXT8I_FH8" title="Seymour: American Made Since 1949" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Seymour: American Made Since 1949" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
                     <div class="lg:col-span-4 flex flex-col justify-between h-full">
@@ -539,7 +543,7 @@
                 <div class="soft-glass rounded-[32px] p-5 flex flex-col justify-between border border-white">
                     <div>
                         <div class="aspect-video w-full rounded-2xl bg-slate-900 overflow-hidden relative mb-5 shadow-xl border border-slate-200">
-                            <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/Hv9y6WDBqIQ" title="Seymour MRO High Solids Enamel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Seymour MRO High Solids Enamel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                         <span class="text-[10px] font-mono uppercase tracking-wider text-orange-700 bg-orange-100 border border-orange-300 px-2.5 py-1 rounded-full font-bold">
                             Product Commercial
@@ -559,7 +563,7 @@
                 <div class="soft-glass rounded-[32px] p-5 flex flex-col justify-between border border-white">
                     <div>
                         <div class="aspect-video w-full rounded-2xl bg-slate-900 overflow-hidden relative mb-5 shadow-xl border border-slate-200">
-                            <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/a6uEJcT4ujk" title="Spray Painting Pro Tips & Tricks" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Spray Painting Pro Tips & Tricks" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                         <span class="text-[10px] font-mono uppercase tracking-wider text-amber-800 bg-amber-100 border border-amber-300 px-2.5 py-1 rounded-full font-bold">
                             Educational / How-To
@@ -579,7 +583,7 @@
                 <div class="soft-glass rounded-[32px] p-5 flex flex-col justify-between border border-white">
                     <div>
                         <div class="aspect-video w-full rounded-2xl bg-slate-900 overflow-hidden relative mb-5 shadow-xl border border-slate-200">
-                            <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/nAjKxPDo4m0" title="Restoring Bar Stools with Seymour 2K Clear & Stainless Steel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Restoring Bar Stools with Seymour 2K Clear & Stainless Steel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                         <span class="text-[10px] font-mono uppercase tracking-wider text-purple-800 bg-purple-100 border border-purple-300 px-2.5 py-1 rounded-full font-bold">
                             Restoration Project
@@ -633,7 +637,46 @@
             </div>
         </section>
 
-        <!-- INFLUENCER MANAGEMENT -->
+        <!-- ABOUT ME (MOVED UP BELOW YOUTUBE SECTION AS REQUESTED) -->
+        <section id="about-quinn" class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center mb-32">
+            <div class="md:col-span-4">
+                <div class="relative">
+                    <img src="headshot.jpg" alt="Quinn Corcoran" class="w-full rounded-[40px] shadow-2xl border-4 border-white aspect-square object-cover">
+                    <div class="absolute -bottom-3 -right-3 bg-gradient-to-r from-amber-400 to-orange-500 text-white px-4 py-2 rounded-2xl text-xs helvetica-bold uppercase shadow-xl font-mono">
+                        Chicago, IL 📍
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-8 soft-glass p-8 sm:p-12 rounded-[40px] border border-white">
+                <span class="text-xs font-mono uppercase text-orange-600 tracking-wider block mb-2 font-bold">// Storyteller Profile</span>
+                <h2 class="text-4xl helvetica-bold mb-6 uppercase text-slate-950">About Quinn Corcoran</h2>
+                <div class="space-y-4 text-base sm:text-lg leading-relaxed text-slate-700 font-light">
+                    <p>
+                        I am an <a href="https://www.spj.org/mark-of-excellence-awards-2020-national-winners-and-finalists/#:~:text=Digital%20News%20Videography-,National%20Winner" target="_blank" class="text-orange-600 underline underline-offset-4 font-semibold hover:text-orange-700">SPJ award-winning journalist</a> and social media manager passionate about telling stories that resonate deeply and convert measurably [1].
+                    </p>
+                    <p>
+                        With a Bachelor’s in Journalism (Dual Minor in Chinese & Media Arts) from The University of Montana, I merge editorial credibility with Gen Z digital culture. Whether directing in-studio commercials or scaling organic reach from 0 to 10k in months, I build genuine brand affinity.
+                    </p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-slate-200 flex flex-wrap items-center justify-between gap-4">
+                    <div class="flex items-center gap-6">
+                        <a href="mailto:quinncorcoran@gmail.com" class="text-sm text-slate-800 hover:text-orange-600 transition flex items-center gap-2 font-medium">
+                            <svg class="w-4 h-4 text-orange-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+                            quinncorcoran@gmail.com
+                        </a>
+                        <span class="text-slate-400">&bull;</span>
+                        <a href="tel:6307092206" class="text-sm text-slate-800 hover:text-orange-600 transition flex items-center gap-2 font-medium">
+                            <svg class="w-4 h-4 text-orange-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+                            (630) 709-2206
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BEEFED UP INFLUENCER MANAGEMENT (6 CARDS) -->
         <section id="influencer-partners" class="soft-glass p-8 sm:p-12 rounded-[40px] mb-32 border border-white relative overflow-hidden">
             <div class="max-w-3xl mb-10">
                 <span class="px-3 py-1 rounded-md bg-purple-100 border border-purple-300 text-purple-800 font-mono text-xs uppercase font-bold tracking-wider block w-fit mb-2">Creator Partnerships</span>
@@ -643,7 +686,46 @@
                 </p>
             </div>
             
+            <!-- 3x2 CREATOR GRID -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- 1. Alexander Vargas (TikTok Lead) -->
+                <a href="https://www.tiktok.com/@_alexandervargas/video/7647579299075067150" target="_blank" class="soft-glass-card p-6 rounded-3xl hover:border-orange-500 transition group flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-mono uppercase text-rose-600 font-bold">TikTok / Gen Z Creator</span>
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-orange-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+                        </div>
+                        <p class="text-lg helvetica-bold mb-1 text-slate-950 group-hover:text-orange-600 transition">Alexander Vargas</p>
+                        <p class="text-xs text-slate-600">High-energy TikTok creator partnership & viral youth demographic reach.</p>
+                    </div>
+                </a>
+
+                <!-- 2. Conor Shanahan (Pro Drift Master) -->
+                <a href="https://www.instagram.com/p/DW9Xbxlio5b/?hl=en" target="_blank" class="soft-glass-card p-6 rounded-3xl hover:border-orange-500 transition group flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-mono uppercase text-sky-600 font-bold">Red Bull / Drift Masters</span>
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-orange-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+                        </div>
+                        <p class="text-lg helvetica-bold mb-1 text-slate-950 group-hover:text-orange-600 transition">Conor Shanahan</p>
+                        <p class="text-xs text-slate-600">Pro European drift champion collaboration and extreme track-use trials.</p>
+                    </div>
+                </a>
+
+                <!-- 3. Ian Johnson (Big Tire Garage) -->
+                <a href="https://www.youtube.com/@BigTireGarage" target="_blank" class="soft-glass-card p-6 rounded-3xl hover:border-orange-500 transition group flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-mono uppercase text-amber-600 font-bold">TV Host / Off-Road Tech</span>
+                            <svg class="w-4 h-4 text-slate-400 group-hover:text-orange-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+                        </div>
+                        <p class="text-lg helvetica-bold mb-1 text-slate-950 group-hover:text-orange-600 transition">Ian Johnson (Big Tire Garage)</p>
+                        <p class="text-xs text-slate-600">Deep technical fabrication review, weld-through trials & shop testing.</p>
+                    </div>
+                </a>
+
+                <!-- 4. Vaughn Gittin Jr. & RTR -->
                 <a href="https://www.instagram.com/p/DKfBji1ugdG/" target="_blank" class="soft-glass-card p-6 rounded-3xl hover:border-orange-500 transition group flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-4">
@@ -651,29 +733,31 @@
                             <svg class="w-4 h-4 text-slate-400 group-hover:text-orange-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
                         </div>
                         <p class="text-lg helvetica-bold mb-1 text-slate-950 group-hover:text-orange-600 transition">Vaughn Gittin Jr. & RTR</p>
-                        <p class="text-xs text-slate-600">Pro motorsport campaign & trackside content series.</p>
+                        <p class="text-xs text-slate-600">Pro motorsport campaign, trackside content & OEM lifestyle integration.</p>
                     </div>
                 </a>
 
+                <!-- 5. OffRoadNChill -->
                 <a href="https://www.instagram.com/p/DUT1lPAEmEl/" target="_blank" class="soft-glass-card p-6 rounded-3xl hover:border-orange-500 transition group flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-mono uppercase text-orange-600 font-bold">Overland / Offroad</span>
+                            <span class="text-xs font-mono uppercase text-emerald-600 font-bold">Overland / Offroad</span>
                             <svg class="w-4 h-4 text-slate-400 group-hover:text-orange-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
                         </div>
                         <p class="text-lg helvetica-bold mb-1 text-slate-950 group-hover:text-orange-600 transition">OffRoadNChill</p>
-                        <p class="text-xs text-slate-600">Expedition lifestyle seeding & extreme durability testing.</p>
+                        <p class="text-xs text-slate-600">Expedition lifestyle seeding, trail-testing & extreme weather durability.</p>
                     </div>
                 </a>
 
+                <!-- 6. FlexRocksandRollovers -->
                 <a href="https://www.instagram.com/p/DTstKfejrDC/" target="_blank" class="soft-glass-card p-6 rounded-3xl hover:border-orange-500 transition group flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-mono uppercase text-orange-600 font-bold">Rock Crawling</span>
+                            <span class="text-xs font-mono uppercase text-purple-600 font-bold">Rock Crawling</span>
                             <svg class="w-4 h-4 text-slate-400 group-hover:text-orange-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
                         </div>
                         <p class="text-lg helvetica-bold mb-1 text-slate-950 group-hover:text-orange-600 transition">FlexRocksandRollovers</p>
-                        <p class="text-xs text-slate-600">Chassis coating trials, live demos, and community meetups.</p>
+                        <p class="text-xs text-slate-600">Chassis coating trials, live demos, and outdoor community meetups.</p>
                     </div>
                 </a>
             </div>
@@ -728,45 +812,6 @@
             </div>
         </section>
 
-        <!-- ABOUT ME -->
-        <section id="about-quinn" class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center mb-24">
-            <div class="md:col-span-4">
-                <div class="relative">
-                    <img src="headshot.jpg" alt="Quinn Corcoran" class="w-full rounded-[40px] shadow-2xl border-4 border-white aspect-square object-cover">
-                    <div class="absolute -bottom-3 -right-3 bg-gradient-to-r from-amber-400 to-orange-500 text-white px-4 py-2 rounded-2xl text-xs helvetica-bold uppercase shadow-xl font-mono">
-                        Chicago, IL 📍
-                    </div>
-                </div>
-            </div>
-
-            <div class="md:col-span-8 soft-glass p-8 sm:p-12 rounded-[40px] border border-white">
-                <span class="text-xs font-mono uppercase text-orange-600 tracking-wider block mb-2 font-bold">// Storyteller Profile</span>
-                <h2 class="text-4xl helvetica-bold mb-6 uppercase text-slate-950">About Quinn Corcoran</h2>
-                <div class="space-y-4 text-base sm:text-lg leading-relaxed text-slate-700 font-light">
-                    <p>
-                        I am an <a href="https://www.spj.org/mark-of-excellence-awards-2020-national-winners-and-finalists/#:~:text=Digital%20News%20Videography-,National%20Winner" target="_blank" class="text-orange-600 underline underline-offset-4 font-semibold hover:text-orange-700">SPJ award-winning journalist</a> and social media manager passionate about telling stories that resonate deeply and convert measurably [1].
-                    </p>
-                    <p>
-                        With a Bachelor’s in Journalism (Dual Minor in Chinese & Media Arts) from The University of Montana, I merge editorial credibility with Gen Z digital culture. Whether directing in-studio commercials or scaling organic reach from 0 to 10k in months, I build genuine brand affinity.
-                    </p>
-                </div>
-
-                <div class="mt-8 pt-6 border-t border-slate-200 flex flex-wrap items-center justify-between gap-4">
-                    <div class="flex items-center gap-6">
-                        <a href="mailto:quinncorcoran@gmail.com" class="text-sm text-slate-800 hover:text-orange-600 transition flex items-center gap-2 font-medium">
-                            <svg class="w-4 h-4 text-orange-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
-                            quinncorcoran@gmail.com
-                        </a>
-                        <span class="text-slate-400">&bull;</span>
-                        <a href="tel:6307092206" class="text-sm text-slate-800 hover:text-orange-600 transition flex items-center gap-2 font-medium">
-                            <svg class="w-4 h-4 text-orange-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
-                            (630) 709-2206
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
     </main>
 
     <!-- FOOTER -->
@@ -776,13 +821,13 @@
 
     <!-- SCRIPTS -->
     <script>
-        // Ambient Radial Glow Mouse Tracker
+        // Ambient Radial Glow Mouse Tracker (Sky-Blue Accent)
         const glow = document.getElementById('soft-glow');
         window.addEventListener('pointermove', (e) => {
             const { clientX, clientY } = e;
             glow.animate({
-                left: `${clientX - 350}px`,
-                top: `${clientY - 350}px`
+                left: `${clientX - 375}px`,
+                top: `${clientY - 375}px`
             }, { duration: 3500, fill: "forwards" });
         });
 
