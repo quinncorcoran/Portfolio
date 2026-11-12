@@ -1,847 +1,597 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FNL1FZQJ6V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FNL1FZQJ6V"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FNL1FZQJ6V');
+    </script>
 
-  gtag('config', 'G-FNL1FZQJ6V');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quinn Corcoran | Social Media Manager & Video Content Creator</title>
-    <meta name="description" content="Chicago-based social media manager and video content creator. 14M organic views, 1M unique viewers, and 3x ROI on ~$250K ad spend. Two-time national journalism award winner.">
+    <title>Quinn Corcoran | Social Media Manager and Video Creator</title>
+    <meta name="description" content="Chicago social media manager and video creator. 14M organic views in 2026, two sold-out product launches, and 3x ROI on about $250K in paid media. SPJ national award winner.">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Quinn Corcoran | Social Media Manager & Video Content Creator">
-    <meta property="og:description" content="Six years of high-volume short-form video, influencer partnerships, and paid media. See the viral reels and commercial work.">
+    <meta property="og:title" content="Quinn Corcoran | Social Media Manager and Video Creator">
+    <meta property="og:description" content="I run social media for brands and make the video myself. See the reels, the results, and the commercial work.">
     <meta property="og:url" content="https://quinncorcoran.github.io/Portfolio/">
+    <!-- TODO: replace with a 1200x630 image (og-card.jpg). This is what LinkedIn shows when the link is shared. -->
     <meta property="og:image" content="https://quinncorcoran.github.io/Portfolio/thumb-1.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    
-    <!-- SMILEY EMOJI TAB FAVICON -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>😊</text></svg>">
-    
-    <!-- Fonts -->
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2210%22 fill=%22%2314213d%22/><text x=%2232%22 y=%2243%22 font-family=%22Arial,sans-serif%22 font-size=%2230%22 font-weight=%22700%22 text-anchor=%22middle%22 fill=%22%23ffd60a%22>QC</text></svg>">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
     <style>
-        /* HELVETICA & GEN Z SOFT CLUB TYPOGRAPHY */
-        body { 
-            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background: #e0f2fe url('Background.jpg') no-repeat center center fixed; 
-            background-size: cover;
-            color: #0f172a;
-            overflow-x: hidden;
+        :root {
+            --paper: #ffffff;
+            --ink: #14213d;
+            --muted: #56607a;
+            --line: #dfe3ea;
+            --wash: #f2f4f8;
+            --mark: #ffd60a;
+            --wrap: 1120px;
         }
 
-        .display-bold { font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif; font-weight: 800; letter-spacing: -0.03em; }
-        .display-medium { font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif; font-weight: 700; letter-spacing: -0.01em; }
-        .body-light { font-weight: 400; letter-spacing: 0; }
-        /* The old monospace labels now use Inter (no more typewriter/serif look) */
-        .font-mono { font-family: 'Inter', system-ui, sans-serif !important; font-variant-numeric: tabular-nums; }
-        .tabular-nums { font-variant-numeric: tabular-nums; }
+        *, *::before, *::after { box-sizing: border-box; }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: 'Schibsted Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 1.0625rem;
+            line-height: 1.6;
+            font-variant-numeric: tabular-nums;
+            -webkit-font-smoothing: antialiased;
+        }
+        img, video, iframe { display: block; max-width: 100%; }
+        h1, h2, h3, p, ul, dl, dd, figure { margin: 0; }
+        ul { padding: 0; list-style: none; }
 
-        /* REEL TILES */
-        .reel-tile .play-overlay, .reel-tile .stat-overlay { transition: opacity 0.3s ease; }
-        .reel-tile.is-playing .play-overlay, .reel-tile.is-playing .stat-overlay { opacity: 0; }
-        .reel-tile video { transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
-        .reel-tile:hover video { transform: scale(1.04); }
+        a { color: inherit; text-decoration-thickness: 1.5px; text-underline-offset: 0.18em; }
+        a:hover { background: var(--mark); }
+        :focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; border-radius: 2px; }
 
-        /* LUMINOUS FROSTED GLASS (LIGHT MODE) */
-        .soft-glass {
-            background: rgba(255, 255, 255, 0.75);
-            backdrop-filter: blur(28px) saturate(270%);
-            -webkit-backdrop-filter: blur(28px) saturate(270%);
-            border: 1px solid rgba(255, 255, 255, 0.9);
-            box-shadow: 0 20px 45px -15px rgba(2, 132, 199, 0.15);
+        /* The one accent: a highlighter, used only on measured results. */
+        mark {
+            background: var(--mark);
+            color: inherit;
+            padding: 0.05em 0.2em;
+            border-radius: 2px;
+            font-weight: 600;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
         }
 
-        /* EXTRA TRANSPARENT GLASS CARDS FOR REELS */
-        .soft-glass-card {
-            background: rgba(255, 255, 255, 0.48);
-            backdrop-filter: blur(24px) saturate(180%);
-            -webkit-backdrop-filter: blur(24px) saturate(180%);
-            border: 1px solid rgba(255, 255, 255, 0.75);
-            box-shadow: 0 15px 35px -10px rgba(15, 23, 42, 0.07);
-            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-        }
+        .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 1.5rem; }
+        .muted { color: var(--muted); }
+        .small { font-size: 0.9375rem; }
 
-        .soft-glass-card:hover {
-            background: rgba(255, 255, 255, 0.78);
-            border-color: #f97316;
-            transform: translateY(-6px);
-            box-shadow: 0 25px 50px -12px rgba(249, 115, 22, 0.22);
+        /* Header */
+        .site-head {
+            position: sticky; top: 0; z-index: 20;
+            background: var(--paper);
+            border-bottom: 1px solid var(--line);
         }
+        .site-head .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 60px; }
+        .site-name { font-weight: 800; font-size: 1.0625rem; letter-spacing: -0.01em; text-decoration: none; }
+        .site-nav { display: flex; align-items: center; gap: 1.75rem; font-size: 0.9375rem; font-weight: 500; }
+        .site-nav a { text-decoration: none; }
+        .site-nav .links { display: none; gap: 1.75rem; }
+        @media (min-width: 820px) { .site-nav .links { display: flex; } }
 
-        /* AMBIENT BLUE/CYAN CURSOR GLOW */
-        #soft-glow {
-            position: fixed;
-            width: 750px;
-            height: 750px;
-            background: radial-gradient(circle, rgba(14, 165, 233, 0.28) 0%, rgba(56, 189, 248, 0.15) 40%, rgba(0,0,0,0) 70%);
-            border-radius: 50%;
-            z-index: 0;
-            filter: blur(110px);
-            pointer-events: none;
-            transition: transform 0.2s ease-out;
+        /* Buttons */
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center;
+            padding: 0.8rem 1.25rem;
+            border: 1.5px solid var(--ink); border-radius: 6px;
+            background: var(--ink); color: #fff;
+            font: inherit; font-weight: 600; font-size: 0.9375rem; line-height: 1.2;
+            text-decoration: none; cursor: pointer;
         }
+        .btn:hover { background: var(--mark); color: var(--ink); }
+        .btn.quiet { background: transparent; color: var(--ink); }
+        .btn.quiet:hover { background: var(--mark); }
+        .btn.compact { padding: 0.55rem 0.9rem; }
+        .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
 
-        /* TICKER ANIMATION */
-        .ticker-wrap {
-            width: 100%;
-            overflow: hidden;
-            white-space: nowrap;
+        /* Sections */
+        section { padding: 4.5rem 0; }
+        section + section { border-top: 1px solid var(--line); }
+        [id] { scroll-margin-top: 76px; }
+        h2 { font-size: clamp(1.75rem, 3.2vw, 2.5rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.1; }
+        h3 { font-size: 1.375rem; font-weight: 700; letter-spacing: -0.015em; line-height: 1.2; }
+        .section-head { max-width: 62ch; margin-bottom: 2.5rem; }
+        .section-head p { margin-top: 0.75rem; color: var(--muted); }
+
+        /* Hero */
+        .hero { padding: 4rem 0 4.5rem; }
+        .hero-grid { display: grid; gap: 3rem; align-items: center; }
+        @media (min-width: 900px) { .hero-grid { grid-template-columns: minmax(0, 1fr) 320px; gap: 4.5rem; } }
+        h1 {
+            font-size: clamp(2.5rem, 6.2vw, 4.5rem);
+            font-weight: 800; letter-spacing: -0.035em; line-height: 1.02;
+            max-width: 13ch;
         }
+        .hero-lede { margin-top: 1.75rem; max-width: 56ch; font-size: 1.1875rem; line-height: 1.65; }
+        .hero .actions { margin-top: 2rem; }
+        .hero-reel { width: min(100%, 320px); }
+        .hero-reel figcaption { margin-top: 0.9rem; font-size: 0.9375rem; }
+        .hero-reel figcaption strong { display: block; font-size: 1.25rem; letter-spacing: -0.01em; }
 
-        .ticker-move {
-            display: inline-block;
-            animation: ticker 38s linear infinite;
-        }
-
-        @keyframes ticker {
-            0% { transform: translate3d(0, 0, 0); }
-            100% { transform: translate3d(-50%, 0, 0); }
-        }
-
-        /* 9:16 VERTICAL ASPECT RATIO FOR REELS */
-        .aspect-reel {
+        /* Reels */
+        .reel {
+            position: relative;
             aspect-ratio: 9 / 16;
+            background: var(--ink);
+            border-radius: 10px;
+            overflow: hidden;
         }
+        .reel video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+        .reel-toggle {
+            position: absolute; inset: 0; width: 100%; height: 100%;
+            display: grid; place-items: center;
+            background: transparent; border: 0; padding: 0; cursor: pointer;
+        }
+        .reel-toggle:focus-visible { outline-offset: -5px; outline-color: var(--mark); }
+        .reel-toggle span {
+            width: 56px; height: 56px; border-radius: 50%;
+            background: #fff; display: grid; place-items: center;
+            transition: opacity 0.2s ease;
+        }
+        .reel-toggle svg { width: 20px; height: 20px; margin-left: 3px; fill: var(--ink); }
+        .reel-toggle:hover span { background: var(--mark); }
+        .reel.is-playing .reel-toggle span { opacity: 0; }
+
+        .reel-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.75rem 1rem; }
+        @media (min-width: 640px) { .reel-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+        @media (min-width: 1000px) { .reel-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
+        .reel-item .views { margin-top: 0.75rem; font-weight: 700; font-size: 1.0625rem; }
+        .reel-item .what { font-size: 0.9375rem; color: var(--muted); line-height: 1.4; }
+        .reel-item .where { font-size: 0.875rem; margin-top: 0.25rem; }
+        .feed-tile {
+            aspect-ratio: 9 / 16; border-radius: 10px;
+            border: 1.5px solid var(--ink);
+            display: flex; flex-direction: column; justify-content: flex-end;
+            padding: 1rem; text-decoration: none; font-weight: 700; line-height: 1.25;
+        }
+        .feed-tile span { font-weight: 400; font-size: 0.9375rem; color: var(--muted); }
+        .feed-tile:hover span { color: var(--ink); }
+
+        /* Results */
+        .case { display: grid; gap: 2rem; align-items: start; }
+        @media (min-width: 900px) { .case { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 3.5rem; } }
+        .case p { margin-top: 0.9rem; max-width: 60ch; }
+        .embed { aspect-ratio: 16 / 9; background: var(--ink); border-radius: 10px; overflow: hidden; }
+        .embed iframe { width: 100%; height: 100%; border: 0; }
+
+        .bars { margin-top: 1.75rem; display: grid; gap: 0.6rem; max-width: 30rem; }
+        .bars .row { display: grid; gap: 0.2rem; }
+        .bars .label { font-size: 0.875rem; color: var(--muted); }
+        .bars .bar {
+            width: var(--w); min-width: 7.5rem;
+            background: var(--wash); border-radius: 4px;
+            padding: 0.4rem 0.7rem; font-weight: 700; font-size: 0.9375rem; white-space: nowrap;
+        }
+        .bars .bar.is-new { background: var(--mark); }
+        .bars-note { margin-top: 0.6rem; font-size: 0.8125rem; color: var(--muted); }
+
+        .case-pair { display: grid; gap: 3rem; margin-top: 4rem; padding-top: 3.5rem; border-top: 1px solid var(--line); }
+        @media (min-width: 900px) { .case-pair { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: 3.5rem; } }
+        .case-reel { display: grid; gap: 1.5rem; align-items: start; }
+        .case-reel .reel { max-width: 220px; }
+        @media (min-width: 520px) { .case-reel { grid-template-columns: 190px minmax(0, 1fr); gap: 2rem; } .case-reel .reel { max-width: none; } }
+        .case-pair p { margin-top: 0.9rem; max-width: 52ch; }
+        .case-pair .btn { margin-top: 1.25rem; }
+
+        /* Film */
+        .film-lead { display: grid; gap: 1.75rem; align-items: center; }
+        @media (min-width: 900px) { .film-lead { grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: 3rem; } }
+        .film-lead p, .film-item p { margin-top: 0.6rem; }
+        .film-more { display: grid; gap: 2.5rem; margin-top: 3rem; }
+        @media (min-width: 720px) { .film-more { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; } }
+        .film-item h3 { margin-top: 1rem; font-size: 1.1875rem; }
+        .role { font-size: 0.9375rem; color: var(--muted); }
+
+        /* Creators */
+        .creators { border-top: 1px solid var(--line); }
+        .creators li {
+            display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0.15rem 1.5rem;
+            padding: 0.95rem 0; border-bottom: 1px solid var(--line); align-items: baseline;
+        }
+        @media (min-width: 720px) { .creators li { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr) 6rem; } }
+        .creators .name { font-weight: 700; }
+        .creators .who { color: var(--muted); font-size: 0.9375rem; grid-column: 1; }
+        @media (min-width: 720px) { .creators .who { grid-column: auto; } }
+        .creators a { font-size: 0.9375rem; grid-row: 1; grid-column: 2; justify-self: end; }
+        @media (min-width: 720px) { .creators a { grid-row: auto; grid-column: auto; } }
+
+        /* About */
+        .about { display: grid; gap: 2.5rem; align-items: start; }
+        @media (min-width: 900px) { .about { grid-template-columns: 300px minmax(0, 1fr); gap: 4rem; } }
+        .about img { width: 100%; max-width: 300px; aspect-ratio: 1; object-fit: cover; border-radius: 10px; }
+        .about-body p { max-width: 62ch; }
+        .about-body p + p { margin-top: 1rem; }
+        .about-body h2 { margin-bottom: 1.25rem; }
+        .history { margin-top: 2.25rem; border-top: 1px solid var(--line); max-width: 40rem; }
+        .history div { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 1rem; padding: 0.7rem 0; border-bottom: 1px solid var(--line); font-size: 0.9375rem; }
+        .history dt { color: var(--muted); }
+        .history dd strong { font-weight: 700; }
+
+        /* Contact */
+        .contact h2 { font-size: clamp(2.25rem, 5.5vw, 4rem); letter-spacing: -0.035em; line-height: 1.02; max-width: 14ch; }
+        .contact p { margin-top: 1.25rem; max-width: 52ch; }
+        .contact .actions { margin-top: 2rem; }
+
+        footer { border-top: 1px solid var(--line); padding: 2rem 0 3rem; font-size: 0.875rem; color: var(--muted); }
 
         @media (prefers-reduced-motion: reduce) {
-            .ticker-move { animation: none; }
-            #soft-glow { display: none; }
-            .soft-glass-card:hover { transform: none; }
             html { scroll-behavior: auto; }
+            .reel-toggle span { transition: none; }
         }
     </style>
 </head>
-<body class="body-light relative selection:bg-amber-300 selection:text-black">
+<body>
 
-    <div id="soft-glow"></div>
-
-    <!-- FLOATING TOP NAVIGATION -->
-    <nav class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-4">
-        <div class="max-w-6xl mx-auto soft-glass rounded-full px-6 py-3.5 flex items-center justify-between shadow-xl">
-            <a href="#" class="display-bold text-base sm:text-lg tracking-tight flex items-center gap-2 text-slate-950">
-                <span class="w-3.5 h-3.5 rounded-full bg-gradient-to-tr from-sky-500 to-amber-500 animate-pulse"></span>
-                QUINN CORCORAN
-            </a>
-            
-            <div class="hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-wider text-slate-700">
-                <a href="#viral-reels" class="hover:text-orange-600 transition">Viral Hits</a>
-                <a href="#youtube-productions" class="hover:text-orange-600 transition">Commercials</a>
-                <a href="#about-quinn" class="hover:text-orange-600 transition">About</a>
-                <a href="#influencer-partners" class="hover:text-orange-600 transition">Creator Collabs</a>
-                <a href="#strategy-skills" class="hover:text-orange-600 transition">Strategy & Skills</a>
-            </div>
-
-            <div class="flex items-center gap-3">
-                <details class="md:hidden relative">
-                    <summary class="list-none cursor-pointer bg-white/80 border border-slate-300 text-slate-900 text-xs display-bold uppercase px-4 py-2.5 rounded-full">Menu</summary>
-                    <div class="absolute right-0 top-12 w-52 soft-glass rounded-2xl p-4 flex flex-col gap-3 text-xs font-bold uppercase tracking-wider text-slate-800">
-                        <a href="#viral-reels" onclick="this.closest('details').removeAttribute('open')">Viral Hits</a>
-                        <a href="#youtube-productions" onclick="this.closest('details').removeAttribute('open')">Commercials</a>
-                        <a href="#about-quinn" onclick="this.closest('details').removeAttribute('open')">About</a>
-                        <a href="#influencer-partners" onclick="this.closest('details').removeAttribute('open')">Creator Collabs</a>
-                        <a href="#strategy-skills" onclick="this.closest('details').removeAttribute('open')">Strategy &amp; Skills</a>
-                        <a href="mailto:quinncorcoran@gmail.com">Let's Talk</a>
-                    </div>
-                </details>
-                <a href="Quinn_Corcoran_Resume.pdf" download="Quinn_Corcoran_Resume.pdf" class="bg-gradient-to-r from-amber-400 via-orange-500 to-amber-500 hover:from-amber-500 hover:to-orange-600 text-white text-xs display-bold uppercase px-5 py-2.5 rounded-full transition-all shadow-md hover:shadow-orange-500/30 flex items-center gap-2 hover:scale-105">
-                    <svg class="w-4 h-4 text-white stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
-                    Resume (PDF)
-                </a>
-                <a href="mailto:quinncorcoran@gmail.com" class="hidden sm:inline-flex bg-slate-900 hover:bg-slate-800 text-white text-xs display-bold uppercase px-5 py-2.5 rounded-full transition shadow-md">
-                    Let's Talk
-                </a>
-            </div>
+    <header class="site-head">
+        <div class="wrap">
+            <a class="site-name" href="#top">Quinn Corcoran</a>
+            <nav class="site-nav" aria-label="Main">
+                <div class="links">
+                    <a href="#reels">Reels</a>
+                    <a href="#results">Results</a>
+                    <a href="#film">Commercial work</a>
+                    <a href="#creators">Creators</a>
+                    <a href="#about">About</a>
+                </div>
+                <a class="btn compact" href="Quinn_Corcoran_Resume.pdf" download="Quinn_Corcoran_Resume.pdf">Download resume</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <!-- BOTTOM FLOATING STATS TICKER (EXPANDED RESUME DATA) -->
-    <div id="ticker-container" class="fixed bottom-0 left-0 w-full bg-gradient-to-r from-amber-400 via-orange-400 to-amber-300 text-slate-950 py-3 z-40 shadow-2xl flex items-center justify-between border-t border-white/60">
-        <div class="ticker-wrap text-xs display-bold uppercase tracking-wider">
-            <div class="ticker-move">
-                ✦ 14M Organic Views (2026) &bull; ✦ 1M Unique Viewers &bull; ✦ 3x ROI on ~$250K Ad Spend &bull; ✦ 4.4M-View Top Reel &bull; ✦ ~20 Creators (15M Combined Following) &bull; ✦ Product Video Sold Out Featured Paint &bull; ✦ 2x National Journalism Winner &bull; 
-                ✦ 14M Organic Views (2026) &bull; ✦ 1M Unique Viewers &bull; ✦ 3x ROI on ~$250K Ad Spend &bull; ✦ 4.4M-View Top Reel &bull; ✦ ~20 Creators (15M Combined Following) &bull; ✦ Product Video Sold Out Featured Paint &bull; ✦ 2x National Journalism Winner &bull;
-            </div>
-        </div>
-        <a href="Quinn_Corcoran_Resume.pdf" download="Quinn_Corcoran_Resume.pdf" class="hidden sm:flex items-center gap-2 bg-slate-950 text-white px-5 py-2 rounded-full text-xs display-bold uppercase mr-4 whitespace-nowrap hover:bg-slate-800 transition shadow-xl border border-white/30">
-            <svg class="w-4 h-4 text-amber-400 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
-            Download Resume
-        </a>
-    </div>
+    <main id="top">
 
-    <!-- MAIN CONTAINER -->
-    <main class="max-w-6xl mx-auto px-4 sm:px-6 pt-36 pb-36 relative z-10">
-        
-        <!-- HERO SECTION -->
-        <section class="text-center mb-24">
-            <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full soft-glass text-xs font-mono uppercase tracking-widest text-orange-600 mb-8 border border-white shadow-sm">
-                <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span> Social Media Manager &bull; Video Content Creator &bull; Brand Storyteller
-            </div>
-            
-            <h1 class="text-6xl sm:text-8xl md:text-9xl display-bold uppercase tracking-tighter leading-none mb-6 text-slate-950">
-                QUINN <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600">CORCORAN</span>
-            </h1>
-            
-            <!-- HERO SUBTITLE FROSTED BUBBLE -->
-            <div class="max-w-3xl mx-auto mb-10 p-6 sm:p-7 rounded-3xl soft-glass border border-white/90 shadow-md">
-                <p class="text-lg sm:text-2xl text-slate-800 font-light leading-relaxed">
-                    Social media content machine with six years of high-volume, in-house video production. Turning organic reach, influencer partnerships, and paid media into revenue.
-                </p>
-                <div class="mt-4 pt-4 border-t border-slate-200/80 flex flex-wrap items-center justify-center gap-6 text-xs font-mono uppercase tracking-wider text-slate-600 font-semibold">
-                    <span class="flex items-center gap-1.5"><strong class="text-orange-600 font-bold">14M</strong> 2026 Organic Views</span>
-                    <span>&bull;</span>
-                    <span class="flex items-center gap-1.5"><strong class="text-orange-600 font-bold">1M</strong> Unique Viewers</span>
-                    <span>&bull;</span>
-                    <span class="flex items-center gap-1.5"><strong class="text-orange-600 font-bold">3x ROI</strong> on ~$250K Ad Spend</span>
-                </div>
-            </div>
-
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="Quinn_Corcoran_Resume.pdf" download="Quinn_Corcoran_Resume.pdf" class="bg-gradient-to-r from-amber-400 via-orange-500 to-amber-500 text-white px-9 py-4 rounded-full display-bold text-sm uppercase tracking-wider transition shadow-xl hover:scale-105 flex items-center gap-2.5 hover:shadow-orange-500/30">
-                    <svg class="w-5 h-5 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
-                    Download Resume (PDF)
-                </a>
-                <a href="#viral-reels" class="bg-slate-950 text-white hover:bg-slate-800 px-8 py-4 rounded-full display-bold text-sm uppercase tracking-wider transition shadow-lg">
-                    View Viral Portfolio
-                </a>
-                <a href="https://www.linkedin.com/in/quinn-corcoran1998/" target="_blank" class="soft-glass hover:bg-white px-8 py-4 rounded-full display-bold text-sm uppercase tracking-wider transition flex items-center gap-2 border border-slate-300 text-slate-900 shadow-sm">
-                    <svg class="w-4 h-4 text-orange-600 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.62 1.62 0 1 0 0-3.24 1.62 1.62 0 0 0 0 3.24M7.85 18.5V10.1H5.07v8.4h2.78z"/></svg>
-                    LinkedIn
-                </a>
-            </div>
-
-            <!-- KEY IMPACT NUMBERS FROM RESUME -->
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-16 text-left">
-                <div class="soft-glass p-6 rounded-3xl border border-white">
-                    <span class="text-3xl sm:text-4xl display-bold text-orange-600">14M</span>
-                    <p class="text-xs text-slate-600 uppercase tracking-wider mt-1 font-mono font-semibold">2026 Organic Views</p>
-                </div>
-                <div class="soft-glass p-6 rounded-3xl border border-white">
-                    <span class="text-3xl sm:text-4xl display-bold text-amber-500">3x ROI</span>
-                    <p class="text-xs text-slate-600 uppercase tracking-wider mt-1 font-mono font-semibold">On ~$250K Ad Spend</p>
-                </div>
-                <div class="soft-glass p-6 rounded-3xl border border-white">
-                    <span class="text-3xl sm:text-4xl display-bold text-orange-600">15M+</span>
-                    <p class="text-xs text-slate-600 uppercase tracking-wider mt-1 font-mono font-semibold">Creators' Combined Following</p>
-                </div>
-                <div class="soft-glass p-6 rounded-3xl border border-white">
-                    <span class="text-3xl sm:text-4xl display-bold text-amber-500">2x Winner</span>
-                    <p class="text-xs text-slate-600 uppercase tracking-wider mt-1 font-mono font-semibold">National Journalism Awards <a href="#footnote-1" class="underline decoration-dotted">[1]</a></p>
-                </div>
-            </div>
-        </section>
-
-        <!-- VIRAL REELS SECTION -->
-        <section id="viral-reels" class="mb-32">
-            <div class="max-w-3xl mb-10">
-                <span class="inline-block px-4 py-1.5 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs sm:text-sm font-bold uppercase tracking-widest mb-4">Organic posts &bull; Organic views</span>
-                <h2 class="text-5xl sm:text-6xl display-bold uppercase tracking-tight text-slate-950 leading-[0.95]">Organic <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600">Viral Reels</span></h2>
-                <p class="mt-4 text-slate-700 text-base sm:text-lg leading-relaxed">
-                    Every reel below is an organic post for Seymour and its creator partners. <strong class="text-slate-950">Views and likes are Instagram + Facebook combined.</strong> One product video sold out the featured paint.
-                </p>
-            </div>
-
-            <!-- Instagram-style grid: featured reel + 11 tiles + feed link.
-                 To change a number, edit the views/likes inside the matching tile's stat-overlay. -->
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
-
-                <article class="reel-card col-span-2 lg:row-span-2 flex flex-col gap-3">
-                    <div class="reel-tile group relative aspect-[3/4] lg:aspect-auto lg:flex-1 lg:min-h-[480px] rounded-[32px] overflow-hidden bg-slate-900 cursor-pointer ring-1 ring-white/70 shadow-xl" onclick="toggleReel(this, 'reel-video-9')">
-                        <video id="reel-video-9" class="absolute inset-0 w-full h-full object-cover" poster="thumb-9.jpg" src="reel-9.mp4" playsinline preload="none" loop></video>
-                        <span class="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs sm:text-sm font-bold uppercase tracking-wider shadow-lg">&#9733; Top Reel</span>
-                        <span class="absolute top-4 right-4 pointer-events-none"><svg class="w-6 h-6 text-white drop-shadow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M3 8.5h18M9 3l3 5.5M15 3l3 5.5" stroke-linecap="round"/><polygon points="10.5 12.5 15.5 15 10.5 17.5" fill="currentColor" stroke="none"/></svg></span>
-                        <div class="play-overlay pointer-events-none absolute inset-0 flex items-center justify-center bg-black/10">
-                            <div class="w-20 h-20 rounded-full bg-white/95 flex items-center justify-center shadow-xl group-hover:scale-110 transition"><svg class="w-6 h-6 fill-orange-600 ml-0.5" viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-                        </div>
-                        <div class="stat-overlay pointer-events-none absolute inset-x-0 bottom-0 px-5 sm:px-7 pb-5 sm:pb-6 pt-24 bg-gradient-to-t from-black/90 via-black/55 to-transparent text-white"><div class="flex items-end gap-8 sm:gap-12"><div><div class="display-bold text-5xl sm:text-6xl lg:text-7xl leading-none tabular-nums">~7M</div><div class="mt-1.5 text-xs sm:text-sm font-semibold uppercase tracking-widest text-white/85">Views</div></div><div><div class="display-bold text-5xl sm:text-6xl lg:text-7xl leading-none tabular-nums">~75K</div><div class="mt-1.5 text-xs sm:text-sm font-semibold uppercase tracking-widest text-white/85">Likes</div></div></div><p class="mt-3 text-xs sm:text-sm text-white/85 font-medium">Instagram + Facebook combined &bull; organic</p></div>
-                    </div>
-                    <p class="flex items-center display-medium text-xl sm:text-2xl text-slate-950 leading-snug bg-white/85 backdrop-blur-md border border-white rounded-2xl px-4 py-3 shadow-md">High-Impact Fabrication Showcase</p>
-                    <a href="https://www.instagram.com/p/DefZ_jzB4OU/?hl=en" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 w-full py-4 text-base sm:text-lg rounded-full bg-slate-950 text-white display-medium tracking-tight hover:bg-orange-500 hover:scale-[1.02] transition shadow-lg">
-                        View on Instagram <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-                    </a>
-                </article>
-
-                <article class="reel-card flex flex-col gap-3">
-                    <div class="reel-tile group relative aspect-[3/4] rounded-3xl overflow-hidden bg-slate-900 cursor-pointer ring-1 ring-white/70 shadow-xl" onclick="toggleReel(this, 'reel-video-1')">
-                        <video id="reel-video-1" class="absolute inset-0 w-full h-full object-cover" poster="thumb-1.jpg" src="reel-1.mp4" playsinline preload="none" loop></video>
-                        
-                        <span class="absolute top-4 right-4 pointer-events-none"><svg class="w-6 h-6 text-white drop-shadow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M3 8.5h18M9 3l3 5.5M15 3l3 5.5" stroke-linecap="round"/><polygon points="10.5 12.5 15.5 15 10.5 17.5" fill="currentColor" stroke="none"/></svg></span>
-                        <div class="play-overlay pointer-events-none absolute inset-0 flex items-center justify-center bg-black/10">
-                            <div class="w-14 h-14 rounded-full bg-white/95 flex items-center justify-center shadow-xl group-hover:scale-110 transition"><svg class="w-6 h-6 fill-orange-600 ml-0.5" viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-                        </div>
-                        <div class="stat-overlay pointer-events-none absolute inset-x-0 bottom-0 px-3.5 pb-3.5 pt-16 bg-gradient-to-t from-black/90 via-black/55 to-transparent text-white"><div class="flex items-end gap-5"><div><div class="display-bold text-2xl sm:text-3xl leading-none tabular-nums">4.4M</div><div class="mt-1.5 text-xs font-semibold uppercase tracking-widest text-white/85">Views</div></div><div><div class="display-bold text-2xl sm:text-3xl leading-none tabular-nums">20K</div><div class="mt-1.5 text-xs font-semibold uppercase tracking-widest text-white/85">Likes</div></div></div></div>
-                    </div>
-                    <p class="flex-1 flex items-center display-medium text-[15px] sm:text-base text-slate-950 leading-snug bg-white/85 backdrop-blur-md border border-white rounded-2xl px-4 py-3 shadow-md">Creator Partnership & AI</p>
-                    <a href="https://www.instagram.com/p/DYE2Rg8xc4J/?hl=en" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 w-full py-3.5 text-sm sm:text-base rounded-full bg-slate-950 text-white display-medium tracking-tight hover:bg-orange-500 hover:scale-[1.02] transition shadow-lg">
-                        View on Instagram <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-                    </a>
-                </article>
-                <article class="reel-card flex flex-col gap-3">
-                    <div class="reel-tile group relative aspect-[3/4] rounded-3xl overflow-hidden bg-slate-900 cursor-pointer ring-1 ring-white/70 shadow-xl" onclick="toggleReel(this, 'reel-video-2')">
-                        <video id="reel-video-2" class="absolute inset-0 w-full h-full object-cover" poster="thumb-2.jpg" src="reel-2.mp4" playsinline preload="none" loop></video>
-                        
-                        <span class="absolute top-4 right-4 pointer-events-none"><svg class="w-6 h-6 text-white drop-shadow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M3 8.5h18M9 3l3 5.5M15 3l3 5.5" stroke-linecap="round"/><polygon points="10.5 12.5 15.5 15 10.5 17.5" fill="currentColor" stroke="none"/></svg></span>
-                        <div class="play-overlay pointer-events-none absolute inset-0 flex items-center justify-center bg-black/10">
-                            <div class="w-14 h-14 rounded-full bg-white/95 flex items-center justify-center shadow-xl group-hover:scale-110 transition"><svg class="w-6 h-6 fill-orange-600 ml-0.5" viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-                        </div>
-                        <div class="stat-overlay pointer-events-none absolute inset-x-0 bottom-0 px-3.5 pb-3.5 pt-16 bg-gradient-to-t from-black/90 via-black/55 to-transparent text-white"><div class="flex items-end gap-5"><div><div class="display-bold text-2xl sm:text-3xl leading-none tabular-nums">555K</div><div class="mt-1.5 text-xs font-semibold uppercase tracking-widest text-white/85">Views</div></div><div><div class="display-bold text-2xl sm:text-3xl leading-none tabular-nums">3.9K</div><div class="mt-1.5 text-xs font-semibold uppercase tracking-widest text-white/85">Likes</div></div></div></div>
-                    </div>
-                    <p class="flex-1 flex items-center display-medium text-[15px] sm:text-base text-slate-950 leading-snug bg-white/85 backdrop-blur-md border border-white rounded-2xl px-4 py-3 shadow-md">Industrial Strength Stress Test</p>
-                    <a href="https://www.instagram.com/p/DQsQvXmDqsa/" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 w-full py-3.5 text-sm sm:text-base rounded-full bg-slate-950 text-white display-medium tracking-tight hover:bg-orange-500 hover:scale-[1.02] transition shadow-lg">
-                        View on Instagram <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-                    </a>
-                </article>
-                <article class="reel-card flex flex-col gap-3">
-                    <div class="reel-tile group relative aspect-[3/4] rounded-3xl overflow-hidden bg-slate-900 cursor-pointer ring-1 ring-white/70 shadow-xl" onclick="toggleReel(this, 'reel-video-3')">
-                        <video id="reel-video-3" class="absolute inset-0 w-full h-full object-cover" poster="thumb-3.jpg" src="reel-3.mp4" playsinline preload="none" loop></video>
-                        
-                        <span class="absolute top-4 right-4 pointer-events-none"><svg class="w-6 h-6 text-white drop-shadow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M3 8.5h18M9 3l3 5.5M15 3l3 5.5" stroke-linecap="round"/><polygon points="10.5 12.5 15.5 15 10.5 17.5" fill="currentColor" stroke="none"/></svg></span>
-                        <div class="play-overlay pointer-events-none absolute inset-0 flex items-center justify-center bg-black/10">
-                            <div class="w-14 h-14 rounded-full bg-white/95 flex items-center justify-center shadow-xl group-hover:scale-110 transition"><svg class="w-6 h-6 fill-orange-600 ml-0.5" viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-                        </div>
-                        <div class="stat-overlay pointer-events-none absolute inset-x-0 bottom-0 px-3.5 pb-3.5 pt-16 bg-gradient-to-t from-black/90 via-black/55 to-transparent text-white"><div class="flex items-end gap-5"><div><div class="display-bold text-2xl sm:text-3xl leading-none tabular-nums">527K</div><div class="mt-1.5 text-xs font-semibold uppercase tracking-widest text-white/85">Views</div></div><div><div class="display-bold text-2xl sm:text-3xl leading-none tabular-nums">5.5K</div><div class="mt-1.5 text-xs font-semibold uppercase tracking-widest text-white/85">Likes</div></div></div></div>
-                    </div>
-                    <p class="flex-1 flex items-center display-medium text-[15px] sm:text-base text-slate-950 leading-snug bg-white/85 backdrop-blur-md border border-white rounded-2xl px-4 py-3 shadow-md">Texture & Application ASMR</p>
-                    <a href="https://www.instagram.com/p/DWAEGdIjsD1/?hl=en" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 w-full py-3.5 text-sm sm:text-base rounded-full bg-slate-950 text-white display-medium tracking-tight hover:bg-orange-500 hover:scale-[1.02] transition shadow-lg">
-                        View on Instagram <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-                    </a>
-                </article>
-                <article class="reel-card flex flex-col gap-3">
-                    <div class="reel-tile group relative aspect-[3/4] rounded-3xl overflow-hidden bg-slate-900 cursor-pointer ring-1 ring-white/70 shadow-xl" onclick="toggleReel(this, 'reel-video-4')">
-                        <video id="reel-video-4" class="absolute inset-0 w-full h-full object-cover" poster="thumb-4.jpg" src="reel-4.mp4" playsinline preload="none" loop></video>
-                        
-                        <span class="absolute top-4 right-4 pointer-events-none"><svg class="w-6 h-6 text-white drop-shadow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M3 8.5h18M9 3l3 5.5M15 3l3 5.5" stroke-linecap="round"/><polygon points="10.5 12.5 15.5 15 10.5 17.5" fill="currentColor" stroke="none"/></svg></span>
-                        <div class="play-overlay pointer-events-none absolute inset-0 flex items-center justify-center bg-black/10">
-                            <div class="w-14 h-14 rounded-full bg-white/95 flex items-center justify-center shadow-xl group-hover:scale-110 transition"><svg class="w-6 h-6 fill-orange-600 ml-0.5" viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-                        </div>
-                        <div class="stat-overlay pointer-events-none absolute inset-x-0 bottom-0 px-3.5 pb-3.5 pt-16 bg-gradient-to-t from-black/90 via-black/55 to-transparent text-white"><div class="flex items-end gap-5"><div><div class="display-bold text-2xl sm:text-3xl leading-none tabular-nums">483K</div><div class="mt-1.5 text-xs font-semibold uppercase tracking-widest text-white/85">Views</div></div><div><div class="display-bold text-2xl sm:text-3xl leading-none tabular-nums">16.2K</div><div class="mt-1.5 text-xs font-semibold uppercase tracking-widest text-white/85">Likes</div></div></div></div>
-                    </div>
-                    <p class="flex-1 flex items-center display-medium text-[15px] sm:text-base text-slate-950 leading-snug bg-white/85 backdrop-blur-md border border-white rounded-2xl px-4 py-3 shadow-md">Organic Creator Partnership</p>
-                    <a href="https://www.instagram.com/p/DU_VfcGD8n8/?hl=en" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 w-full py-3.5 text-sm sm:text-base rounded-full bg-slate-950 text-white display-medium tracking-tight hover:bg-orange-500 hover:scale-[1.02] transition shadow-lg">
-                        View on Instagram <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-                    </a>
-                </article>
-                <article class="reel-card flex flex-col gap-3">
-                    <div class="reel-tile group relative aspect-[3/4] rounded-3xl overflow-hidden bg-slate-900 cursor-pointer ring-1 ring-white/70 shadow-xl" onclick="toggleReel(this, 'reel-video-5')">
-                        <video id="reel-video-5" class="absolute inset-0 w-full h-full object-cover" poster="thumb-5.jpg" src="reel-5.mp4" playsinline preload="none" loop></video>
-                        
-                        <span class="absolute top-4 right-4 pointer-events-none"><svg class="w-6 h-6 text-white drop-shadow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M3 8.5h18M9 3l3 5.5M15 3l3 5.5" stroke-linecap="round"/><polygon points="10.5 12.5 15.5 15 10.5 17.5" fill="currentColor" stroke="none"/></svg></span>
-                        <div class="play-overlay pointer-events-none absolute inset-0 flex items-center justify-center bg-black/10">
-                            <div class="w-14 h-14 rounded-full bg-white/95 flex items-center justify-center shadow-xl group-hover:scale-110 transition"><svg class="w-6 h-6 fill-orange-600 ml-0.5" viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-                        </div>
-                        <div class="stat-overlay pointer-events-none absolute inset-x-0 bottom-0 px-3.5 pb-3.5 pt-16 bg-gradient-to-t from-black/90 via-black/55 to-transparent text-white"><div class="flex items-end gap-5"><div><div class="display-bold text-2xl sm:text-3xl leading-none tabular-nums">212K</div><div class="mt-1.5 text-xs font-semibold uppercase tracking-widest text-white/85">Views</div></div><div><div class="display-bold text-2xl sm:text-3xl leading-none tabular-nums">2K</div><div class="mt-1.5 text-xs font-semibold uppercase tracking-widest text-white/85">Likes</div></div></div></div>
-                    </div>
-                    <p class="flex-1 flex items-center display-medium text-[15px] sm:text-base text-slate-950 leading-snug bg-white/85 backdrop-blur-md border border-white rounded-2xl px-4 py-3 shadow-md">Nozzle Agitation & Pro Tips</p>
-                    <a href="https://www.instagram.com/p/DYftPfsqb4c/?hl=en" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 w-full py-3.5 text-sm sm:text-base rounded-full bg-slate-950 text-white display-medium tracking-tight hover:bg-orange-500 hover:scale-[1.02] transition shadow-lg">
-                        View on Instagram <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-                    </a>
-                </article>
-                <article class="reel-card flex flex-col gap-3">
-                    <div class="reel-tile group relative aspect-[3/4] rounded-3xl overflow-hidden bg-slate-900 cursor-pointer ring-1 ring-white/70 shadow-xl" onclick="toggleReel(this, 'reel-video-6')">
-                        <video id="reel-video-6" class="absolute inset-0 w-full h-full object-cover" poster="thumb-6.jpg" src="reel-6.mp4" playsinline preload="none" loop></video>
-                        
-                        <span class="absolute top-4 right-4 pointer-events-none"><svg class="w-6 h-6 text-white drop-shadow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M3 8.5h18M9 3l3 5.5M15 3l3 5.5" stroke-linecap="round"/><polygon points="10.5 12.5 15.5 15 10.5 17.5" fill="currentColor" stroke="none"/></svg></span>
-                        <div class="play-overlay pointer-events-none absolute inset-0 flex items-center justify-center bg-black/10">
-                            <div class="w-14 h-14 rounded-full bg-white/95 flex items-center justify-center shadow-xl group-hover:scale-110 transition"><svg class="w-6 h-6 fill-orange-600 ml-0.5" viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-                        </div>
-                        <div class="stat-overlay pointer-events-none absolute inset-x-0 bottom-0 px-3.5 pb-3.5 pt-16 bg-gradient-to-t from-black/90 via-black/55 to-transparent text-white"><div class="flex items-end gap-5"><div><div class="display-bold text-2xl sm:text-3xl leading-none tabular-nums">150K</div><div class="mt-1.5 text-xs font-semibold uppercase tracking-widest text-white/85">Views</div></div><div><div class="display-bold text-2xl sm:text-3xl leading-none tabular-nums">2K</div><div class="mt-1.5 text-xs font-semibold uppercase tracking-widest text-white/85">Likes</div></div></div></div>
-                    </div>
-                    <p class="flex-1 flex items-center display-medium text-[15px] sm:text-base text-slate-950 leading-snug bg-white/85 backdrop-blur-md border border-white rounded-2xl px-4 py-3 shadow-md">Product Demo</p>
-                    <a href="https://www.instagram.com/p/DOW-EVIDXpj/?hl=en" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 w-full py-3.5 text-sm sm:text-base rounded-full bg-slate-950 text-white display-medium tracking-tight hover:bg-orange-500 hover:scale-[1.02] transition shadow-lg">
-                        View on Instagram <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-                    </a>
-                </article>
-                <article class="reel-card flex flex-col gap-3">
-                    <div class="reel-tile group relative aspect-[3/4] rounded-3xl overflow-hidden bg-slate-900 cursor-pointer ring-1 ring-white/70 shadow-xl" onclick="toggleReel(this, 'reel-video-10')">
-                        <video id="reel-video-10" class="absolute inset-0 w-full h-full object-cover" poster="thumb-10.jpg" src="reel-10.mp4" playsinline preload="none" loop></video>
-                        
-                        <span class="absolute top-4 right-4 pointer-events-none"><svg class="w-6 h-6 text-white drop-shadow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M3 8.5h18M9 3l3 5.5M15 3l3 5.5" stroke-linecap="round"/><polygon points="10.5 12.5 15.5 15 10.5 17.5" fill="currentColor" stroke="none"/></svg></span>
-                        <div class="play-overlay pointer-events-none absolute inset-0 flex items-center justify-center bg-black/10">
-                            <div class="w-14 h-14 rounded-full bg-white/95 flex items-center justify-center shadow-xl group-hover:scale-110 transition"><svg class="w-6 h-6 fill-orange-600 ml-0.5" viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-                        </div>
-                        <div class="stat-overlay pointer-events-none absolute inset-x-0 bottom-0 px-3.5 pb-3.5 pt-16 bg-gradient-to-t from-black/90 via-black/55 to-transparent text-white"><div class="flex items-end gap-5"><div><div class="display-bold text-2xl sm:text-3xl leading-none tabular-nums">147K</div><div class="mt-1.5 text-xs font-semibold uppercase tracking-widest text-white/85">Views</div></div><div><div class="display-bold text-2xl sm:text-3xl leading-none tabular-nums">1.3K</div><div class="mt-1.5 text-xs font-semibold uppercase tracking-widest text-white/85">Likes</div></div></div></div>
-                    </div>
-                    <p class="flex-1 flex items-center display-medium text-[15px] sm:text-base text-slate-950 leading-snug bg-white/85 backdrop-blur-md border border-white rounded-2xl px-4 py-3 shadow-md">Industrial Performance Reel</p>
-                    <a href="https://www.instagram.com/p/Dd2NUWDKvwG/?hl=en" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 w-full py-3.5 text-sm sm:text-base rounded-full bg-slate-950 text-white display-medium tracking-tight hover:bg-orange-500 hover:scale-[1.02] transition shadow-lg">
-                        View on Instagram <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-                    </a>
-                </article>
-                <article class="reel-card flex flex-col gap-3">
-                    <div class="reel-tile group relative aspect-[3/4] rounded-3xl overflow-hidden bg-slate-900 cursor-pointer ring-1 ring-white/70 shadow-xl" onclick="toggleReel(this, 'reel-video-7')">
-                        <video id="reel-video-7" class="absolute inset-0 w-full h-full object-cover" poster="thumb-7.jpg" src="reel-7.mp4" playsinline preload="none" loop></video>
-                        
-                        <span class="absolute top-4 right-4 pointer-events-none"><svg class="w-6 h-6 text-white drop-shadow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M3 8.5h18M9 3l3 5.5M15 3l3 5.5" stroke-linecap="round"/><polygon points="10.5 12.5 15.5 15 10.5 17.5" fill="currentColor" stroke="none"/></svg></span>
-                        <div class="play-overlay pointer-events-none absolute inset-0 flex items-center justify-center bg-black/10">
-                            <div class="w-14 h-14 rounded-full bg-white/95 flex items-center justify-center shadow-xl group-hover:scale-110 transition"><svg class="w-6 h-6 fill-orange-600 ml-0.5" viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-                        </div>
-                        <div class="stat-overlay pointer-events-none absolute inset-x-0 bottom-0 px-3.5 pb-3.5 pt-16 bg-gradient-to-t from-black/90 via-black/55 to-transparent text-white"><div class="flex items-end gap-5"><div><div class="display-bold text-2xl sm:text-3xl leading-none tabular-nums">125K</div><div class="mt-1.5 text-xs font-semibold uppercase tracking-widest text-white/85">Views</div></div><div><div class="display-bold text-2xl sm:text-3xl leading-none tabular-nums">1K</div><div class="mt-1.5 text-xs font-semibold uppercase tracking-widest text-white/85">Likes</div></div></div></div>
-                    </div>
-                    <p class="flex-1 flex items-center display-medium text-[15px] sm:text-base text-slate-950 leading-snug bg-white/85 backdrop-blur-md border border-white rounded-2xl px-4 py-3 shadow-md">DIY Application</p>
-                    <a href="https://www.instagram.com/p/DXIMNdQDt_8/?hl=en" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 w-full py-3.5 text-sm sm:text-base rounded-full bg-slate-950 text-white display-medium tracking-tight hover:bg-orange-500 hover:scale-[1.02] transition shadow-lg">
-                        View on Instagram <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-                    </a>
-                </article>
-                <article class="reel-card flex flex-col gap-3">
-                    <div class="reel-tile group relative aspect-[3/4] rounded-3xl overflow-hidden bg-slate-900 cursor-pointer ring-1 ring-white/70 shadow-xl" onclick="toggleReel(this, 'reel-video-8')">
-                        <video id="reel-video-8" class="absolute inset-0 w-full h-full object-cover" poster="thumb-8.jpg" src="reel-8.mp4" playsinline preload="none" loop></video>
-                        
-                        <span class="absolute top-4 right-4 pointer-events-none"><svg class="w-6 h-6 text-white drop-shadow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M3 8.5h18M9 3l3 5.5M15 3l3 5.5" stroke-linecap="round"/><polygon points="10.5 12.5 15.5 15 10.5 17.5" fill="currentColor" stroke="none"/></svg></span>
-                        <div class="play-overlay pointer-events-none absolute inset-0 flex items-center justify-center bg-black/10">
-                            <div class="w-14 h-14 rounded-full bg-white/95 flex items-center justify-center shadow-xl group-hover:scale-110 transition"><svg class="w-6 h-6 fill-orange-600 ml-0.5" viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-                        </div>
-                        <div class="stat-overlay pointer-events-none absolute inset-x-0 bottom-0 px-3.5 pb-3.5 pt-16 bg-gradient-to-t from-black/90 via-black/55 to-transparent text-white"><div class="flex items-end gap-5"><div><div class="display-bold text-2xl sm:text-3xl leading-none tabular-nums">115K</div><div class="mt-1.5 text-xs font-semibold uppercase tracking-widest text-white/85">Views</div></div><div><div class="display-bold text-2xl sm:text-3xl leading-none tabular-nums">5K</div><div class="mt-1.5 text-xs font-semibold uppercase tracking-widest text-white/85">Likes</div></div></div></div>
-                    </div>
-                    <p class="flex-1 flex items-center display-medium text-[15px] sm:text-base text-slate-950 leading-snug bg-white/85 backdrop-blur-md border border-white rounded-2xl px-4 py-3 shadow-md">Formula Drift Collab</p>
-                    <a href="https://www.instagram.com/p/DbbkIuDKjTk/" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 w-full py-3.5 text-sm sm:text-base rounded-full bg-slate-950 text-white display-medium tracking-tight hover:bg-orange-500 hover:scale-[1.02] transition shadow-lg">
-                        View on Instagram <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-                    </a>
-                </article>
-                <article class="reel-card flex flex-col gap-3">
-                    <div class="reel-tile group relative aspect-[3/4] rounded-3xl overflow-hidden bg-slate-900 cursor-pointer ring-1 ring-white/70 shadow-xl" onclick="toggleReel(this, 'reel-video-11')">
-                        <video id="reel-video-11" class="absolute inset-0 w-full h-full object-cover" poster="thumb-11.jpg" src="reel-11.mp4" playsinline preload="none" loop></video>
-                        
-                        <span class="absolute top-4 right-4 pointer-events-none"><svg class="w-6 h-6 text-white drop-shadow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M3 8.5h18M9 3l3 5.5M15 3l3 5.5" stroke-linecap="round"/><polygon points="10.5 12.5 15.5 15 10.5 17.5" fill="currentColor" stroke="none"/></svg></span>
-                        <div class="play-overlay pointer-events-none absolute inset-0 flex items-center justify-center bg-black/10">
-                            <div class="w-14 h-14 rounded-full bg-white/95 flex items-center justify-center shadow-xl group-hover:scale-110 transition"><svg class="w-6 h-6 fill-orange-600 ml-0.5" viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-                        </div>
-                        <div class="stat-overlay pointer-events-none absolute inset-x-0 bottom-0 px-3.5 pb-3.5 pt-16 bg-gradient-to-t from-black/90 via-black/55 to-transparent text-white"><div class="flex items-end gap-5"><div><div class="display-bold text-2xl sm:text-3xl leading-none tabular-nums">114K</div><div class="mt-1.5 text-xs font-semibold uppercase tracking-widest text-white/85">Views</div></div><div><div class="display-bold text-2xl sm:text-3xl leading-none tabular-nums">776</div><div class="mt-1.5 text-xs font-semibold uppercase tracking-widest text-white/85">Likes</div></div></div></div>
-                    </div>
-                    <p class="flex-1 flex items-center display-medium text-[15px] sm:text-base text-slate-950 leading-snug bg-white/85 backdrop-blur-md border border-white rounded-2xl px-4 py-3 shadow-md">Rust Solution</p>
-                    <a href="https://www.instagram.com/p/Ddok82OKe4X/?hl=en" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 w-full py-3.5 text-sm sm:text-base rounded-full bg-slate-950 text-white display-medium tracking-tight hover:bg-orange-500 hover:scale-[1.02] transition shadow-lg">
-                        View on Instagram <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-                    </a>
-                </article>
-                <article class="reel-card flex flex-col gap-3">
-                    <div class="reel-tile group relative aspect-[3/4] rounded-3xl overflow-hidden bg-slate-900 cursor-pointer ring-1 ring-white/70 shadow-xl" onclick="toggleReel(this, 'reel-video-12')">
-                        <video id="reel-video-12" class="absolute inset-0 w-full h-full object-cover" poster="thumb-12.jpg" src="reel-12.mp4" playsinline preload="none" loop></video>
-                        
-                        <span class="absolute top-4 right-4 pointer-events-none"><svg class="w-6 h-6 text-white drop-shadow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M3 8.5h18M9 3l3 5.5M15 3l3 5.5" stroke-linecap="round"/><polygon points="10.5 12.5 15.5 15 10.5 17.5" fill="currentColor" stroke="none"/></svg></span>
-                        <div class="play-overlay pointer-events-none absolute inset-0 flex items-center justify-center bg-black/10">
-                            <div class="w-14 h-14 rounded-full bg-white/95 flex items-center justify-center shadow-xl group-hover:scale-110 transition"><svg class="w-6 h-6 fill-orange-600 ml-0.5" viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-                        </div>
-                        <div class="stat-overlay pointer-events-none absolute inset-x-0 bottom-0 px-3.5 pb-3.5 pt-16 bg-gradient-to-t from-black/90 via-black/55 to-transparent text-white"><div class="flex items-end gap-5"><div><div class="display-bold text-2xl sm:text-3xl leading-none tabular-nums">15K</div><div class="mt-1.5 text-xs font-semibold uppercase tracking-widest text-white/85">Views</div></div><div><div class="display-bold text-2xl sm:text-3xl leading-none tabular-nums">328</div><div class="mt-1.5 text-xs font-semibold uppercase tracking-widest text-white/85">Likes</div></div></div></div>
-                    </div>
-                    <p class="flex-1 flex items-center display-medium text-[15px] sm:text-base text-slate-950 leading-snug bg-white/85 backdrop-blur-md border border-white rounded-2xl px-4 py-3 shadow-md">Custom Color Matching</p>
-                    <a href="https://www.instagram.com/p/DcT2EpPxwcF/?hl=en" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 w-full py-3.5 text-sm sm:text-base rounded-full bg-slate-950 text-white display-medium tracking-tight hover:bg-orange-500 hover:scale-[1.02] transition shadow-lg">
-                        View on Instagram <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-                    </a>
-                </article>
-
-                <a href="https://www.instagram.com/seymourpaint" target="_blank" rel="noopener" class="reel-card rounded-3xl p-6 min-h-[280px] flex flex-col justify-between text-white bg-gradient-to-br from-amber-400 via-orange-500 to-amber-500 shadow-xl hover:scale-[1.02] transition">
-                    <span class="text-xs font-bold uppercase tracking-widest text-white/90">More organic content</span>
-                    <div>
-                        <p class="display-bold text-3xl sm:text-4xl leading-none mb-3">See the full feed</p>
-                        <p class="inline-flex items-center gap-2 font-bold text-base">@seymourpaint <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg></p>
-                    </div>
-                </a>
-            </div>
-        </section>
-
-        <!-- YOUTUBE & COMMERCIAL VIDEO SECTION -->
-        <section id="youtube-productions" class="mb-32">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <!-- HERO -->
+        <div class="hero">
+            <div class="wrap hero-grid">
                 <div>
-                    <span class="px-3 py-1 rounded-md bg-orange-100 border border-orange-300 text-orange-800 font-mono text-xs uppercase font-bold tracking-wider block w-fit mb-2">Production & Directing</span>
-                    <h2 class="text-4xl sm:text-5xl display-bold uppercase tracking-tight text-slate-950">Commercial & Long-Form Works</h2>
-                </div>
-                <p class="text-slate-600 text-sm max-w-md mt-4 md:mt-0 font-light">
-                    From cinematic brand anthems to high-converting product showcases and technical reviews.
-                </p>
-            </div>
-
-            <!-- FEATURED BIG HERO COMMERCIAL: SEYMOUR BRAND ANTHEM -->
-            <div class="soft-glass rounded-[40px] p-6 sm:p-10 mb-12 border border-white shadow-2xl relative overflow-hidden">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    <div class="lg:col-span-8">
-                        <div class="aspect-video w-full rounded-3xl bg-slate-950 overflow-hidden relative shadow-2xl border border-slate-300">
-                            <iframe loading="lazy" class="w-full h-full" src="https://www.youtube-nocookie.com/embed/2iFXT8I_FH8" title="Seymour: American Made Since 1949" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
+                    <h1>I run social media for brands, and I make the video myself.</h1>
+                    <p class="hero-lede">
+                        I'm the social media manager at Seymour of Sycamore, an industrial paint maker. This year my organic video has reached
+                        <mark>14M views</mark> and <mark>1M people</mark> on Instagram and Facebook. Twice, a video has
+                        <mark>sold out the paint it featured</mark>. I also direct about $250K in paid media at <mark>3x ROI</mark>
+                        and run a $150K creator program.
+                    </p>
+                    <div class="actions">
+                        <a class="btn" href="Quinn_Corcoran_Resume.pdf" download="Quinn_Corcoran_Resume.pdf">Download resume</a>
+                        <a class="btn quiet" href="mailto:quinncorcoran@gmail.com">Email me</a>
+                        <a class="btn quiet" href="https://www.linkedin.com/in/quinn-corcoran1998/" target="_blank" rel="noopener">LinkedIn</a>
                     </div>
-                    <div class="lg:col-span-4 flex flex-col justify-between h-full">
+                </div>
+
+                <!-- When you cut a 30-second showreel, swap reel-9.mp4 / thumb-9.jpg here for it and update the caption. -->
+                <figure class="hero-reel">
+                    <div class="reel">
+                        <video src="reel-9.mp4" poster="thumb-9.jpg" playsinline preload="none" loop></video>
+                        <button class="reel-toggle" type="button" aria-label="Play my top reel of 2026">
+                            <span><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21"/></svg></span>
+                        </button>
+                    </div>
+                    <figcaption>
+                        <strong>7M views, 75K likes</strong>
+                        My top reel this year. Organic, Instagram and Facebook combined.
+                        <a href="https://www.instagram.com/p/DefZ_jzB4OU/?hl=en" target="_blank" rel="noopener">See it on Instagram</a>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <!-- REELS -->
+        <section id="reels">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2>Organic reels</h2>
+                    <p>Organic posts for Seymour and its creator partners. No paid boosting. View counts are Instagram and Facebook combined.</p>
+                </div>
+
+                <!-- Each caption (.what) is a placeholder. Rewrite it in one plain line: what the video is and why it worked. -->
+                <div class="reel-grid">
+                    <div class="reel-item">
+                        <div class="reel">
+                            <video src="reel-1.mp4" poster="thumb-1.jpg" playsinline preload="none" loop></video>
+                            <button class="reel-toggle" type="button" aria-label="Play reel: creator partnership with AI video"><span><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21"/></svg></span></button>
+                        </div>
+                        <p class="views">4.4M views</p>
+                        <p class="what">Creator partnership with AI video</p>
+                        <p class="where"><a href="https://www.instagram.com/p/DYE2Rg8xc4J/?hl=en" target="_blank" rel="noopener">Instagram</a></p>
+                    </div>
+                    <div class="reel-item">
+                        <div class="reel">
+                            <video src="reel-2.mp4" poster="thumb-2.jpg" playsinline preload="none" loop></video>
+                            <button class="reel-toggle" type="button" aria-label="Play reel: stress test"><span><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21"/></svg></span></button>
+                        </div>
+                        <p class="views">555K views</p>
+                        <p class="what">Stress test</p>
+                        <p class="where"><a href="https://www.instagram.com/p/DQsQvXmDqsa/" target="_blank" rel="noopener">Instagram</a></p>
+                    </div>
+                    <div class="reel-item">
+                        <div class="reel">
+                            <video src="reel-4.mp4" poster="thumb-4.jpg" playsinline preload="none" loop></video>
+                            <button class="reel-toggle" type="button" aria-label="Play reel: creator partnership"><span><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21"/></svg></span></button>
+                        </div>
+                        <p class="views">483K views</p>
+                        <p class="what">Creator partnership</p>
+                        <p class="where"><a href="https://www.instagram.com/p/DU_VfcGD8n8/?hl=en" target="_blank" rel="noopener">Instagram</a></p>
+                    </div>
+                    <div class="reel-item">
+                        <div class="reel">
+                            <video src="reel-5.mp4" poster="thumb-5.jpg" playsinline preload="none" loop></video>
+                            <button class="reel-toggle" type="button" aria-label="Play reel: spray tips"><span><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21"/></svg></span></button>
+                        </div>
+                        <p class="views">212K views</p>
+                        <p class="what">Spray tips</p>
+                        <p class="where"><a href="https://www.instagram.com/p/DYftPfsqb4c/?hl=en" target="_blank" rel="noopener">Instagram</a></p>
+                    </div>
+                    <div class="reel-item">
+                        <div class="reel">
+                            <video src="reel-6.mp4" poster="thumb-6.jpg" playsinline preload="none" loop></video>
+                            <button class="reel-toggle" type="button" aria-label="Play reel: product demo"><span><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21"/></svg></span></button>
+                        </div>
+                        <p class="views">150K views</p>
+                        <p class="what">Product demo</p>
+                        <p class="where"><a href="https://www.instagram.com/p/DOW-EVIDXpj/?hl=en" target="_blank" rel="noopener">Instagram</a></p>
+                    </div>
+                    <a class="feed-tile" href="https://www.instagram.com/seymourpaint" target="_blank" rel="noopener">
+                        See the full feed
+                        <span>@seymourpaint on Instagram</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESULTS -->
+        <section id="results">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2>What the work did</h2>
+                    <p>Views are the easy number. These are three times the content changed what the company sold.</p>
+                </div>
+
+                <!-- Confirm these sales figures before publishing. -->
+                <div class="case">
+                    <div>
+                        <h3>A new color that came out of the comments</h3>
+                        <p>
+                            I handle every comment and DM on Seymour's social accounts, and I treat them as research. Listening to what customers
+                            were asking for, I pitched a new color for one of our most popular paints: Stainless-Blast Black.
+                        </p>
+                        <p>
+                            In 2025, its first full year on our website, it sold <mark>4,200 cans</mark> against 2,700 for the original color.
+                            The original still grew from 2,400 the year before, so the new color added sales instead of moving them.
+                        </p>
+                        <div class="bars" role="img" aria-label="Cans sold on Seymour's website. Original color, 2024: 2,400. Original color, 2025: 2,700. Stainless-Blast Black, 2025: 4,200.">
+                            <div class="row"><span class="label">Original color, 2024</span><span class="bar" style="--w:57%">2,400 cans</span></div>
+                            <div class="row"><span class="label">Original color, 2025</span><span class="bar" style="--w:64%">2,700 cans</span></div>
+                            <div class="row"><span class="label">Stainless-Blast Black, 2025</span><span class="bar is-new" style="--w:100%">4,200 cans</span></div>
+                        </div>
+                        <p class="bars-note">Cans sold on Seymour's website.</p>
+                    </div>
+                    <div>
+                        <div class="embed">
+                            <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/jbNMTOoZJ38" title="Weldable Black Spray Paint? Meet Stainless-Blast Black" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <p class="role">The launch video. Director and camera.</p>
+                    </div>
+                </div>
+
+                <div class="case-pair">
+                    <div class="case-reel">
+                        <div class="reel">
+                            <video src="reel-3.mp4" poster="thumb-3.jpg" playsinline preload="none" loop></video>
+                            <button class="reel-toggle" type="button" aria-label="Play the ColorBond LVP reel"><span><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21"/></svg></span></button>
+                        </div>
                         <div>
-                            <div class="flex items-center gap-2 mb-3">
-                                <span class="bg-amber-100 text-amber-900 border border-amber-300 text-xs px-3 py-1 rounded-full font-mono uppercase font-bold tracking-wider">
-                                    Flagship Brand Film
-                                </span>
-                                <span class="text-xs text-orange-600 font-mono font-bold">Made in USA 🇺🇸</span>
-                            </div>
-                            <h3 class="text-3xl sm:text-4xl display-bold uppercase leading-tight mb-4 text-slate-950">
-                                Seymour: American Made Since 1949
-                            </h3>
-                            <p class="text-slate-700 text-sm leading-relaxed mb-6 font-light">
-                                A gritty brand manifesto documenting American manufacturing, wrench turners, fabricators, and 70+ years of industrial legacy. Directed, shot in-plant, and edited for multi-channel brand positioning.
+                            <h3>One reel sold out more than half a paint line</h3>
+                            <p>
+                                I produced this reel for ColorBond LVP interior paint from start to finish. It reached <mark>527K views</mark>
+                                with no ad spend, and more than half of the line's colors sold out.
                             </p>
-                        </div>
-                        <div class="pt-4 border-t border-slate-200 flex items-center justify-between text-xs font-mono text-slate-600 font-semibold">
-                            <span>Role: Director, DP & Editor</span>
-                            <span>Client: Seymour of Sycamore</span>
+                            <p class="small"><a href="https://www.instagram.com/p/DWAEGdIjsD1/" target="_blank" rel="noopener">See it on Instagram</a></p>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- 4 SEYMOUR VIDEO PRODUCTIONS (2x2 GRID INCLUDING STAINLESS BLAST BLACK) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-
-                <!-- Video 1: Seymour MRO Industrial Enamel -->
-                <div class="soft-glass rounded-[32px] p-5 flex flex-col justify-between border border-white">
+                    <!-- Add the creator's name and any numbers you have for this one. -->
                     <div>
-                        <div class="aspect-video w-full rounded-2xl bg-slate-900 overflow-hidden relative mb-5 shadow-xl border border-slate-200">
-                            <iframe loading="lazy" class="w-full h-full" src="https://www.youtube-nocookie.com/embed/Hv9y6WDBqIQ" title="Seymour MRO High Solids Enamel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <span class="text-xs font-mono uppercase tracking-wider text-orange-700 bg-orange-100 border border-orange-300 px-2.5 py-1 rounded-full font-bold">
-                            Product Commercial
-                        </span>
-                        <h3 class="text-xl display-bold mt-3 mb-2 text-slate-950">Seymour MRO: High Solids Industrial Enamel</h3>
-                        <p class="text-slate-600 text-xs leading-relaxed">
-                            Commercial spot demonstrating 2X coverage formulation, corrosion prevention, and OSHA-matched industrial coatings.
+                        <h3>A creator collaboration that sold out Renew</h3>
+                        <p>
+                            I set up this partnership for Renew, our paint for plants. After the creator's reel went out, the line sold out.
                         </p>
+                        <a class="btn quiet" href="https://www.instagram.com/reel/Cr3F5n3NoFV/?hl=en" target="_blank" rel="noopener">Watch the reel on Instagram</a>
                     </div>
-                    <div class="mt-6 pt-3 border-t border-slate-200 flex justify-between text-xs font-mono text-slate-600 font-semibold">
-                        <span>Role: Director & DP</span>
-                        <span>Client: Seymour</span>
-                    </div>
-                </div>
-
-                <div class="soft-glass rounded-[32px] p-5 flex flex-col justify-between border border-white">
-                    <div>
-                        <div class="aspect-video w-full rounded-2xl bg-slate-900 overflow-hidden relative mb-5 shadow-xl border border-slate-200">
-                            <iframe loading="lazy" class="w-full h-full" src="https://www.youtube-nocookie.com/embed/jbNMTOoZJ38" title="Weldable Black Spray Paint? Meet Stainless-Blast Black" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <span class="text-xs font-mono uppercase tracking-wider text-sky-700 bg-sky-100 border border-sky-300 px-2.5 py-1 rounded-full font-bold">
-                            Product Spotlight
-                        </span>
-                        <h3 class="text-xl display-bold mt-3 mb-2 text-slate-950">Weldable Black Spray Paint? Meet Stainless-Blast Black</h3>
-                        <p class="text-slate-600 text-xs leading-relaxed">
-                            Specialty coating formulated with real 316L stainless-steel flake. Chemical-resistant, weld-through capable, and built for roll cages and fabrication.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-3 border-t border-slate-200 flex justify-between text-xs font-mono text-slate-600 font-semibold">
-                        <span>Role: Director & DP</span>
-                        <span>Client: Seymour</span>
-                    </div>
-                </div>
-
-                <!-- Video 3: Spray Painting Tips -->
-                <div class="soft-glass rounded-[32px] p-5 flex flex-col justify-between border border-white">
-                    <div>
-                        <div class="aspect-video w-full rounded-2xl bg-slate-900 overflow-hidden relative mb-5 shadow-xl border border-slate-200">
-                            <iframe loading="lazy" class="w-full h-full" src="https://www.youtube-nocookie.com/embed/a6uEJcT4ujk" title="Spray Painting Pro Tips & Tricks" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <span class="text-xs font-mono uppercase tracking-wider text-amber-800 bg-amber-100 border border-amber-300 px-2.5 py-1 rounded-full font-bold">
-                            Educational / How-To
-                        </span>
-                        <h3 class="text-xl display-bold mt-3 mb-2 text-slate-950">Spray Painting Tips: Prep & Clog Prevention</h3>
-                        <p class="text-slate-600 text-xs leading-relaxed">
-                            Fast-paced customer education video explaining 2-minute agitation, degreasing prep, and inverted spray clearing.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-3 border-t border-slate-200 flex justify-between text-xs font-mono text-slate-600 font-semibold">
-                        <span>Role: Host & Videographer</span>
-                        <span>Client: Seymour</span>
-                    </div>
-                </div>
-
-                <!-- Video 4: Stool Restoration Project (Brandon / Seymour Crew) -->
-                <div class="soft-glass rounded-[32px] p-5 flex flex-col justify-between border border-white">
-                    <div>
-                        <div class="aspect-video w-full rounded-2xl bg-slate-900 overflow-hidden relative mb-5 shadow-xl border border-slate-200">
-                            <iframe loading="lazy" class="w-full h-full" src="https://www.youtube-nocookie.com/embed/nAjKxPDo4m0" title="Restoring Bar Stools with Seymour 2K Clear & Stainless Steel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <span class="text-xs font-mono uppercase tracking-wider text-orange-800 bg-orange-100 border border-orange-300 px-2.5 py-1 rounded-full font-bold">
-                            Restoration Project
-                        </span>
-                        <h3 class="text-xl display-bold mt-3 mb-2 text-slate-950">Bar Stool Refurbishing: 16-45 Converter & 2K Clear</h3>
-                        <p class="text-slate-600 text-xs leading-relaxed">
-                            Step-by-step restoration documenting rust removal, 16-45 Rust-to-Primer, Stainless-Steel, and 2K clear coat.
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-3 border-t border-slate-200 flex justify-between text-xs font-mono text-slate-600 font-semibold">
-                        <span>Role: Producer & Editor</span>
-                        <span>Client: Seymour Crew</span>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- JOURNALISM & DOCUMENTARY HIGHLIGHTS (EXPANDED TO BOTH NATIONAL AWARDS) -->
-            <div class="soft-glass p-8 rounded-[36px] border border-white">
-                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
-                    <div>
-                        <span class="text-xs font-mono uppercase text-orange-600 tracking-wider font-bold">Investigative Reporting & Visual Journalism</span>
-                        <h3 class="text-2xl display-bold uppercase mt-1 text-slate-950">Award-Winning Documentary Journalism</h3>
-                    </div>
-                    <span class="bg-amber-400 text-slate-950 text-xs px-4 py-1.5 rounded-full font-bold font-mono shadow-md flex items-center gap-1.5">
-                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 15.4l-3.76 2.27 1-4.28L6 10.47l4.38-.37L12 6.09l1.62 4.01 4.38.37-3.24 2.92 1 4.28zM22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24z"/></svg>
-                        2x National Award Winner <a href="#footnote-1" class="underline decoration-dotted">[1]</a>
-                    </span>
-                </div>
-                <p class="text-slate-700 text-sm leading-relaxed mb-6 font-light">
-                    Led a team of four videographers at The Montana Kaimin. Editor and photographer on the Montana PBS documentary “Trash Talk” with a 7-person student crew.
-                </p>
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                    <a href="https://www.spj.org/mark-of-excellence-awards-2020-national-winners-and-finalists/" target="_blank" class="soft-glass-card hover:bg-orange-500 hover:text-white p-4 rounded-2xl transition group">
-                        <p class="text-xs text-slate-600 group-hover:text-amber-100 font-mono font-semibold">SPJ National Winner</p>
-                        <p class="text-sm font-bold mt-1 text-slate-950 group-hover:text-white">Enrollment Probe &rarr;</p>
-                    </a>
-                    <a href="https://quinncorcoran.myportfolio.com/" target="_blank" class="soft-glass-card hover:bg-orange-500 hover:text-white p-4 rounded-2xl transition group">
-                        <p class="text-xs text-slate-600 group-hover:text-amber-100 font-mono font-semibold">National Winner · TV In-Depth Reporting</p>
-                        <p class="text-sm font-bold mt-1 text-slate-950 group-hover:text-white">Trash Talk (Montana PBS) &rarr;</p>
-                    </a>
-                    <a href="http://www.montanakaimin.com/multimedia/kaimin-talks-to-artists---episode-2-barbara-ballas/video_04eea5ba-8009-11ea-a231-5b54a2ec1c51.html" target="_blank" class="soft-glass-card hover:bg-orange-500 hover:text-white p-4 rounded-2xl transition group">
-                        <p class="text-xs text-slate-600 group-hover:text-amber-100 font-mono font-semibold">Docuseries</p>
-                        <p class="text-sm font-bold mt-1 text-slate-950 group-hover:text-white">Art Talks &rarr;</p>
-                    </a>
-                    <a href="http://www.montanakaimin.com/multimedia/kpit-ghost-adventures-episode-jeannette-rankin-hall/video_a8817128-01a4-11ea-b43b-1b839c70e918.html" target="_blank" class="soft-glass-card hover:bg-orange-500 hover:text-white p-4 rounded-2xl transition group">
-                        <p class="text-xs text-slate-600 group-hover:text-amber-100 font-mono font-semibold">Mini-Doc</p>
-                        <p class="text-sm font-bold mt-1 text-slate-950 group-hover:text-white">Ghost Hunt &rarr;</p>
-                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- ABOUT ME (DIRECTLY BELOW YOUTUBE SECTION) -->
-        <section id="about-quinn" class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center mb-32">
-            <div class="md:col-span-4">
-                <div class="relative">
-                    <img src="headshot.jpg" alt="Quinn Corcoran" class="w-full rounded-[40px] shadow-2xl border-4 border-white aspect-square object-cover">
-                    <div class="absolute -bottom-3 -right-3 bg-gradient-to-r from-amber-400 to-orange-500 text-white px-4 py-2 rounded-2xl text-xs display-bold uppercase shadow-xl font-mono">
-                        Chicago, IL 📍
+        <!-- COMMERCIAL AND LONG-FORM -->
+        <section id="film">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2>Commercial and long-form</h2>
+                </div>
+
+                <div class="film-lead">
+                    <div class="embed">
+                        <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/2iFXT8I_FH8" title="Seymour: American Made Since 1949" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div>
+                        <h3>Seymour: American Made Since 1949</h3>
+                        <p>The company's brand film, shot inside the Sycamore plant with the people who work there.</p>
+                        <p class="role">Director, camera and editor</p>
+                    </div>
+                </div>
+
+                <div class="film-more">
+                    <div class="film-item">
+                        <div class="embed">
+                            <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/Hv9y6WDBqIQ" title="Seymour MRO High Solids Enamel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <h3>MRO High Solids Industrial Enamel</h3>
+                        <p class="role">Product commercial. Director and camera.</p>
+                    </div>
+                    <div class="film-item">
+                        <div class="embed">
+                            <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/a6uEJcT4ujk" title="Spray Painting Pro Tips and Tricks" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <h3>Spray painting tips: prep and clog prevention</h3>
+                        <p class="role">Customer how-to. On-camera host and videographer.</p>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="md:col-span-8 soft-glass p-8 sm:p-12 rounded-[40px] border border-white">
-                <span class="text-xs font-mono uppercase text-orange-600 tracking-wider block mb-2 font-bold">About Me</span>
-                <h2 class="text-4xl display-bold mb-6 uppercase text-slate-950">About Quinn Corcoran</h2>
-                <div class="space-y-4 text-base sm:text-lg leading-relaxed text-slate-700 font-light">
+        <!-- CREATORS -->
+        <section id="creators">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2>Creator partnerships</h2>
                     <p>
-                        I'm a two-time national award winner in journalism <a href="#footnote-1" class="underline decoration-dotted">[1]</a> and a digital video creator with six years of experience producing short-form video, running influencer partnerships, and directing paid media.
-                    </p>
-                    <p>
-                        With a Bachelor’s in Journalism (Dual Minor in Chinese & Media Arts) from The University of Montana, I combine newsroom rigor with short-form video instincts. From 14M organic Instagram and Facebook views in 2026 to a product video that sold out the featured paint, I build content that turns attention into sales.
+                        I find creators myself, pitch them, negotiate the deal, and stay their main contact. At Seymour that is about 20 active
+                        partners with a combined following near 15M, on a $150K budget. At 303 Products I managed a $285K influencer budget.
                     </p>
                 </div>
-                <div class="mt-8 pt-6 border-t border-slate-200 flex flex-wrap items-center justify-between gap-4">
-                    <div class="flex items-center gap-6">
-                        <a href="mailto:quinncorcoran@gmail.com" class="text-sm text-slate-800 hover:text-orange-600 transition flex items-center gap-2 font-medium">
-                            <svg class="w-4 h-4 text-orange-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
-                            quinncorcoran@gmail.com
-                        </a>
-                    </div>
+
+                <!-- Add one or two 303 Products collaborations to this list when you have the links. -->
+                <ul class="creators">
+                    <li>
+                        <span class="name">Vaughn Gittin Jr. and RTR</span>
+                        <span class="who">Professional drifter and performance vehicle brand</span>
+                        <a href="https://www.instagram.com/p/DKfBji1ugdG/" target="_blank" rel="noopener">Instagram</a>
+                    </li>
+                    <li>
+                        <span class="name">Conor Shanahan</span>
+                        <span class="who">Professional drifter, Drift Masters</span>
+                        <a href="https://www.instagram.com/p/DW9Xbxlio5b/?hl=en" target="_blank" rel="noopener">Instagram</a>
+                    </li>
+                    <li>
+                        <span class="name">Ian Johnson, Big Tire Garage</span>
+                        <span class="who">TV host and off-road fabricator</span>
+                        <a href="https://www.youtube.com/@BigTireGarage" target="_blank" rel="noopener">YouTube</a>
+                    </li>
+                    <li>
+                        <span class="name">Alexander Vargas</span>
+                        <span class="who">TikTok creator</span>
+                        <a href="https://www.tiktok.com/@_alexandervargas/video/7647579299075067150" target="_blank" rel="noopener">TikTok</a>
+                    </li>
+                    <li>
+                        <span class="name">OffRoadNChill</span>
+                        <span class="who">Overlanding and off-road</span>
+                        <a href="https://www.instagram.com/p/DUT1lPAEmEl/" target="_blank" rel="noopener">Instagram</a>
+                    </li>
+                    <li>
+                        <span class="name">FlexRocksandRollovers</span>
+                        <span class="who">Rock crawling</span>
+                        <a href="https://www.instagram.com/p/DTstKfejrDC/" target="_blank" rel="noopener">Instagram</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about">
+            <div class="wrap about">
+                <img src="headshot.jpg" alt="Quinn Corcoran" loading="lazy">
+                <div class="about-body">
+                    <h2>About</h2>
+                    <p>
+                        I'm a social media manager and video creator in Chicago with six years of making short-form video for brands.
+                        Since 2023 I've run social at Seymour of Sycamore: organic content, creator partnerships, paid media direction,
+                        and quarterly reporting to our Marketing Director and CFO. I manage one direct report and mentor our marketing interns.
+                    </p>
+                    <p>
+                        I started in journalism. At the University of Montana I led the video team at the Montana Kaimin and won a national
+                        <a href="https://www.spj.org/mark-of-excellence-awards-2020-national-winners-and-finalists/" target="_blank" rel="noopener">SPJ Mark of Excellence Award</a>
+                        for an enrollment investigation. I was also an editor and photographer on Trash Talk, a Montana PBS student documentary
+                        named a national winner for in-depth television reporting. That training is why I start with the story and then check it
+                        against the numbers.
+                    </p>
+                    <p class="muted small">
+                        Tools: Premiere Pro, After Effects, CapCut, Photoshop, Lightroom, Figma, Meta Business Suite, Sprout Social, Sprinklr,
+                        Brandwatch, Google Analytics. AI video with Firefly, Kling and Runway, blended with real footage.
+                    </p>
+
+                    <dl class="history">
+                        <div><dt>2023 to now</dt><dd><strong>Seymour of Sycamore</strong>, Digital Content Creator and Social Media Manager</dd></div>
+                        <div><dt>2022 to 2023</dt><dd><strong>Gold Eagle / 303 Products</strong>, Social Media Specialist</dd></div>
+                        <div><dt>2020 to 2022</dt><dd><strong>KCommunications</strong>, Digital Marketing Manager</dd></div>
+                        <div><dt>2017 to 2020</dt><dd><strong>The Montana Kaimin</strong>, Video Editor</dd></div>
+                        <div><dt>2020</dt><dd><strong>University of Montana</strong>, B.A. in Journalism, minors in Chinese and Media Arts</dd></div>
+                    </dl>
                 </div>
             </div>
         </section>
 
-        <!-- BEEFED UP INFLUENCER MANAGEMENT (6 CARDS - 15M REACH) -->
-        <section id="influencer-partners" class="soft-glass p-8 sm:p-12 rounded-[40px] mb-32 border border-white relative overflow-hidden">
-            <div class="max-w-3xl mb-10">
-                <span class="px-3 py-1 rounded-md bg-orange-100 border border-orange-300 text-orange-800 font-mono text-xs uppercase font-bold tracking-wider block w-fit mb-2">Creator Partnerships</span>
-                <h2 class="text-4xl display-bold uppercase mb-4 text-slate-950">Influencer Strategy & Budget Direction</h2>
-                <p class="text-slate-700 text-base sm:text-lg leading-relaxed font-light">
-                    Sourcing and managing partnerships with <strong>about 20 creators and a combined 15M+ following</strong>. Directing budgets of <strong class="text-slate-950 font-bold">$285,000 at 303 Products</strong> and <strong class="text-slate-950 font-bold">$150,000 at Seymour of Sycamore</strong> to turn creator trust into sustainable sales.
-                </p>
-            </div>
-            
-            <p class="text-xs font-mono uppercase tracking-wider text-slate-600 font-bold mb-4">A selection of creator collaborations</p>
-            <!-- 3x2 CREATOR GRID -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-                <!-- 1. Alexander Vargas (TikTok Lead) -->
-                <a href="https://www.tiktok.com/@_alexandervargas/video/7647579299075067150" target="_blank" class="soft-glass-card p-6 rounded-3xl hover:border-orange-500 transition group flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-mono uppercase text-orange-600 font-bold">TikTok / Gen Z Creator</span>
-                            <svg class="w-4 h-4 text-slate-400 group-hover:text-orange-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
-                        </div>
-                        <p class="text-lg display-bold mb-1 text-slate-950 group-hover:text-orange-600 transition">Alexander Vargas</p>
-                        <p class="text-xs text-slate-600">High-energy TikTok creator partnership & viral youth demographic reach.</p>
-                    </div>
-                </a>
-
-                <!-- 2. Conor Shanahan (Pro Drift Master) -->
-                <a href="https://www.instagram.com/p/DW9Xbxlio5b/?hl=en" target="_blank" class="soft-glass-card p-6 rounded-3xl hover:border-orange-500 transition group flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-mono uppercase text-sky-600 font-bold">Red Bull / Drift Masters</span>
-                            <svg class="w-4 h-4 text-slate-400 group-hover:text-orange-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
-                        </div>
-                        <p class="text-lg display-bold mb-1 text-slate-950 group-hover:text-orange-600 transition">Conor Shanahan</p>
-                        <p class="text-xs text-slate-600">Pro European drift champion collaboration and extreme track-use trials.</p>
-                    </div>
-                </a>
-
-                <!-- 3. Ian Johnson (Big Tire Garage) -->
-                <a href="https://www.youtube.com/@BigTireGarage" target="_blank" class="soft-glass-card p-6 rounded-3xl hover:border-orange-500 transition group flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-mono uppercase text-amber-600 font-bold">TV Host / Off-Road Tech</span>
-                            <svg class="w-4 h-4 text-slate-400 group-hover:text-orange-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
-                        </div>
-                        <p class="text-lg display-bold mb-1 text-slate-950 group-hover:text-orange-600 transition">Ian Johnson (Big Tire Garage)</p>
-                        <p class="text-xs text-slate-600">Deep technical fabrication review, weld-through trials & shop testing.</p>
-                    </div>
-                </a>
-
-                <!-- 4. Vaughn Gittin Jr. & RTR -->
-                <a href="https://www.instagram.com/p/DKfBji1ugdG/" target="_blank" class="soft-glass-card p-6 rounded-3xl hover:border-orange-500 transition group flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-mono uppercase text-orange-600 font-bold">Drift / Performance</span>
-                            <svg class="w-4 h-4 text-slate-400 group-hover:text-orange-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
-                        </div>
-                        <p class="text-lg display-bold mb-1 text-slate-950 group-hover:text-orange-600 transition">Vaughn Gittin Jr. & RTR</p>
-                        <p class="text-xs text-slate-600">Pro motorsport campaign, trackside content & OEM lifestyle integration.</p>
-                    </div>
-                </a>
-
-                <!-- 5. OffRoadNChill -->
-                <a href="https://www.instagram.com/p/DUT1lPAEmEl/" target="_blank" class="soft-glass-card p-6 rounded-3xl hover:border-orange-500 transition group flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-mono uppercase text-orange-600 font-bold">Overland / Offroad</span>
-                            <svg class="w-4 h-4 text-slate-400 group-hover:text-orange-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
-                        </div>
-                        <p class="text-lg display-bold mb-1 text-slate-950 group-hover:text-orange-600 transition">OffRoadNChill</p>
-                        <p class="text-xs text-slate-600">Expedition lifestyle seeding, trail-testing & extreme weather durability.</p>
-                    </div>
-                </a>
-
-                <!-- 6. FlexRocksandRollovers -->
-                <a href="https://www.instagram.com/p/DTstKfejrDC/" target="_blank" class="soft-glass-card p-6 rounded-3xl hover:border-orange-500 transition group flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-mono uppercase text-orange-600 font-bold">Rock Crawling</span>
-                            <svg class="w-4 h-4 text-slate-400 group-hover:text-orange-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
-                        </div>
-                        <p class="text-lg display-bold mb-1 text-slate-950 group-hover:text-orange-600 transition">FlexRocksandRollovers</p>
-                        <p class="text-xs text-slate-600">Chassis coating trials, live demos, and outdoor community meetups.</p>
-                    </div>
-                </a>
-            </div>
-        </section>
-
-        <!-- STRATEGY & SKILLS MATRIX (UPDATED FROM EXPANDED RESUME SKILLS) -->
-        <section id="strategy-skills" class="mb-32">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="px-3 py-1 rounded-md bg-amber-100 border border-amber-300 text-amber-800 font-mono text-xs uppercase font-bold tracking-wider">Toolkit</span>
-                <h2 class="text-4xl sm:text-5xl display-bold uppercase tracking-tight mt-2 text-slate-950">Skills & Tooling</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="soft-glass p-8 rounded-[36px] border border-white">
-                    <div class="w-12 h-12 rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg>
-                    </div>
-                    <h3 class="text-xl display-bold mb-3 text-slate-950">Social & Paid Media</h3>
-                    <ul class="space-y-2.5 text-xs font-mono text-slate-700">
-                        <li>✦ Meta Business Suite, Google & LinkedIn Ads</li>
-                        <li>✦ Sprout Social, Sprinklr, Hootsuite, Brandwatch</li>
-                        <li>✦ Emplifi, Google Analytics, KPI Dashboards</li>
-                        <li>✦ Paid Media Planning (~$250K Budget, 3x ROI)</li>
-                    </ul>
-                </div>
-
-                <div class="soft-glass p-8 rounded-[36px] border border-white">
-                    <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z"/><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z"/></svg>
-                    </div>
-                    <h3 class="text-xl display-bold mb-3 text-slate-950">Content Production</h3>
-                    <ul class="space-y-2.5 text-xs font-mono text-slate-700">
-                        <li>✦ Premiere Pro, After Effects, CapCut</li>
-                        <li>✦ Photoshop, Lightroom, Capture One, Figma</li>
-                        <li>✦ iPhone, Canon, Sony & Panasonic Cameras</li>
-                        <li>✦ Studio Lighting, Audio & Prop Styling</li>
-                    </ul>
-                </div>
-
-                <div class="soft-glass p-8 rounded-[36px] border border-white">
-                    <div class="w-12 h-12 rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-.778.099-1.533.284-2.253"/></svg>
-                    </div>
-                    <h3 class="text-xl display-bold mb-3 text-slate-950">Leadership & Strategy</h3>
-                    <ul class="space-y-2.5 text-xs font-mono text-slate-700">
-                        <li>✦ Influencer Sourcing & Deal Negotiation</li>
-                        <li>✦ Agency Management & Marketing Intern Mentoring</li>
-                        <li>✦ Executive Performance Reporting (Director & CFO)</li>
-                        <li>✦ Cross-Department B2B Sales Enablement</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACT CTA -->
-        <section id="contact" class="mb-8">
-            <div class="soft-glass rounded-[40px] p-8 sm:p-14 text-center border border-white">
-                <span class="inline-block px-4 py-1.5 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs sm:text-sm font-bold uppercase tracking-widest mb-5">Get in touch</span>
-                <h2 class="text-4xl sm:text-6xl display-bold uppercase tracking-tight text-slate-950 leading-[0.95] mb-5">Let&rsquo;s make something <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600">people watch.</span></h2>
-                <p class="max-w-xl mx-auto text-slate-700 text-base sm:text-lg leading-relaxed mb-8">Chicago-based social media manager and video content creator. Short-form video, influencer partnerships, and paid media that turn attention into sales.</p>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <a href="mailto:quinncorcoran@gmail.com" class="bg-gradient-to-r from-amber-400 via-orange-500 to-amber-500 text-white px-9 py-4 rounded-full display-bold text-sm sm:text-base uppercase tracking-wider shadow-xl hover:scale-105 transition">Email Me</a>
-                    <a href="Quinn_Corcoran_Resume.pdf" download="Quinn_Corcoran_Resume.pdf" class="bg-slate-950 text-white px-9 py-4 rounded-full display-bold text-sm sm:text-base uppercase tracking-wider shadow-lg hover:bg-slate-800 transition">Download Resume</a>
-                    <a href="https://www.linkedin.com/in/quinn-corcoran1998/" target="_blank" rel="noopener" class="soft-glass px-9 py-4 rounded-full display-bold text-sm sm:text-base uppercase tracking-wider border border-slate-300 text-slate-900 hover:bg-white transition">LinkedIn</a>
+        <!-- CONTACT -->
+        <section id="contact" class="contact">
+            <div class="wrap">
+                <h2>Let's make something people watch.</h2>
+                <p>I'm looking for a social media or content role on a larger team. The fastest way to reach me is email.</p>
+                <div class="actions">
+                    <a class="btn" href="mailto:quinncorcoran@gmail.com">quinncorcoran@gmail.com</a>
+                    <a class="btn quiet" href="Quinn_Corcoran_Resume.pdf" download="Quinn_Corcoran_Resume.pdf">Download resume</a>
+                    <a class="btn quiet" href="https://www.linkedin.com/in/quinn-corcoran1998/" target="_blank" rel="noopener">LinkedIn</a>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <!-- FOOTER -->
-    <footer class="border-t border-slate-200 py-12 text-center text-xs text-slate-600 font-mono">
-        <p id="footnote-1" class="max-w-3xl mx-auto px-6 mb-4 text-slate-600 leading-relaxed text-left sm:text-center">
-            [1] 2020 SPJ Mark of Excellence Awards: <a class="underline" target="_blank" href="https://www.spj.org/mark-of-excellence-awards-2020-national-winners-and-finalists/">National Winner, Online/Digital News Videography</a>, for &ldquo;Where are the students? An enrollment investigation.&rdquo; &ldquo;Trash Talk: Montana&rsquo;s Recycling Challenge,&rdquo; a Montana PBS documentary by a 7-person University of Montana student crew (Quinn: editor and photographer), was named a national winner in Television In-Depth Reporting, per the University of Montana School of Journalism.
-        </p>
-        <p>&copy; 2026 Quinn Corcoran &bull; Chicago, IL</p>
+    <footer>
+        <div class="wrap">&copy; 2026 Quinn Corcoran, Chicago, IL</div>
     </footer>
 
-    <!-- SCRIPTS -->
     <script>
-        // Ambient Radial Glow Mouse Tracker (Sky-Blue Accent)
-        const glow = document.getElementById('soft-glow');
-        window.addEventListener('pointermove', (e) => {
-            const { clientX, clientY } = e;
-            glow.animate({
-                left: `${clientX - 375}px`,
-                top: `${clientY - 375}px`
-            }, { duration: 3500, fill: "forwards" });
-        });
-
-        // Click-to-play reels (one at a time)
-        function toggleReel(tile, videoId) {
-            const video = document.getElementById(videoId);
-            if (!video) return;
-            document.querySelectorAll('.reel-tile').forEach(t => {
-                if (t !== tile) {
-                    const v = t.querySelector('video');
-                    if (v) v.pause();
-                    t.classList.remove('is-playing');
-                }
-            });
-            if (video.paused) {
-                const p = video.play();
-                if (p !== undefined) {
-                    p.then(() => tile.classList.add('is-playing')).catch(() => {
-                        video.muted = true;
-                        video.play().then(() => tile.classList.add('is-playing'));
-                    });
-                }
-            } else {
-                video.pause();
-                tile.classList.remove('is-playing');
-            }
+        // Click-to-play reels, one at a time.
+        function stopReel(tile) {
+            const video = tile.querySelector('video');
+            const btn = tile.querySelector('.reel-toggle');
+            video.pause();
+            tile.classList.remove('is-playing');
+            btn.setAttribute('aria-pressed', 'false');
         }
+
+        document.addEventListener('click', function (e) {
+            const btn = e.target.closest('.reel-toggle');
+            if (!btn) return;
+            const tile = btn.closest('.reel');
+            const video = tile.querySelector('video');
+
+            document.querySelectorAll('.reel.is-playing').forEach(function (other) {
+                if (other !== tile) stopReel(other);
+            });
+
+            if (!video.paused) { stopReel(tile); return; }
+
+            const started = function () {
+                tile.classList.add('is-playing');
+                btn.setAttribute('aria-pressed', 'true');
+            };
+            const attempt = video.play();
+            if (attempt !== undefined) {
+                attempt.then(started).catch(function () {
+                    video.muted = true;
+                    video.play().then(started).catch(function () {});
+                });
+            } else {
+                started();
+            }
+        });
     </script>
 </body>
 </html>
