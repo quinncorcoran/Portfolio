@@ -85,9 +85,9 @@
         .site-head .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 60px; }
         .site-name { font-weight: 800; font-size: 1.0625rem; letter-spacing: -0.01em; text-decoration: none; }
         .site-nav { display: flex; align-items: center; gap: 1.75rem; font-size: 0.9375rem; font-weight: 500; }
-        .site-nav a { text-decoration: none; }
+        .site-nav a { text-decoration: none; white-space: nowrap; }
         .site-nav .links { display: none; gap: 1.75rem; }
-        @media (min-width: 820px) { .site-nav .links { display: flex; } }
+        @media (min-width: 960px) { .site-nav .links { display: flex; } }
 
         /* Buttons */
         .btn {
@@ -155,6 +155,9 @@
         .reel-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.75rem 1rem; }
         @media (min-width: 640px) { .reel-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
         @media (min-width: 1000px) { .reel-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
+        .group-head { margin: 3.5rem 0 1.5rem; max-width: 62ch; }
+        .section-head + .group-head { margin-top: 0; }
+        .group-head p { margin-top: 0.4rem; color: var(--muted); font-size: 0.9375rem; }
         .reel-item .views { margin-top: 0.75rem; font-weight: 700; font-size: 1.0625rem; }
         .reel-item .what { font-size: 0.9375rem; color: var(--muted); line-height: 1.4; }
         .reel-item .where { font-size: 0.875rem; margin-top: 0.25rem; }
@@ -185,13 +188,25 @@
         .bars .bar.is-new { background: var(--mark); }
         .bars-note { margin-top: 0.6rem; font-size: 0.8125rem; color: var(--muted); }
 
-        .case-pair { display: grid; gap: 3rem; margin-top: 4rem; padding-top: 3.5rem; border-top: 1px solid var(--line); }
-        @media (min-width: 900px) { .case-pair { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: 3.5rem; } }
-        .case-reel { display: grid; gap: 1.5rem; align-items: start; }
-        .case-reel .reel { max-width: 220px; }
-        @media (min-width: 520px) { .case-reel { grid-template-columns: 190px minmax(0, 1fr); gap: 2rem; } .case-reel .reel { max-width: none; } }
-        .case-pair p { margin-top: 0.9rem; max-width: 52ch; }
-        .case-pair .btn { margin-top: 1.25rem; }
+        .bars .bar.is-small { width: max-content; }
+
+        .case-feature { display: grid; gap: 1.75rem; align-items: start; margin-top: 4rem; padding-top: 3.5rem; border-top: 1px solid var(--line); }
+        .case-feature .reel { max-width: 220px; }
+        .case-feature .credit { margin-top: 0.6rem; font-size: 0.875rem; color: var(--muted); }
+        .case-feature p { margin-top: 0.9rem; max-width: 52ch; }
+        .case-feature .btn { margin-top: 1.25rem; }
+        .case-feature .stat { font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; white-space: nowrap; }
+        .case-feature .stat-label { margin-top: 0.5rem; font-size: 0.9375rem; color: var(--muted); }
+        .case-feature .numbers .bars { margin-top: 1.75rem; }
+        @media (min-width: 620px) {
+            .case-feature { grid-template-columns: 200px minmax(0, 1fr); gap: 2rem 2.5rem; }
+            .case-feature .reel { max-width: none; }
+            .case-feature .numbers { grid-column: 2; }
+        }
+        @media (min-width: 1000px) {
+            .case-feature { grid-template-columns: 240px minmax(0, 1fr) minmax(0, 1fr); gap: 3.5rem; }
+            .case-feature .numbers { grid-column: auto; }
+        }
 
         /* Film */
         .film-lead { display: grid; gap: 1.75rem; align-items: center; }
@@ -250,6 +265,7 @@
                     <a href="#reels">Reels</a>
                     <a href="#results">Results</a>
                     <a href="#film">Commercial work</a>
+                    <a href="#work-303">303 Products</a>
                     <a href="#creators">Creators</a>
                     <a href="#about">About</a>
                 </div>
@@ -390,26 +406,18 @@
                     </div>
                 </div>
 
-                <div class="case-pair">
-                    <div class="case-reel">
+                <div class="case-feature">
+                    <div>
                         <div class="reel">
-                            <video src="reel-3.mp4" poster="thumb-3.jpg" playsinline preload="none" loop></video>
-                            <button class="reel-toggle" type="button" aria-label="Play the ColorBond LVP reel"><span><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21"/></svg></span></button>
+                            <video src="reel-10.mp4.mp4" data-poster="thumb-10.jpg" playsinline preload="none" loop></video>
+                            <button class="reel-toggle" type="button" aria-label="Play the House of Hargrove reel for Renew"><span><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21"/></svg></span></button>
                         </div>
-                        <div>
-                            <h3>One reel sold out more than half a paint line</h3>
-                            <p>
-                                I produced this reel for ColorBond LVP interior paint from start to finish. It reached <mark>527K views</mark>
-                                with no ad spend, and more than half of the line's colors sold out.
-                            </p>
-                            <p class="small"><a href="https://www.instagram.com/p/DWAEGdIjsD1/" target="_blank" rel="noopener">See it on Instagram</a></p>
-                        </div>
+                        <p class="credit">Reel by @houseofhargrove</p>
                     </div>
-
                     <div>
                         <h3>A creator collaboration that sold out Renew</h3>
                         <p>
-                            I set up this partnership with @houseofhargrove for Renew, our paint for plants. The reel ran in spring 2023,
+                            I set up this partnership with @houseofhargrove for Renew, our paint for plants. Her reel ran in spring 2023,
                             and the line sold out.
                         </p>
                         <p>
@@ -417,6 +425,31 @@
                             <mark>6,000 on Amazon</mark>. In the same three months of 2022, the website sold just under 200.
                         </p>
                         <a class="btn quiet" href="https://www.instagram.com/reel/Cr3F5n3NoFV/?hl=en" target="_blank" rel="noopener">Watch the reel on Instagram</a>
+                    </div>
+                    <div class="numbers">
+                        <p class="stat"><mark>Nearly 30M</mark></p>
+                        <p class="stat-label">views on the creator's reel, with 275K likes</p>
+                        <div class="bars" role="img" aria-label="Cans of Renew sold. Website, same three months of 2022: just under 200. Website, three months after the reel: more than 5,000. Amazon, three months after the reel: more than 6,000.">
+                            <div class="row"><span class="label">Website, same three months of 2022</span><span class="bar is-small">Under 200 cans</span></div>
+                            <div class="row"><span class="label">Website, three months after the reel</span><span class="bar is-new" style="--w:83%">5,000+ cans</span></div>
+                            <div class="row"><span class="label">Amazon, three months after the reel</span><span class="bar is-new" style="--w:100%">6,000+ cans</span></div>
+                        </div>
+                        <p class="bars-note">Cans of Renew sold. No Amazon figure for 2022.</p>
+                    </div>
+                </div>
+
+                <div class="case-feature">
+                    <div class="reel">
+                        <video src="reel-3.mp4" poster="thumb-3.jpg" playsinline preload="none" loop></video>
+                        <button class="reel-toggle" type="button" aria-label="Play the ColorBond LVP reel"><span><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21"/></svg></span></button>
+                    </div>
+                    <div>
+                        <h3>One reel sold out more than half a paint line</h3>
+                        <p>
+                            I produced this reel for ColorBond LVP interior paint from start to finish. It reached <mark>527K views</mark>
+                            with no ad spend, and more than half of the line's colors sold out.
+                        </p>
+                        <p class="small"><a href="https://www.instagram.com/p/DWAEGdIjsD1/" target="_blank" rel="noopener">See it on Instagram</a></p>
                     </div>
                 </div>
             </div>
@@ -459,6 +492,135 @@
             </div>
         </section>
 
+        <!-- 303 PRODUCTS -->
+        <section id="work-303">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2>303 Products</h2>
+                    <p>
+                        Before Seymour, I ran social for 303 Products, a car care brand: the organic content, and a $285K influencer budget.
+                    </p>
+                </div>
+
+                <div class="group-head">
+                    <h3>Organic TikTok</h3>
+                    <p>I took the account from 0 to 5K followers in a year with how-to videos like these, posted in 2022 and early 2023.</p>
+                </div>
+                <div class="reel-grid">
+                    <div class="reel-item">
+                        <div class="reel">
+                            <video src="Reel-150.mp4" data-poster="Thumb-150.jpg" playsinline preload="none" loop></video>
+                            <button class="reel-toggle" type="button" aria-label="Play: microfiber versus waffle weave towels"><span><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21"/></svg></span></button>
+                        </div>
+                        <p class="views">90K views</p>
+                        <p class="what">Detailing basics: microfiber vs. waffle weave towels</p>
+                        <p class="where"><a href="https://www.tiktok.com/@303products/video/7155681295517879595" target="_blank" rel="noopener">TikTok</a></p>
+                    </div>
+                    <div class="reel-item">
+                        <div class="reel">
+                            <video src="Reel-140.mp4" data-poster="Thumb-140.jpg" playsinline preload="none" loop></video>
+                            <button class="reel-toggle" type="button" aria-label="Play: common detailing mistakes"><span><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21"/></svg></span></button>
+                        </div>
+                        <p class="views">69K views</p>
+                        <p class="what">Common detailing mistakes, with tips and tricks</p>
+                        <p class="where"><a href="https://www.tiktok.com/@303products/video/7152900927937170730" target="_blank" rel="noopener">TikTok</a></p>
+                    </div>
+                    <div class="reel-item">
+                        <div class="reel">
+                            <video src="Reel-120.mp4" data-poster="Thumb-120.jpg" playsinline preload="none" loop></video>
+                            <button class="reel-toggle" type="button" aria-label="Play: Foam Cannon product demo"><span><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21"/></svg></span></button>
+                        </div>
+                        <p class="views">45K views</p>
+                        <p class="what">Foam Cannon product demo</p>
+                        <p class="where"><a href="https://www.tiktok.com/@303products/video/7185178518169357614" target="_blank" rel="noopener">TikTok</a></p>
+                    </div>
+                    <div class="reel-item">
+                        <div class="reel">
+                            <video src="Reel-160.mp4" data-poster="Thumb-160.jpg" playsinline preload="none" loop></video>
+                            <button class="reel-toggle" type="button" aria-label="Play: the easiest detailing product to use"><span><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21"/></svg></span></button>
+                        </div>
+                        <p class="views">45K views</p>
+                        <p class="what">The easiest detailing product to use</p>
+                        <p class="where"><a href="https://www.tiktok.com/@303products/video/7164237062055628078" target="_blank" rel="noopener">TikTok</a></p>
+                    </div>
+                    <div class="reel-item">
+                        <div class="reel">
+                            <video src="Reel-130.mp4" data-poster="Thumb-130.jpg" playsinline preload="none" loop></video>
+                            <button class="reel-toggle" type="button" aria-label="Play: clay mitt versus clay bar"><span><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21"/></svg></span></button>
+                        </div>
+                        <p class="views">43K views</p>
+                        <p class="what">Clay mitt vs. clay bar: tutorial and product demo</p>
+                        <p class="where"><a href="https://www.tiktok.com/@303products/video/7177228449969376555" target="_blank" rel="noopener">TikTok</a></p>
+                    </div>
+                    <a class="feed-tile" href="https://www.tiktok.com/@303products" target="_blank" rel="noopener">
+                        See the account
+                        <span>@303products on TikTok</span>
+                    </a>
+                </div>
+
+                <div class="group-head">
+                    <h3>Creator collaborations</h3>
+                    <p>Creators I picked for 303 and built partnerships with.</p>
+                </div>
+                <div class="reel-grid">
+                    <div class="reel-item">
+                        <div class="reel">
+                            <video src="303%20influencer%2003.mp4" data-poster="303%20Thumb-03.jpg" playsinline preload="none" loop></video>
+                            <button class="reel-toggle" type="button" aria-label="Play: Christina Roki detailing video"><span><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21"/></svg></span></button>
+                        </div>
+                        <p class="views">Christina Roki</p>
+                        <p class="what">Simple detailing video. 123K views, 6.9K likes.</p>
+                        <p class="where"><a href="https://www.instagram.com/christinaroki/reel/CuGC-l_pKOr/" target="_blank" rel="noopener">Instagram</a> &middot; <a href="https://www.instagram.com/christinaroki/reel/CsjjcsFJ3Xn/" target="_blank" rel="noopener">Second reel</a></p>
+                    </div>
+                    <div class="reel-item">
+                        <div class="reel">
+                            <video src="303%20influencer%2004.mp4" data-poster="303%20Thumb-04.jpg" playsinline preload="none" loop></video>
+                            <button class="reel-toggle" type="button" aria-label="Play: Christina Roki STEM program"><span><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21"/></svg></span></button>
+                        </div>
+                        <p class="views">Christina Roki</p>
+                        <p class="what">Our biggest collab: we sponsored her STEM program for young women learning to work on cars, and sent everyone home with 303 products.</p>
+                        <p class="where"><a href="https://www.instagram.com/christinaroki/reel/CqeVDyhpa2O/" target="_blank" rel="noopener">Instagram</a></p>
+                    </div>
+                    <div class="reel-item">
+                        <div class="reel">
+                            <video src="303%20influencer%2001.mp4" data-poster="303%20Thumb-01.jpg" playsinline preload="none" loop></video>
+                            <button class="reel-toggle" type="button" aria-label="Play: Alexander Vargas engine bay how-to"><span><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21"/></svg></span></button>
+                        </div>
+                        <p class="views">Alexander Vargas</p>
+                        <p class="what">How to detail an engine bay. 43K views, 3.9K likes.</p>
+                        <p class="where"><a href="https://www.tiktok.com/@_alexandervargas/video/7140077469968731435" target="_blank" rel="noopener">TikTok</a></p>
+                    </div>
+                    <div class="reel-item">
+                        <div class="reel">
+                            <video src="303%20influencer%2002.mp4" data-poster="303%20Thumb-02.jpg" playsinline preload="none" loop></video>
+                            <button class="reel-toggle" type="button" aria-label="Play: Alexander Vargas car wash ASMR"><span><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21"/></svg></span></button>
+                        </div>
+                        <p class="views">Alexander Vargas</p>
+                        <p class="what">Car wash ASMR. 3.5K likes.</p>
+                        <p class="where"><a href="https://www.tiktok.com/@_alexandervargas/video/7166806199814393134" target="_blank" rel="noopener">TikTok</a></p>
+                    </div>
+                    <div class="reel-item">
+                        <div class="reel">
+                            <video src="303%20influencer%2006.mp4" data-poster="303%20Thumb-06.jpg" playsinline preload="none" loop></video>
+                            <button class="reel-toggle" type="button" aria-label="Play: TeamSallyRacing car wash video"><span><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21"/></svg></span></button>
+                        </div>
+                        <p class="views">TeamSallyRacing</p>
+                        <p class="what">Driver and creator. Car wash video, 3.2K likes.</p>
+                        <p class="where"><a href="https://www.tiktok.com/@teamsallyracing/video/7103371491437317419?lang=en" target="_blank" rel="noopener">TikTok</a></p>
+                    </div>
+                    <div class="reel-item">
+                        <div class="reel">
+                            <video src="303%20influencer%2005.mp4" data-poster="303%20Thumb-05.jpg" playsinline preload="none" loop></video>
+                            <button class="reel-toggle" type="button" aria-label="Play: Jordan Sanford car wash video"><span><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21"/></svg></span></button>
+                        </div>
+                        <p class="views">Jordan Sanford</p>
+                        <p class="what">Car wash video. 3K likes.</p>
+                        <p class="where"><a href="https://www.tiktok.com/@jordantsanford/video/7239320136954498347" target="_blank" rel="noopener">TikTok</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- CREATORS -->
         <section id="creators">
             <div class="wrap">
@@ -466,7 +628,7 @@
                     <h2>Creator partnerships</h2>
                     <p>
                         I find creators myself, pitch them, negotiate the deal, and stay their main contact. At Seymour that is about 20 active
-                        partners with a combined following near 15M, on a $150K budget. At 303 Products I managed a $285K influencer budget.
+                        partners with a combined following near 15M, on a $150K budget. At 303 Products I managed a $285K influencer budget; <a href="#work-303">those collaborations are above</a>.
                     </p>
                 </div>
 
@@ -488,7 +650,7 @@
                     </li>
                     <li>
                         <span class="name">Alexander Vargas</span>
-                        <span class="who">TikTok creator</span>
+                        <span class="who">TikTok creator, a partner since my 303 days</span>
                         <a href="https://www.tiktok.com/@_alexandervargas/video/7647579299075067150" target="_blank" rel="noopener">TikTok</a>
                     </li>
                     <li>
@@ -559,6 +721,19 @@
     </footer>
 
     <script>
+        // Cover images for videos lower on the page load only as they come near the screen.
+        (function () {
+            const lazy = document.querySelectorAll('video[data-poster]');
+            const load = function (video) { video.poster = video.dataset.poster; video.removeAttribute('data-poster'); };
+            if (!('IntersectionObserver' in window)) { lazy.forEach(load); return; }
+            const watcher = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) { load(entry.target); watcher.unobserve(entry.target); }
+                });
+            }, { rootMargin: '800px 0px' });
+            lazy.forEach(function (video) { watcher.observe(video); });
+        })();
+
         // Click-to-play reels, one at a time.
         function stopReel(tile) {
             const video = tile.querySelector('video');
