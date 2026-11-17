@@ -114,7 +114,12 @@
         .section-head p { margin-top: 0.75rem; color: var(--muted); }
 
         /* Hero */
-        .hero { padding: 4rem 0 4.5rem; }
+        .hero { padding: 2.75rem 0 4rem; }
+        @media (min-width: 900px) { .hero { padding: 4rem 0 4.5rem; } }
+        .hero-id { display: flex; align-items: center; gap: 0.85rem; margin-bottom: 1.75rem; font-size: 0.9375rem; line-height: 1.35; color: var(--muted); }
+        .hero-id .avatar { width: 64px; height: 64px; border-radius: 50%; overflow: hidden; flex: none; background: var(--line); }
+        .hero-id .avatar img { display: block; width: 104px; max-width: none; height: auto; margin: -32px 0 0 -21px; }
+        .hero-id strong { display: block; font-size: 1rem; color: var(--ink); }
         .hero-grid { display: grid; gap: 3rem; align-items: center; }
         @media (min-width: 900px) { .hero-grid { grid-template-columns: minmax(0, 1fr) 320px; gap: 4.5rem; } }
         h1 {
@@ -126,7 +131,8 @@
         .hero .actions { margin-top: 2rem; }
         .hero-reel { width: min(100%, 320px); }
         .hero-reel figcaption { margin-top: 0.9rem; font-size: 0.9375rem; }
-        .hero-reel figcaption strong { display: block; font-size: 1.25rem; letter-spacing: -0.01em; }
+        .reel-kicker { margin-bottom: 0.9rem; font-size: 0.9375rem; color: var(--muted); }
+        .reel-kicker strong { display: block; margin-top: 0.15rem; font-size: 1.375rem; letter-spacing: -0.01em; color: var(--ink); }
 
         /* Reels */
         .reel {
@@ -280,6 +286,10 @@
         <div class="hero">
             <div class="wrap hero-grid">
                 <div>
+                    <p class="hero-id">
+                        <span class="avatar"><img src="head-small.jpg" alt="Photo of Quinn Corcoran" onerror="this.onerror=null;this.src='head002.jpg'"></span>
+                        <span><strong>Quinn Corcoran</strong>Social media manager and video creator, Chicago</span>
+                    </p>
                     <h1>I run social media for brands, and I make the video myself.</h1>
                     <p class="hero-lede">
                         I'm the social media manager at Seymour of Sycamore, an industrial paint maker. This year my organic video has reached
@@ -295,6 +305,10 @@
                 </div>
 
                 <figure class="hero-reel">
+                    <p class="reel-kicker">
+                        My top reel, written, shot and edited by me
+                        <strong><mark>7M views</mark>, 75K likes</strong>
+                    </p>
                     <div class="reel">
                         <video src="reel-9.mp4" poster="thumb-9.jpg" playsinline preload="none" loop></video>
                         <button class="reel-toggle" type="button" aria-label="Play my top reel of 2026">
@@ -302,8 +316,8 @@
                         </button>
                     </div>
                     <figcaption>
-                        <strong>7M views, 75K likes</strong>
-                        My top reel this year. Organic, Instagram and Facebook combined.
+                        A product demo for ColorBond LVP, and my most-watched video this year. My coworker is on camera and I'm behind it.
+                        Organic views, Instagram and Facebook combined.
                         <a href="https://www.instagram.com/p/DefZ_jzB4OU/?hl=en" target="_blank" rel="noopener">See it on Instagram</a>
                     </figcaption>
                 </figure>
@@ -504,7 +518,7 @@
 
                 <div class="group-head">
                     <h3>Organic TikTok</h3>
-                    <p>I took the account from 0 to 5K followers in a year with how-to videos like these, posted in 2022 and early 2023.</p>
+                    <p>I took <a href="https://www.tiktok.com/@303products" target="_blank" rel="noopener">@303products</a> from 0 to 5K followers in a year with how-to videos like these, posted in 2022 and early 2023.</p>
                 </div>
                 <div class="reel-grid">
                     <div class="reel-item">
@@ -515,6 +529,14 @@
                         <p class="views">90K views</p>
                         <p class="what">Detailing basics: microfiber vs. waffle weave towels</p>
                         <p class="where"><a href="https://www.tiktok.com/@303products/video/7155681295517879595" target="_blank" rel="noopener">TikTok</a></p>
+                    </div>
+                    <div class="reel-item">
+                        <div class="reel">
+                            <video src="Reel-110.mp4" data-poster="Thumb-110.jpg" playsinline preload="none" loop></video>
+                            <button class="reel-toggle" type="button" aria-label="Play: graphene product deep dive"><span><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21"/></svg></span></button>
+                        </div>
+                        <p class="views">78K views</p>
+                        <p class="what">Product deep dive: graphene detailer</p>
                     </div>
                     <div class="reel-item">
                         <div class="reel">
@@ -552,10 +574,6 @@
                         <p class="what">Clay mitt vs. clay bar: tutorial and product demo</p>
                         <p class="where"><a href="https://www.tiktok.com/@303products/video/7177228449969376555" target="_blank" rel="noopener">TikTok</a></p>
                     </div>
-                    <a class="feed-tile" href="https://www.tiktok.com/@303products" target="_blank" rel="noopener">
-                        See the account
-                        <span>@303products on TikTok</span>
-                    </a>
                 </div>
 
                 <div class="group-head">
